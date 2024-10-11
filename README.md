@@ -9,6 +9,7 @@ I've gotten really into language learning and so have a bunch of my friends, but
 Goals of the project:
 - Learn sockets to create a multiplayer game I can play with my friends
 - Support simultaneous learning of multiple languages.
+- Learn deployment
 
 
 Languages my friends are interested in:
