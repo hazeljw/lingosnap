@@ -3,16 +3,14 @@ import logo from './logo.svg';
 import './styles.css';
 import { Avatar, Box, Button, TextField } from '@mui/material';
 
-function Lobby() {
-
-    const gameCode = "1234";
+function Lobby({roomCode}: {roomCode: string}) {
 
     const handleStartGame = () => {
     }
 
   return (
     <Box className="Lobby flexCenter" gap={3} flexDirection={'column'}>
-        <Box className="title">Game code: {gameCode}</Box>
+        <Box className="title">Game code: {roomCode}</Box>
 
         <Box className="flexCenter" >
             <Box className="leftBox">

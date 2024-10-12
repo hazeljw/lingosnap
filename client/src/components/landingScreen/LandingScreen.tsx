@@ -1,16 +1,19 @@
 import React from 'react';
 import './styles.css';
 import { Avatar, Box, Button, TextField } from '@mui/material';
+import { Socket } from 'socket.io-client';
 
-function LandingScreen() {
+function LandingScreen({socket}: {socket:Socket}) {
     const [name, setName] = React.useState("Guest"+Math.floor(Math.random()*1000));
 
     const [enteredGameCode, setEnteredGameCode] = React.useState("");
 
     const handleHostNewGame = () => {
+      socket.emit('host_new_room', {userName: name});
     }
 
     const handleJoinGame = () => {
+      socket.emit('join_room', {userName: name, room: enteredGameCode});
     }
 
   return (
@@ -26,7 +29,7 @@ function LandingScreen() {
 
         <Box className="flexCenter" gap={1}>
             <TextField id="outlined-basic" label="Game Code" variant="outlined" value={enteredGameCode} onChange={(v)=>{setEnteredGameCode(v.target?.value)}} />
-            <Button variant="contained" color="primary" onClick={handleJoinGame} disabled={!enteredGameCode?.length}>Join Game</Button>
+            <Button variant="contained" color="primary" onClick={handleJoinGame} disabled={enteredGameCode?.length !== 6}>Join Game</Button>
         </Box>
 
     </Box>

@@ -1,3 +1,5 @@
+import { generateRoomCode } from "./utils";
+
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -20,22 +22,20 @@ const io = new Server(server, {
 io.on("connection", (socket) => {
     console.log(`User connected: ${socket.id}`)
 
+    socket.on('host_new_room', (data) => {
+        const roomCode = generateRoomCode();
+        socket.join(roomCode);
+        socket.emit('user_host_success', {roomCode: roomCode, hostId: socket.id});
+        console.log(`User with id: ${socket.id} joined room: ${data.room}`);
+    })
+
     socket.on('join_room', (data) => {
         socket.join(data.room);
+
+        socket.emit('room_join_success', {roomCode: data.room, userId: socket.id}); // TODO: pass back info about the room
         console.log(`User with id: ${socket.id} joined room: ${data.room}`);
-        //console.log("code", generateRoomCode());
     })
-
-    socket.on('send_message', (data) => {
-        socket.to(data.room).emit('receive_message', data);
-
-        //socket.broadcast.emit('receive_message', data);
-
-        //socket.emit('receive_message', {message: 'You sent: ' + data.message});
-
-        //socket.emit('receive_message', data);
-        //console.log(data);
-    })
+    
 })
 
 
