@@ -1,9 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './styles.css';
 import { Avatar, Box, Button, TextField } from '@mui/material';
 
 function LandingScreen() {
+    const [name, setName] = React.useState("Guest"+Math.floor(Math.random()*1000));
+
+    const [enteredGameCode, setEnteredGameCode] = React.useState("");
 
     const handleHostNewGame = () => {
     }
@@ -16,15 +18,15 @@ function LandingScreen() {
         <Box className="title">LingoSnap</Box>
 
         <Box className="flexCenter"  gap={1} >
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-            <TextField id="outlined-basic" label="Name" variant="outlined" />
+            <Avatar alt={name?.length ? name : "LingoSnap"} src="/static/images/avatar/1.jpg" />
+            <TextField id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(v) => {setName(v.target?.value)}} />
         </Box>
 
         <Button variant="contained" color="primary" onClick={handleHostNewGame}>Host New Game</Button>
 
         <Box className="flexCenter" gap={1}>
-            <TextField id="outlined-basic" label="Game Code" variant="outlined" />
-            <Button variant="contained" color="primary" onClick={handleJoinGame}>Join Game</Button>
+            <TextField id="outlined-basic" label="Game Code" variant="outlined" value={enteredGameCode} onChange={(v)=>{setEnteredGameCode(v.target?.value)}} />
+            <Button variant="contained" color="primary" onClick={handleJoinGame} disabled={!enteredGameCode?.length}>Join Game</Button>
         </Box>
 
     </Box>
