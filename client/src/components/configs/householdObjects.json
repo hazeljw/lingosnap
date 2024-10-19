@@ -1,0 +1,359 @@
+[
+    {
+      "word": "chair",
+      "languages": {
+        "english": "chair",
+        "spanish": "silla",
+        "french": "chaise",
+        "german": "stuhl",
+        "italian": "sedia",
+        "portuguese": "cadeira",
+        "dutch": "stoel",
+        "japanese": "isu",
+        "korean": "uija",
+        "finnish": "tuoli",
+        "tereo": "tūru"
+      },
+      "tags": ["household", "furniture", "seating", "living room"],
+      "image": "/images/chair.svg",
+      "funFact": "The oldest known chair is over 5,000 years old, found in Egypt.",
+      "congrats": "You're sitting pretty!",
+      "sorry": "Don't take this sitting down!"
+    },
+    {
+      "word": "table",
+      "languages": {
+        "english": "table",
+        "spanish": "mesa",
+        "french": "table",
+        "german": "tisch",
+        "italian": "tavolo",
+        "portuguese": "mesa",
+        "dutch": "tafel",
+        "japanese": "tēburu",
+        "korean": "teibul",
+        "finnish": "pöytä",
+        "tereo": "tēpu"
+      },
+      "tags": ["household", "furniture", "dining", "surface"],
+      "image": "/images/table.svg",
+      "funFact": "The world's largest table can seat up to 5,000 people.",
+      "congrats": "You've brought something to the table!",
+      "sorry": "This answer doesn't quite make the cut!"
+    },
+    {
+      "word": "lamp",
+      "languages": {
+        "english": "lamp",
+        "spanish": "lámpara",
+        "french": "lampe",
+        "german": "lampe",
+        "italian": "lampada",
+        "portuguese": "lâmpada",
+        "dutch": "lamp",
+        "japanese": "ranpu",
+        "korean": "rampu",
+        "finnish": "lamppu",
+        "tereo": "rama"
+      },
+      "tags": ["household", "lighting", "electricity", "decor"],
+      "image": "/images/lamp.svg",
+      "funFact": "The longest-lasting light bulb has been burning since 1901.",
+      "congrats": "You're lighting up the room!",
+      "sorry": "Keep searching for your bright idea!"
+    },
+    {
+      "word": "bed",
+      "languages": {
+        "english": "bed",
+        "spanish": "cama",
+        "french": "lit",
+        "german": "bett",
+        "italian": "letto",
+        "portuguese": "cama",
+        "dutch": "bed",
+        "japanese": "beddo",
+        "korean": "chimdae",
+        "finnish": "sänky",
+        "tereo": "moenga"
+      },
+      "tags": ["household", "furniture", "bedroom", "sleep"],
+      "image": "/images/bed.svg",
+      "funFact": "The world's largest bed measures 86 feet 11 inches long and 53 feet 11 inches wide.",
+      "congrats": "You've made your bed and now you can lie in it!",
+      "sorry": "Don't let the bed bugs bite!"
+    },
+    {
+      "word": "refrigerator",
+      "languages": {
+        "english": "refrigerator",
+        "spanish": "refrigerador",
+        "french": "réfrigérateur",
+        "german": "kühlschrank",
+        "italian": "frigorifero",
+        "portuguese": "geladeira",
+        "dutch": "koelkast",
+        "japanese": "reizōko",
+        "korean": "naengjanggo",
+        "finnish": "jääkaappi",
+        "tereo": "pouaka makariri"
+      },
+      "tags": ["household", "appliance", "kitchen", "food storage"],
+      "image": "/images/refrigerator.svg",
+      "funFact": "The first domestic refrigerator was invented in 1913.",
+      "congrats": "You're as cool as a cucumber!",
+      "sorry": "This answer's past its expiration date!"
+    },
+    {
+      "word": "sofa",
+      "languages": {
+        "english": "sofa",
+        "spanish": "sofá",
+        "french": "canapé",
+        "german": "sofa",
+        "italian": "divano",
+        "portuguese": "sofá",
+        "dutch": "bank",
+        "japanese": "sofa",
+        "korean": "sopa",
+        "finnish": "sohva",
+        "tereo": "tōhunga"
+      },
+      "tags": ["household", "furniture", "living room", "comfort"],
+      "image": "/images/sofa.svg",
+      "funFact": "The word 'sofa' comes from the Arabic word 'suffah', meaning 'bench'.",
+      "congrats": "You're in your comfort zone!",
+      "sorry": "Don't just sit there, try again!"
+    },
+    {
+      "word": "mirror",
+      "languages": {
+        "english": "mirror",
+        "spanish": "espejo",
+        "french": "miroir",
+        "german": "spiegel",
+        "italian": "specchio",
+        "portuguese": "espelho",
+        "dutch": "spiegel",
+        "japanese": "kagami",
+        "korean": "geoul",
+        "finnish": "peili",
+        "tereo": "whakaata"
+      },
+      "tags": ["household", "decor", "bathroom", "reflection"],
+      "image": "/images/mirror.svg",
+      "funFact": "The earliest known mirrors were pieces of polished stone such as obsidian, dating back to 6000 BCE.",
+      "congrats": "You're reflecting on your success!",
+      "sorry": "This answer isn't quite what it seems!"
+    },
+    {
+      "word": "curtain",
+      "languages": {
+        "english": "curtain",
+        "spanish": "cortina",
+        "french": "rideau",
+        "german": "vorhang",
+        "italian": "tenda",
+        "portuguese": "cortina",
+        "dutch": "gordijn",
+        "japanese": "kāten",
+        "korean": "keoteun",
+        "finnish": "verho",
+        "tereo": "ārai"
+      },
+      "tags": ["household", "decor", "window", "privacy"],
+      "image": "/images/curtain.svg",
+      "funFact": "The heaviest curtain ever made weighed 16 tons and was used in the Sydney Opera House.",
+      "congrats": "You've pulled back the curtain on success!",
+      "sorry": "Time to draw the curtains on this attempt!"
+    },
+    {
+      "word": "clock",
+      "languages": {
+        "english": "clock",
+        "spanish": "reloj",
+        "french": "horloge",
+        "german": "uhr",
+        "italian": "orologio",
+        "portuguese": "relógio",
+        "dutch": "klok",
+        "japanese": "tokei",
+        "korean": "sigan",
+        "finnish": "kello",
+        "tereo": "karaka"
+      },
+      "tags": ["household", "time", "decor", "wall"],
+      "image": "/images/clock.svg",
+      "funFact": "The world's largest clock face is on the Abraj Al-Bait Towers in Mecca, Saudi Arabia.",
+      "congrats": "You're right on time!",
+      "sorry": "Time's up, but don't stop now!"
+    },
+    {
+      "word": "rug",
+      "languages": {
+        "english": "rug",
+        "spanish": "alfombra",
+        "french": "tapis",
+        "german": "teppich",
+        "italian": "tappeto",
+        "portuguese": "tapete",
+        "dutch": "vloerkleed",
+        "japanese": "ragu",
+        "korean": "reogu",
+        "finnish": "matto",
+        "tereo": "whāriki"
+      },
+      "tags": ["household", "decor", "floor", "textile"],
+      "image": "/images/rug.svg",
+      "funFact": "The most expensive rug ever sold was a 17th-century Persian carpet for $33.7 million in 2013.",
+      "congrats": "You've really tied the room together!",
+      "sorry": "Don't sweep this under the rug, try again!"
+    },
+    {
+      "word": "bookshelf",
+      "languages": {
+        "english": "bookshelf",
+        "spanish": "estantería",
+        "french": "bibliothèque",
+        "german": "bücherregal",
+        "italian": "libreria",
+        "portuguese": "estante",
+        "dutch": "boekenkast",
+        "japanese": "hondana",
+        "korean": "chaekjang",
+        "finnish": "kirjahylly",
+        "tereo": "paenga pukapuka"
+      },
+      "tags": ["household", "furniture", "storage", "books"],
+      "image": "/images/bookshelf.svg",
+      "funFact": "The Library of Congress is the largest library in the world, with more than 170 million items.",
+      "congrats": "You're one for the books!",
+      "sorry": "This chapter's closed, but keep reading!"
+    },
+    {
+      "word": "vase",
+      "languages": {
+        "english": "vase",
+        "spanish": "jarrón",
+        "french": "vase",
+        "german": "vase",
+        "italian": "vaso",
+        "portuguese": "vaso",
+        "dutch": "vaas",
+        "japanese": "kabin",
+        "korean": "kkochbyeong",
+        "finnish": "maljakko",
+        "tereo": "oko"
+      },
+      "tags": ["household", "decor", "flowers", "ornament"],
+      "image": "/images/vase.svg",
+      "funFact": "The most expensive vase ever sold was a Chinese Qianlong-dynasty vase for $53 million in 2017.",
+      "congrats": "Your knowledge is blooming!",
+      "sorry": "This attempt's a bit fragile, but don't break down!"
+    },
+    {
+      "word": "pillow",
+      "languages": {
+        "english": "pillow",
+        "spanish": "almohada",
+        "french": "oreiller",
+        "german": "kissen",
+        "italian": "cuscino",
+        "portuguese": "travesseiro",
+        "dutch": "kussen",
+        "japanese": "makura",
+        "korean": "beogeo",
+        "finnish": "tyyny",
+        "tereo": "urunga"
+      },
+      "tags": ["household", "bedroom", "comfort", "sleep"],
+      "image": "/images/pillow.svg",
+      "funFact": "The world's largest pillow fight involved 6,261 people in Minnesota, USA in 2015.",
+      "congrats": "You can rest easy now!",
+      "sorry": "Don't lose sleep over it, try again!"
+    },
+    {
+      "word": "kettle",
+      "languages": {
+        "english": "kettle",
+        "spanish": "tetera",
+        "french": "bouilloire",
+        "german": "wasserkocher",
+        "italian": "bollitore",
+        "portuguese": "chaleira",
+        "dutch": "waterkoker",
+        "japanese": "yakan",
+        "korean": "jujonja",
+        "finnish": "vedenkeitin",
+        "tereo": "tīkera"
+      },
+      "tags": ["household", "kitchen", "appliance", "beverage"],
+      "image": "/images/kettle.svg",
+      "funFact": "The electric kettle was invented in 1891 by Carpenter Electric Company of Chicago.",
+      "congrats": "You're steaming ahead!",
+      "sorry": "This answer's not quite your cup of tea!"
+    },
+    {
+      "word": "blanket",
+      "languages": {
+        "english": "blanket",
+        "spanish": "manta",
+        "french": "couverture",
+        "german": "decke",
+        "italian": "coperta",
+        "portuguese": "cobertor",
+        "dutch": "deken",
+        "japanese": "mōfu",
+        "korean": "damyo",
+        "finnish": "peitto",
+        "tereo": "paraikete"
+      },
+      "tags": ["household", "bedroom", "comfort", "textile"],
+      "image": "/images/blanket.svg",
+      "funFact": "The world's largest blanket measured 11,148.5 square meters and was made in Spain in 2018.",
+      "congrats": "You've got it all covered!",
+      "sorry": "Don't get cold feet, warm up to another try!"
+    },
+    {
+      "word": "toaster",
+      "languages": {
+        "english": "toaster",
+        "spanish": "tostadora",
+        "french": "grille-pain",
+        "german": "toaster",
+        "italian": "tostapane",
+        "portuguese": "torradeira",
+        "dutch": "broodrooster",
+        "japanese": "tōsutā",
+        "korean": "toseteo",
+        "finnish": "leivänpaahdin",
+        "tereo": "tōta"
+      },
+      "tags": ["household", "kitchen", "appliance", "breakfast"],
+      "image": "/images/toaster.svg",
+      "funFact": "The first electric toaster was invented in 1893 in Scotland by Alan MacMasters.",
+      "congrats": "You're on a roll!",
+      "sorry": "This answer's a bit overdone, but don't get burnt out!"
+    },
+    {
+      "word": "plant",
+      "languages": {
+        "english": "plant",
+        "spanish": "planta",
+        "french": "plante",
+        "german": "pflanze",
+        "italian": "pianta",
+        "portuguese": "planta",
+        "dutch": "plant",
+        "japanese": "shokubutsu",
+        "korean": "sigmul",
+        "finnish": "kasvi",
+        "tereo": "tipu"
+      },
+      "tags": ["household", "decor", "nature", "living"],
+      "image": "/images/plant.svg",
+      "funFact": "The world's oldest known living plant is a bristlecone pine tree estimated to be over 5,000 years old.",
+      "congrats": "Your knowledge is growing!",
+      "sorry": "Don't let your spirits wilt, plant another seed of thought!"
+    }
+]

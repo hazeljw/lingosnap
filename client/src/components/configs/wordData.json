@@ -1,0 +1,129 @@
+{"data": [
+{
+    "word": "dog",
+    "languages": {
+        "english": "dog",
+        "spanish": "perro",
+        "french": "chien",
+        "german": "hund",
+        "italian": "cane",
+        "portuguese": "cachorro",
+        "dutch": "hond",
+        "japanese": "inu",
+        "korean": "gae",
+        "finnish": "koira",
+        "tereo": "kuri"
+    },
+    "tags": ["animal", "pet", "mammal", "family"],
+    "image": "/images/dog.svg",
+    "funFact": "Dogs have three eyelids.",
+    "congrats": "You're barking up the right tree!",
+    "sorry": "You're barking up the wrong tree!"
+},
+{
+    "word": "cat",
+    "languages": {
+        "english": "cat",
+        "spanish": "gato",
+        "french": "chat",
+        "german": "katze",
+        "italian": "gatto",
+        "portuguese": "gato",
+        "dutch": "kat",
+        "japanese": "neko",
+        "korean": "goyang-i",
+        "finnish": "kissa",
+        "tereo": "pusi"
+    },
+    "tags": ["animal", "pet", "mammal", "family"],
+    "image": "/images/cat.svg",
+    "funFact": "Isaac Newton invented the cat door.",
+    "congrats": "You're the cat's pajamas!",
+    "sorry": "Scratch that! Better luck next time."
+},
+{
+    "word": "apple",
+    "languages": {
+        "english": "apple",
+        "spanish": "manzana",
+        "french": "pomme",
+        "german": "apfel",
+        "italian": "mela",
+        "portuguese": "maçã",
+        "dutch": "appel",
+        "japanese": "ringo",
+        "korean": "sagwa",
+        "finnish": "omena",
+        "tereo": "aporo"
+    },
+    "tags": ["food", "fruit", "healthy", "snack"],
+    "image": "/images/apple.svg",
+    "funFact": "Apples float in water because 25% of their volume is air.",
+    "congrats": "You're the apple of my eye!",
+    "sorry": "Don't let this spoil the bunch!"
+},
+{
+    "word": "passport",
+    "languages": {
+        "english": "passport",
+        "spanish": "pasaporte",
+        "french": "passeport",
+        "german": "reisepass",
+        "italian": "passaporto",
+        "portuguese": "passaporte",
+        "dutch": "paspoort",
+        "japanese": "pasupōto",
+        "korean": "yeogwon",
+        "finnish": "passi",
+        "tereo": "uruwhenua"
+    },
+    "tags": ["travel", "document", "identification", "international"],
+    "image": "/images/passport.svg",
+    "funFact": "The world's most powerful passport belongs to Japan, allowing visa-free entry to 193 countries.",
+    "congrats": "You've just stamped your way to success!",
+    "sorry": "Looks like your travel plans are on hold!"
+},
+{
+    "word": "pencil",
+    "languages": {
+        "english": "pencil",
+        "spanish": "lápiz",
+        "french": "crayon",
+        "german": "bleistift",
+        "italian": "matita",
+        "portuguese": "lápis",
+        "dutch": "potlood",
+        "japanese": "enpitsu",
+        "korean": "yeonpil",
+        "finnish": "lyijykynä",
+        "tereo": "pene rākau"
+    },
+    "tags": ["school", "writing", "stationery", "tool"],
+    "image": "/images/pencil.svg",
+    "funFact": "A single pencil can draw a line 35 miles long.",
+    "congrats": "You've got the write stuff!",
+    "sorry": "Time to sharpen your skills!"
+},
+{
+    "word": "chair",
+    "languages": {
+        "english": "chair",
+        "spanish": "silla",
+        "french": "chaise",
+        "german": "stuhl",
+        "italian": "sedia",
+        "portuguese": "cadeira",
+        "dutch": "stoel",
+        "japanese": "isu",
+        "korean": "uija",
+        "finnish": "tuoli",
+        "tereo": "tūru"
+    },
+    "tags": ["household", "furniture", "seating", "living room"],
+    "image": "/images/chair.svg",
+    "funFact": "The oldest known chair is over 5,000 years old, found in Egypt.",
+    "congrats": "You're sitting pretty!",
+    "sorry": "Don't take this sitting down!"
+}
+
+]}
