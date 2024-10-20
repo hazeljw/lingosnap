@@ -209,7 +209,7 @@
             "image": "/images/chocolate.png",
             "funFact": "The scientific name for the cocoa tree, Theobroma cacao, means 'food of the gods'.",
             "congrats": "Sweet success!",
-            "sorry": "Don't melt down, solidify your knowledge and try again!"
+            "sorry": "Don't melt down, try again!"
         },
         {
             "word": "coffee",
@@ -314,7 +314,7 @@
             "image": "/images/fries.png",
             "funFact": "The world record for the longest french fry is 34 inches.",
             "congrats": "You're on fire with this answer!",
-            "sorry": "This answer's a bit soggy, crisp it up and try again!"
+            "sorry": "This answer's a bit soggy, try again!"
         },
         {
             "word": "hotdog",
@@ -335,7 +335,7 @@
             "image": "/images/hotdog.png",
             "funFact": "The world record for most hot dogs eaten in 10 minutes is 76, set by Joey Chestnut in 2021.",
             "congrats": "You're on a roll with this one!",
-            "sorry": "This answer's not cutting the mustard, try again!"
+            "sorry": "This answer's not cutting the mustard!"
         },
         {
             "word": "icecream",

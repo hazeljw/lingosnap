@@ -13,15 +13,37 @@ export interface RoomData {
 }
 
 export enum Language {
-    English = 'English',
-    Spanish = 'Spanish',
-    French = 'French',
-    German = 'German',
-    Italian = 'Italian',
-    Dutch = 'Dutch',
-    Portuguese = 'Portuguese',
-    Japanese = 'Japanese',
-    Korean = 'Korean',
-    Finnish = 'Finnish',
-    TeReo = 'Te Reo',
+    English = 'english',
+    Spanish = 'spanish',
+    French = 'french',
+    German = 'german',
+    Italian = 'italian',
+    Dutch = 'dutch',
+    Portuguese = 'portuguese',
+    Japanese = 'japanese',
+    Korean = 'korean',
+    Finnish = 'finnish',
+    TeReo = 'tereo',
+}
+
+export interface ContentItem {
+    word: string;
+    languages: {
+        [Language.English]: string;
+        [Language.Spanish]: string;
+        [Language.French]: string;
+        [Language.German]: string;
+        [Language.Italian]: string;
+        [Language.Dutch]: string;
+        [Language.Portuguese]: string;
+        [Language.Japanese]: string;
+        [Language.Korean]: string;
+        [Language.Finnish]: string;
+        [Language.TeReo]: string;
+    };
+    tags: string[];
+    image: string;
+    funFact: string;
+    congrats: string;
+    sorry: string;
 }

@@ -5,6 +5,7 @@ import LandingScreen from './components/landingScreen/LandingScreen';
 import Lobby from './components/lobby/Lobby';
 import io from 'socket.io-client';
 import {RoomData} from '../../common/types';
+import GameOn from './components/game/GameOn';
 
 enum GameStatus {
   NotJoined='NotJoined',
@@ -44,6 +45,12 @@ function App() {
     setRoomData(undefined);
   }
 
+  const handleStartGame = () => {
+    // TODO: start the game for everyone in the room
+    //socket.emit('start_game', {roomData});
+    setGameStatus(GameStatus.InGame);
+  }
+
 
   return (
     <div className="App">
@@ -54,7 +61,9 @@ function App() {
       { gameStatus === GameStatus.NotJoined && <LandingScreen socket={socket} />}
 
 
-      { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} />}
+      { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame}/>}
+
+      { gameStatus === GameStatus.InGame && <GameOn roomData={roomData} handleLeaveLobby={handleLeaveLobby} />}
       
     </div>
   );
