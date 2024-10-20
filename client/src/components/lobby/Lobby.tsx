@@ -2,25 +2,32 @@ import React from 'react';
 import logo from './logo.svg';
 import './styles.css';
 import { Avatar, Box, Button, TextField } from '@mui/material';
+import { RoomData } from '../../../../common/types';
 
-function Lobby({roomCode}: {roomCode: string}) {
+function Lobby({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveLobby: () => void}) {
 
     const handleStartGame = () => {
     }
 
   return (
     <Box className="Lobby flexCenter" gap={3} flexDirection={'column'}>
-        <Box className="title">Game code: {roomCode}</Box>
+        <Box className="title">Game code: {roomData?.roomCode}</Box>
 
-        <Box className="flexCenter" >
-            <Box className="leftBox">
+        <Box className="flexSimple" >
+            <Box className="leftBox" mr={2}>
                 <Box>Players:</Box>
                 <Box>
+                {roomData?.users?.map((user, index) => {
 
-                <Box className="flexCenter"  gap={1} >
-                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                    <TextField id="outlined-basic" label="Name" variant="outlined" />
-                </Box>
+                    return (
+                        <Box className="flexSimple" gap={1} key={index + user?.id}>
+                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                            <Box>
+                                {user?.name}:{user?.isHost ? 'Host' : ''}
+                            </Box>
+                        </Box>
+                    )
+                })}
                 </Box>
             </Box>
 
@@ -35,6 +42,12 @@ function Lobby({roomCode}: {roomCode: string}) {
 
                 <Button variant="contained" color="primary" onClick={handleStartGame}>Start Game</Button>
             </Box>
+
+        </Box>
+
+
+        <Box>
+            <Button variant="contained" color="primary" onClick={handleLeaveLobby}>Leave</Button>
 
         </Box>
 

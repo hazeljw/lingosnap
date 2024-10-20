@@ -9,11 +9,11 @@ function LandingScreen({socket}: {socket:Socket}) {
     const [enteredGameCode, setEnteredGameCode] = React.useState("");
 
     const handleHostNewGame = () => {
-      socket.emit('host_new_room', {userName: name});
+      socket.emit('host_new_room', {name});
     }
 
     const handleJoinGame = () => {
-      socket.emit('join_room', {userName: name, room: enteredGameCode});
+      socket.emit('join_room', {name, room: enteredGameCode});
     }
 
   return (
