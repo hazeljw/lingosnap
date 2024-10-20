@@ -3,9 +3,12 @@ import './styles.css';
 import { Avatar, Box, Button, TextField } from '@mui/material';
 import { RoomData } from '../../../../common/types';
 import { GameContentData, getItemsForCard } from './helpers';
+import HintMenu from './HintMenu';
+import { Language } from '../common/enums';
 
 function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveLobby: () => void}) {
     const [itemData, setItemData] = React.useState<GameContentData>();
+    const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
     // TODO: update dynamically as game progresses
     const itemsPerCard = 7;
@@ -84,6 +87,12 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
 
             </Box>
+
+            <Box>
+                <Button variant="contained" color="primary" onClick={() => {setHintMenuOpen(true)}}>Hint</Button>
+            </Box>
+
+            <HintMenu open={hintMenuOpen} handleClose={() => {setHintMenuOpen(false)}} chosenLanguage={Language.French}/>
         </Box>
     );
 }

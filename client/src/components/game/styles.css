@@ -28,6 +28,13 @@
 }
 
 
-.item {
-    
+.wordItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-weight: bold;
 }
