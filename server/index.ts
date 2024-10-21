@@ -106,7 +106,7 @@ io.on("connection", (socket) => {
         // generate the game state
         
         // TODO: make this change throughout the game
-        const numberItemsPerCard = 10;
+        const numberItemsPerCard = 3;
 
         const gameItems = getItemsForCard(numberItemsPerCard);
 
@@ -127,6 +127,57 @@ io.on("connection", (socket) => {
         socket.to(roomCode).emit('game_start', {roomData});
         socket.emit('game_start', {roomData}); // TODO: pass back info about the room
         
+    })
+
+
+    socket.on('correct_answer', (data) => {
+
+        const userId = socket.id;
+        const roomCode = data.roomData.roomCode;
+        const roomData = roomDataMap[roomCode];
+
+        // update the user's score
+
+        const totalUsers = roomData.users.length;
+        const totalUsersWithCorrectAnswer = roomData.gameState?.userIdsWithCorrectAnswerForRound.length;
+
+        const score = (totalUsers - totalUsersWithCorrectAnswer) * 100 + 100;
+
+        const user = roomData.users.find(user => user.id === userId);
+
+        if(!user) return;
+        user.score += score;
+        roomData.gameState?.userIdsWithCorrectAnswerForRound.push(userId);
+
+        // check if all users have answered correctly
+        if(roomData.gameState?.userIdsWithCorrectAnswerForRound.length === totalUsers) {
+            // move to the next round
+            roomData.gameState.currentRound += 1;
+
+            if(roomData.gameState.currentRound > roomData.gameState.totalRounds) {
+                // end the game
+
+                // TODO: any relevant stuff here
+
+            } else {
+                // generate the game state
+                const numberItemsPerCard = 10;
+                const gameItems = getItemsForCard(numberItemsPerCard);
+                const gameState = {
+                    ...roomData.gameState,
+                    ...gameItems,
+                    userIdsWithCorrectAnswerForRound: [],
+                    roundExpiryTimeUTC: new Date(Date.now() + 30000) // 30 seconds
+                }
+    
+                roomData.gameState = gameState;
+            }   
+        }
+
+
+
+        socket.to(roomCode).emit('game_update', {roomData});
+        socket.emit('game_update', {roomData}); 
     })
 
 })

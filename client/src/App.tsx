@@ -10,7 +10,8 @@ import GameOn from './components/game/GameOn';
 enum GameStatus {
   NotJoined='NotJoined',
   InLobby='InLobby',
-  InGame='InGame'
+  InGame='InGame',
+  GameOver='GameOver'
 }
 
 const socket = io('http://localhost:3002');
@@ -43,6 +44,18 @@ function App() {
       setGameStatus(GameStatus.InGame);
     });
 
+    socket.on('game_update', (data) => {
+      console.log('game_start got!', data);
+      setRoomData(data?.roomData)
+
+      // check for game over
+      if(data?.roomData?.gameState?.currentRound > data?.roomData?.gameState?.totalRounds) {
+        setGameStatus(GameStatus.GameOver);
+      }
+
+      //setGameStatus(GameStatus.InGame);
+    });
+
   }, [socket]);
 
   const handleLeaveLobby = () => {
@@ -59,6 +72,10 @@ function App() {
     //setGameStatus(GameStatus.InGame);
   }
 
+  const handleCorrectAnswer = () => {
+    socket.emit('correct_answer', {roomData});
+  }
+
 
   return (
     <div className="App">
@@ -67,8 +84,10 @@ function App() {
 
       { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame}/>}
 
-      { gameStatus === GameStatus.InGame && <GameOn roomData={roomData} handleLeaveLobby={handleLeaveLobby} />}
+      { gameStatus === GameStatus.InGame && <GameOn roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} />}
       
+      { gameStatus === GameStatus.GameOver && <div>Game Over!</div>}
+
     </div>
   );
 }

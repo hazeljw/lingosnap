@@ -8,7 +8,7 @@ import { Language } from '../common/enums';
 import { mapLanguageToFlag } from '../common/mappers';
 import UserScore from './UserScore';
 
-function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveLobby: () => void}) {
+function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void}) {
     const [itemData, setItemData] = React.useState<GameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
@@ -27,12 +27,18 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
         if(enteredAnswer?.toLowerCase() === correctAnswer?.toLowerCase()) {
             console.log("CORRECT");
+
+            handleCorrectAnswer();
+
             // handle correct answer
+
         } else {
             console.log("INCORRECT");
             // handle incorrect answer
-            setEnteredAnswer("");
+            
         }
+
+        setEnteredAnswer("");
 
     }
 
@@ -122,7 +128,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
                         CODE: {roomData?.roomCode}
                     </Box>
                     <Box>
-                        Round X of Y
+                        Round {roomData?.gameState?.currentRound} of {roomData?.gameState?.totalRounds}
                     </Box>
                 </Box>
 
