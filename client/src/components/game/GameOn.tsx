@@ -12,8 +12,8 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
     const [itemData, setItemData] = React.useState<GameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
-    const [cardOnePositions, setCardOnePositions] = React.useState<{x: number, y: number}[]>([]);
-    const [cardTwoPositions, setCardTwoPositions] = React.useState<{x: number, y: number}[]>([]);
+    const [cardOnePositions, setCardOnePositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
+    const [cardTwoPositions, setCardTwoPositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
 
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
 
@@ -40,8 +40,8 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
     const itemsPerCard = 10;
 
 
-    const assignPositionsForItems = (numItems:number):{x: number, y: number}[] => {
-        const positions:{x: number, y: number}[] = []
+    const assignPositionsForItems = (numItems:number):{x: number, y: number, rotate:number}[] => {
+        const positions:{x: number, y: number, rotate:number}[] = []
 
         let attempts = 0;
 
@@ -51,6 +51,8 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
             // place randomly within the card
             let x = Math.floor(Math.random() * cardWidth - border) + border;
             let y = Math.floor(Math.random() * cardHeight - border) + border;
+
+            let rotate = Math.floor(Math.random() * (5)) * 90;
 
             if(x > cardWidth - border){
                 x = x - border
@@ -69,7 +71,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
                 continue
             }
 
-            positions.push({x, y})
+            positions.push({x, y, rotate})
         }
 
         return positions
@@ -118,7 +120,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
 
                                 return (
-                                    <Box key={index} style={{position: 'absolute', top: y, left: x}} className='item'>
+                                    <Box key={index} style={{position: 'absolute', top: y, left: x, transform:`rotate(${cardOnePositions[index]?.rotate}deg)`}} className='item'>
                                         <img className='pixelImage' src={item.image} alt={item.word} width={"64px"}/>
                                     </Box>
                                 )
@@ -134,7 +136,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
                                 const y = cardTwoPositions[index]?.y;
 
                                 return (
-                                    <Box key={index} style={{position: 'absolute', top: y, left: x}} className='item'>
+                                    <Box key={index} style={{position: 'absolute', top: y, left: x, transform:`rotate(${cardTwoPositions[index]?.rotate}deg)`}} className='item'>
                                         <img className='pixelImage' src={item.image} alt={item.word} width={"64px"}/>
                                     </Box>
                                 )
