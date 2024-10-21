@@ -3,6 +3,7 @@ export interface User {
     name: string;
     isHost: boolean;
     selectedLanguage?: Language;
+    score?: number;
 }
 
 export interface RoomData {

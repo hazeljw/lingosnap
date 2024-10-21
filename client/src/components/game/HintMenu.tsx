@@ -16,7 +16,6 @@ function HintMenu({handleClose, chosenLanguage, open}: {handleClose: () => void,
             <Box className='subtitle'>{mapLanguageToFlag(chosenLanguage)}{' '}Reference words:</Box>
 
             <Grid container spacing={2}>
-
                 {words.map((word, index) => {
                     return (
                         <Grid size={{ xs: 6, md: 4, lg: 3 }}>
