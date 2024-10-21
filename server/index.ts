@@ -6,7 +6,6 @@ const http = require('http');
 
 const {Server} = require('socket.io');
 const cors = require('cors');
-//const { generateRoomCode } = require('./utils');
 
 import { RoomData } from '../common/types';
 
@@ -36,7 +35,7 @@ io.on("connection", (socket) => {
         const roomData:RoomData = {
             roomCode: roomCode,
             hostId: socket.id,
-            users: [{id: socket.id, name: data.name, isHost: true}],
+            users: [{id: socket.id, name: data.name, isHost: true, score: 0}],
         }
 
         socket.join(roomCode);
@@ -55,7 +54,7 @@ io.on("connection", (socket) => {
 
         const roomData = roomDataMap[data.room];
 
-        const user = {id: socket.id, name: data.name, isHost: false};
+        const user = {id: socket.id, name: data.name, isHost: false, score: 0};
 
         roomData.users.push(user);
 

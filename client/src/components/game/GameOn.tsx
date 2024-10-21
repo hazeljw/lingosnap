@@ -15,10 +15,28 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
     const [cardOnePositions, setCardOnePositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
     const [cardTwoPositions, setCardTwoPositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
 
+    const [celebation, setCelebration] = React.useState<string>('');
+
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
 
     // TODO: get from user settings
-    const chosenLanguage = Language.French;
+    const chosenLanguage = Language.English;
+
+
+    const determineCelebration = () => {
+        const peopleWhoGotIt = roomData?.gameState?.userIdsWithCorrectAnswerForRound?.length ?? 0;
+
+        if(peopleWhoGotIt >= 1) {
+            setCelebration(itemData?.commonItem?.funFact ?? '');
+        } else {
+            setCelebration(itemData?.commonItem?.congrats ?? '');
+        }
+
+        // set time out to clear
+        // setTimeout(() => {
+        //     setCelebration('');
+        // }, 5000)
+    }
 
 
     const handleSubmitAnswer = () => {
@@ -29,6 +47,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
             console.log("CORRECT");
 
             handleCorrectAnswer();
+            determineCelebration();
 
             // handle correct answer
 
@@ -100,6 +119,24 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
     useEffect(() => {
         console.log("Game state changed", roomData?.gameState);
 
+        // if(roomData?.gameState) {
+        //     setItemData({
+        //         cardOne: roomData?.gameState?.cardOne,
+        //         cardTwo: roomData?.gameState?.cardTwo,
+        //         commonItem: roomData?.gameState?.commonItem,
+        //         allItems: roomData?.gameState?.allItems
+        //     })
+
+        //     setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
+        //     setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
+        // }
+    }, [roomData?.gameState])
+
+
+    useEffect(() => {
+        // on round change
+        setCelebration('');
+
         if(roomData?.gameState) {
             setItemData({
                 cardOne: roomData?.gameState?.cardOne,
@@ -111,7 +148,8 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
             setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
             setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
         }
-    }, [roomData?.gameState])
+
+    }, [roomData?.gameState?.currentRound])
 
     // TODO: update dynamically
     const cardHeight = 400
@@ -194,7 +232,10 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
                                 }}
                                 
                             />
-                            <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length}>Submit</Button>
+                            <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebation?.length}>Submit</Button>
+                        </Box>
+                        <Box>
+                            {celebation}
                         </Box>
                         
                     </Box>
