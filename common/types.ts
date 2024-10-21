@@ -10,7 +10,18 @@ export interface RoomData {
     roomCode: string;
     hostId?: string;
     users?: User[];
-    gameState?: any;
+    gameState?: GameState;
+}
+
+export interface GameState {
+    totalRounds: number;
+    currentRound: number;
+    cardOne: ContentItem[];
+    cardTwo: ContentItem[];
+    commonItem: ContentItem;
+    allItems: ContentItem[];
+    userIdsWithCorrectAnswerForRound: string[]
+    roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
 }
 
 export enum Language {

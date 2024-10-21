@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './styles.css';
 import { Avatar, Box, Button, Dialog } from '@mui/material';
-import data from '../configs/contentData.json';
+import data from '../../configs/contentData.json';
 import { Language } from '../common/enums';
 import Grid from '@mui/material/Grid2';
 import { mapLanguageToFlag } from '../common/mappers';

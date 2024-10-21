@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './styles.css';
 import { Avatar, Box, Button, InputAdornment, TextField } from '@mui/material';
 import { RoomData } from '../../../../common/types';
-import { GameContentData, getItemsForCard } from './helpers';
+import { GameContentData } from './helpers';
 import HintMenu from './HintMenu';
 import { Language } from '../common/enums';
 import { mapLanguageToFlag } from '../common/mappers';
@@ -36,10 +36,6 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
     }
 
-    // TODO: update dynamically as game progresses
-    const itemsPerCard = 10;
-
-
     const assignPositionsForItems = (numItems:number):{x: number, y: number, rotate:number}[] => {
         const positions:{x: number, y: number, rotate:number}[] = []
 
@@ -63,13 +59,31 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
             // check if position is already taken
             if(positions.find((pos) => {
-                const overlappingX = pos.x - x < 64 && pos.x - x > 0; // TODO: check overlapping logic
-                const overlappingY = pos.y - y < 64 && pos.y - y > 0;
 
-                return overlappingX && overlappingY
+                const imageWidth = 100;
+
+                const l1 = {x: x, y: y};
+                const r1 = {x: x + imageWidth, y: y + imageWidth};
+                const l2 = {x: pos.x, y: pos.y};
+                const r2 = {x: pos.x + imageWidth, y: pos.y + imageWidth};
+
+
+                 // If one rectangle is to the left of the other
+                if (l1.x > r2.x || l2.x > r1.x)
+                    return false;
+
+                // If one rectangle is above the other
+                if (r1.y > l2.y || r2.y > l1.y)
+                    return false;
+
+                console.log("COLLISION");
+
+                return true;
             })) {
                 continue
             }
+
+            console.log("all good");
 
             positions.push({x, y, rotate})
         }
@@ -77,18 +91,21 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
         return positions
     }
 
+    useEffect(() => {
+        console.log("Game state changed", roomData?.gameState);
 
-    useEffect(() => {   
-        const response = getItemsForCard(itemsPerCard);
+        if(roomData?.gameState) {
+            setItemData({
+                cardOne: roomData?.gameState?.cardOne,
+                cardTwo: roomData?.gameState?.cardTwo,
+                commonItem: roomData?.gameState?.commonItem,
+                allItems: roomData?.gameState?.allItems
+            })
 
-        //  generate postions for each item
-        setCardOnePositions(assignPositionsForItems(response.cardOne.length));
-        setCardTwoPositions(assignPositionsForItems(response.cardTwo.length));
-
-
-        setItemData(response);
-        console.log(response);
-    }, []);
+            setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
+            setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
+        }
+    }, [roomData?.gameState])
 
     // TODO: update dynamically
     const cardHeight = 400

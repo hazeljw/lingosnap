@@ -1,0 +1,510 @@
+{
+    "_comment": "Content that currently has images",
+    "data": [
+        {
+            "word": "apple",
+            "languages": {
+                "english": "apple",
+                "spanish": "manzana",
+                "french": "pomme",
+                "german": "apfel",
+                "italian": "mela",
+                "portuguese": "maçã",
+                "dutch": "appel",
+                "japanese": "ringo",
+                "korean": "sagwa",
+                "finnish": "omena",
+                "tereo": "aporo"
+            },
+            "tags": ["food", "fruit", "healthy", "snack"],
+            "image": "/images/apple.png",
+            "funFact": "Apples float in water because 25% of their volume is air.",
+            "congrats": "You're the apple of my eye!",
+            "sorry": "Don't let this spoil the bunch!"
+        },
+        {
+            "word": "avocado",
+            "languages": {
+            "english": "avocado",
+            "spanish": "aguacate",
+            "french": "avocat",
+            "german": "avocado",
+            "italian": "avocado",
+            "portuguese": "abacate",
+            "dutch": "avocado",
+            "japanese": "abokado",
+            "korean": "abokado",
+            "finnish": "avokado",
+            "tereo": "āwakato"
+            },
+            "tags": ["food", "fruit", "healthy", "green"],
+            "image": "/images/avocado.png",
+            "funFact": "Avocados are a fruit, not a vegetable, and have more potassium than bananas.",
+            "congrats": "You've got the good fats!",
+            "sorry": "Don't let this pit you against success!"
+        },
+        {
+            "word": "banana",
+            "languages": {
+            "english": "banana",
+            "spanish": "plátano",
+            "french": "banane",
+            "german": "banane",
+            "italian": "banana",
+            "portuguese": "banana",
+            "dutch": "banaan",
+            "japanese": "banana",
+            "korean": "banana",
+            "finnish": "banaani",
+            "tereo": "panana"
+            },
+            "tags": ["food", "fruit", "yellow", "potassium"],
+            "image": "/images/banana.png",
+            "funFact": "Bananas are berries, but strawberries aren't!",
+            "congrats": "You're top of the bunch!",
+            "sorry": "Don't slip up, peel yourself off and try again!"
+        },
+        {
+            "word": "beer",
+            "languages": {
+            "english": "beer",
+            "spanish": "cerveza",
+            "french": "bière",
+            "german": "bier",
+            "italian": "birra",
+            "portuguese": "cerveja",
+            "dutch": "bier",
+            "japanese": "bīru",
+            "korean": "maekju",
+            "finnish": "olut",
+            "tereo": "pia"
+            },
+            "tags": ["food", "drink", "alcohol", "beverage"],
+            "image": "/images/beer.png",
+            "funFact": "The world's strongest beer is 'Snake Venom' with 67.5% alcohol content.",
+            "congrats": "You're brewing up success!",
+            "sorry": "This answer's a bit flat, but don't get bitter!"
+        },
+        {
+            "word": "bread",
+            "languages": {
+            "english": "bread",
+            "spanish": "pan",
+            "french": "pain",
+            "german": "brot",
+            "italian": "pane",
+            "portuguese": "pão",
+            "dutch": "brood",
+            "japanese": "pan",
+            "korean": "ppang",
+            "finnish": "leipä",
+            "tereo": "parāoa"
+            },
+            "tags": ["food", "staple", "carbohydrate", "baked"],
+            "image": "/images/bread.png",
+            "funFact": "The world's oldest evidence of bread-making dates back 14,400 years.",
+            "congrats": "You're on a roll!",
+            "sorry": "Don't be crusty, rise to the occasion!"
+        },
+        {
+            "word": "burger",
+            "languages": {
+            "english": "burger",
+            "spanish": "hamburguesa",
+            "french": "hamburger",
+            "german": "burger",
+            "italian": "hamburger",
+            "portuguese": "hambúrguer",
+            "dutch": "hamburger",
+            "japanese": "bāgā",
+            "korean": "beogeo",
+            "finnish": "hampurilainen",
+            "tereo": "pēke"
+            },
+            "tags": ["food", "fast food", "meat", "sandwich"],
+            "image": "/images/burger.png",
+            "funFact": "The largest hamburger ever made weighed 2,566 pounds.",
+            "congrats": "You've got a real whopper of an answer!",
+            "sorry": "This answer's a little undercooked, flip it and try again!"
+        },
+        {
+            "word": "carrot",
+            "languages": {
+            "english": "carrot",
+            "spanish": "zanahoria",
+            "french": "carotte",
+            "german": "karotte",
+            "italian": "carota",
+            "portuguese": "cenoura",
+            "dutch": "wortel",
+            "japanese": "ninjin",
+            "korean": "danggeun",
+            "finnish": "porkkana",
+            "tereo": "kāreti"
+            },
+            "tags": ["food", "vegetable", "orange", "healthy"],
+            "image": "/images/carrot.png",
+            "funFact": "Carrots were originally purple before being bred orange in the 17th century.",
+            "congrats": "You've got 20/20 vision on this one!",
+            "sorry": "Don't get steamed, stay crisp and try again!"
+        },
+        {
+            "word": "cheese",
+            "languages": {
+            "english": "cheese",
+            "spanish": "queso",
+            "french": "fromage",
+            "german": "käse",
+            "italian": "formaggio",
+            "portuguese": "queijo",
+            "dutch": "kaas",
+            "japanese": "chīzu",
+            "korean": "chijeu",
+            "finnish": "juusto",
+            "tereo": "tīhi"
+            },
+            "tags": ["food", "dairy", "protein", "snack"],
+            "image": "/images/cheese.png",
+            "funFact": "The world's most expensive cheese comes from donkey milk and costs over $500 per pound.",
+            "congrats": "You're the big cheese now!",
+            "sorry": "Don't let this grate on you, try again!"
+        },
+        {
+            "word": "cherry",
+            "languages": {
+            "english": "cherry",
+            "spanish": "cereza",
+            "french": "cerise",
+            "german": "kirsche",
+            "italian": "ciliegia",
+            "portuguese": "cereja",
+            "dutch": "kers",
+            "japanese": "sakuranbo",
+            "korean": "cherri",
+            "finnish": "kirsikka",
+            "tereo": "tērī"
+            },
+            "tags": ["food", "fruit", "red", "sweet"],
+            "image": "/images/cherry.png",
+            "funFact": "The world record for cherry pit spitting is 93 feet 6.5 inches.",
+            "congrats": "You've hit the jackpot!",
+            "sorry": "This answer's the pits, but keep trying!"
+        },
+        {
+            "word": "chocolate",
+            "languages": {
+            "english": "chocolate",
+            "spanish": "chocolate",
+            "french": "chocolat",
+            "german": "schokolade",
+            "italian": "cioccolato",
+            "portuguese": "chocolate",
+            "dutch": "chocolade",
+            "japanese": "chokorēto",
+            "korean": "chokollit",
+            "finnish": "suklaa",
+            "tereo": "tiakarete"
+            },
+            "tags": ["food", "sweet", "dessert", "cocoa"],
+            "image": "/images/chocolate.png",
+            "funFact": "The scientific name for the cocoa tree, Theobroma cacao, means 'food of the gods'.",
+            "congrats": "Sweet success!",
+            "sorry": "Don't melt down, try again!"
+        },
+        {
+            "word": "coffee",
+            "languages": {
+            "english": "coffee",
+            "spanish": "café",
+            "french": "café",
+            "german": "kaffee",
+            "italian": "caffè",
+            "portuguese": "café",
+            "dutch": "koffie",
+            "japanese": "kōhī",
+            "korean": "keopi",
+            "finnish": "kahvi",
+            "tereo": "kawhe"
+            },
+            "tags": ["food", "drink", "caffeine", "beverage"],
+            "image": "/images/coffee.png",
+            "funFact": "Coffee is the second most traded commodity in the world, after crude oil.",
+            "congrats": "You're brewing with success!",
+            "sorry": "This answer's a little weak, try a stronger brew!"
+        },
+        {
+            "word": "donut",
+            "languages": {
+            "english": "donut",
+            "spanish": "rosquilla",
+            "french": "beignet",
+            "german": "krapfen",
+            "italian": "ciambella",
+            "portuguese": "rosquinha",
+            "dutch": "donut",
+            "japanese": "dōnatsu",
+            "korean": "donat",
+            "finnish": "donitsi",
+            "tereo": "tōnati"
+            },
+            "tags": ["food", "dessert", "sweet", "pastry"],
+            "image": "/images/donut.png",
+            "funFact": "The largest donut ever made was an American-style jelly donut weighing 1.7 tons.",
+            "congrats": "You've got this one in the bag!",
+            "sorry": "Donut give up, try again!"
+        },
+        {
+            "word": "egg",
+            "languages": {
+            "english": "egg",
+            "spanish": "huevo",
+            "french": "œuf",
+            "german": "ei",
+            "italian": "uovo",
+            "portuguese": "ovo",
+            "dutch": "ei",
+            "japanese": "tamago",
+            "korean": "gyeran",
+            "finnish": "muna",
+            "tereo": "heeki"
+            },
+            "tags": ["food", "protein", "breakfast", "versatile"],
+            "image": "/images/egg.png",
+            "funFact": "The largest egg in the world is laid by the ostrich and can weigh up to 5 pounds.",
+            "congrats": "You've cracked it!",
+            "sorry": "Don't walk on eggshells, give it another go!"
+        },
+        {
+            "word": "fish",
+            "languages": {
+            "english": "fish",
+            "spanish": "pescado",
+            "french": "poisson",
+            "german": "fisch",
+            "italian": "pesce",
+            "portuguese": "peixe",
+            "dutch": "vis",
+            "japanese": "sakana",
+            "korean": "saengseon",
+            "finnish": "kala",
+            "tereo": "ika"
+            },
+            "tags": ["food", "seafood", "protein", "omega-3"],
+            "image": "/images/fish.png",
+            "funFact": "There are over 34,000 known species of fish.",
+            "congrats": "You've reeled in the right answer!",
+            "sorry": "Don't let this one be the one that got away!"
+        },
+        {
+            "word": "fries",
+            "languages": {
+            "english": "fries",
+            "spanish": "patatas fritas",
+            "french": "frites",
+            "german": "pommes",
+            "italian": "patatine fritte",
+            "portuguese": "batatas fritas",
+            "dutch": "friet",
+            "japanese": "furaido potato",
+            "korean": "gamja-튀김",
+            "finnish": "ranskalaiset",
+            "tereo": "rīwai parai"
+            },
+            "tags": ["food", "fast food", "potato", "side dish"],
+            "image": "/images/fries.png",
+            "funFact": "The world record for the longest french fry is 34 inches.",
+            "congrats": "You're on fire with this answer!",
+            "sorry": "This answer's a bit soggy, try again!"
+        },
+        {
+            "word": "hotdog",
+            "languages": {
+            "english": "hotdog",
+            "spanish": "perrito caliente",
+            "french": "hot-dog",
+            "german": "hotdog",
+            "italian": "hot dog",
+            "portuguese": "cachorro-quente",
+            "dutch": "hotdog",
+            "japanese": "hotto doggu",
+            "korean": "hasdogeu",
+            "finnish": "hodari",
+            "tereo": "hōtoke"
+            },
+            "tags": ["food", "fast food", "sausage", "sandwich"],
+            "image": "/images/hotdog.png",
+            "funFact": "The world record for most hot dogs eaten in 10 minutes is 76, set by Joey Chestnut in 2021.",
+            "congrats": "You're on a roll with this one!",
+            "sorry": "This answer's not cutting the mustard!"
+        },
+        {
+            "word": "icecream",
+            "languages": {
+            "english": "ice cream",
+            "spanish": "helado",
+            "french": "glace",
+            "german": "eis",
+            "italian": "gelato",
+            "portuguese": "sorvete",
+            "dutch": "ijsje",
+            "japanese": "aisu kurīmu",
+            "korean": "aiseukeurim",
+            "finnish": "jäätelö",
+            "tereo": "aihikirīmi"
+            },
+            "tags": ["food", "dessert", "cold", "sweet"],
+            "image": "/images/icecream.png",
+            "funFact": "The world's tallest ice cream cone was over 9 feet tall and was made in Italy.",
+            "congrats": "That's the scoop! You've got it!",
+            "sorry": "Don't get brain freeze, warm up to another try!"
+        },
+        {
+            "word": "lollipop",
+            "languages": {
+            "english": "lollipop",
+            "spanish": "piruleta",
+            "french": "sucette",
+            "german": "lutscher",
+            "italian": "lecca lecca",
+            "portuguese": "pirulito",
+            "dutch": "lolly",
+            "japanese": "roripoppu",
+            "korean": "sattang-aju",
+            "finnish": "tikkari",
+            "tereo": "rare"
+            },
+            "tags": ["food", "candy", "sweet", "treat"],
+            "image": "/images/lollipop.png",
+            "funFact": "The largest lollipop ever made weighed 7,003 pounds and had a diameter of 4 feet 8.75 inches.",
+            "congrats": "You've licked this question!",
+            "sorry": "Don't get stuck, give it another lick!"
+        },
+        {
+            "word": "milk",
+            "languages": {
+            "english": "milk",
+            "spanish": "leche",
+            "french": "lait",
+            "german": "milch",
+            "italian": "latte",
+            "portuguese": "leite",
+            "dutch": "melk",
+            "japanese": "gyūnyū",
+            "korean": "uyu",
+            "finnish": "maito",
+            "tereo": "miraka"
+            },
+            "tags": ["food", "drink", "dairy", "calcium"],
+            "image": "/images/milk.png",
+            "funFact": "A cow can produce an average of 6.3 gallons of milk daily and 350,000 glasses of milk in a lifetime.",
+            "congrats": "You've creamed this question!",
+            "sorry": "Don't cry over spilled milk, try again!"
+        },
+        {
+            "word": "muffin",
+            "languages": {
+            "english": "muffin",
+            "spanish": "magdalena",
+            "french": "muffin",
+            "german": "muffin",
+            "italian": "muffin",
+            "portuguese": "muffin",
+            "dutch": "muffin",
+            "japanese": "mafin",
+            "korean": "meopin",
+            "finnish": "muffini",
+            "tereo": "mapine"
+            },
+            "tags": ["food", "pastry", "breakfast", "snack"],
+            "image": "/images/muffin.png",
+            "funFact": "The term 'muffin top' to describe love handles entered the Oxford English Dictionary in 2011.",
+            "congrats": "You've risen to the occasion!",
+            "sorry": "This answer's a bit crumbly, but don't get deflated!"
+        },
+        {
+            "word": "orange",
+            "languages": {
+            "english": "orange",
+            "spanish": "naranja",
+            "french": "orange",
+            "german": "orange",
+            "italian": "arancia",
+            "portuguese": "laranja",
+            "dutch": "sinaasappel",
+            "japanese": "orenji",
+            "korean": "orenji",
+            "finnish": "appelsiini",
+            "tereo": "ārani"
+            },
+            "tags": ["food", "fruit", "citrus", "vitamin C"],
+            "image": "/images/orange.png",
+            "funFact": "The color orange is named after the fruit, not the other way around.",
+            "congrats": "You've squeezed out the right answer!",
+            "sorry": "Don't let this answer leave a sour taste, try again!"
+        },
+        {
+            "word": "pineapple",
+            "languages": {
+            "english": "pineapple",
+            "spanish": "piña",
+            "french": "ananas",
+            "german": "ananas",
+            "italian": "ananas",
+            "portuguese": "abacaxi",
+            "dutch": "ananas",
+            "japanese": "painappuru",
+            "korean": "painaepeul",
+            "finnish": "ananas",
+            "tereo": "paināporo"
+            },
+            "tags": ["food", "fruit", "tropical", "sweet"],
+            "image": "/images/pineapple.png",
+            "funFact": "It takes about 18-20 months to grow a single pineapple.",
+            "congrats": "You're the crown of the fruit bowl!",
+            "sorry": "This answer's a bit prickly, but don't get stuck!"
+        },
+        {
+            "word": "pizza",
+            "languages": {
+            "english": "pizza",
+            "spanish": "pizza",
+            "french": "pizza",
+            "german": "pizza",
+            "italian": "pizza",
+            "portuguese": "pizza",
+            "dutch": "pizza",
+            "japanese": "piza",
+            "korean": "pija",
+            "finnish": "pizza",
+            "tereo": "pīhi"
+            },
+            "tags": ["food", "Italian", "fast food", "cheese"],
+            "image": "/images/pizza.png",
+            "funFact": "The world's largest pizza was 13,580.28 sq ft and was made in Rome, Italy in 2012.",
+            "congrats": "You've got a slice of success!",
+            "sorry": "This answer's a bit cheesy, toss it and try again!"
+        },
+        {
+            "word": "watermelon",
+            "languages": {
+            "english": "watermelon",
+            "spanish": "sandía",
+            "french": "pastèque",
+            "german": "wassermelone",
+            "italian": "anguria",
+            "portuguese": "melancia",
+            "dutch": "watermeloen",
+            "japanese": "suika",
+            "korean": "subak",
+            "finnish": "vesimeloni",
+            "tereo": "mereni"
+            },
+            "tags": ["food", "fruit", "summer", "hydrating"],
+            "image": "/images/watermelon.png",
+            "funFact": "Watermelon is both a fruit and a vegetable - it's related to cucumbers, pumpkins, and squash.",
+            "congrats": "You've seeded out the right answer!",
+            "sorry": "This answer's not quite ripe, let it grow and try again!"
+        }
+    ]
+}
+

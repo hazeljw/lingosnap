@@ -37,6 +37,12 @@ function App() {
       setRoomData(data?.roomData)
     });
 
+    socket.on('game_start', (data) => {
+      console.log('game_start got!', data);
+      setRoomData(data?.roomData)
+      setGameStatus(GameStatus.InGame);
+    });
+
   }, [socket]);
 
   const handleLeaveLobby = () => {
@@ -48,18 +54,16 @@ function App() {
   const handleStartGame = () => {
     // TODO: start the game for everyone in the room
     //socket.emit('start_game', {roomData});
-    setGameStatus(GameStatus.InGame);
+    socket.emit('start_game', {roomData});
+
+    //setGameStatus(GameStatus.InGame);
   }
 
 
   return (
     <div className="App">
 
-      {gameStatus}
-      {" "}roomcode: {roomData?.roomCode}
-
       { gameStatus === GameStatus.NotJoined && <LandingScreen socket={socket} />}
-
 
       { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame}/>}
 

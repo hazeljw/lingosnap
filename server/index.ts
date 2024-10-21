@@ -1,4 +1,4 @@
-import { generateRoomCode } from "./utils";
+import { generateRoomCode, getItemsForCard } from "./utils";
 
 const express = require('express');
 const app = express();
@@ -7,6 +7,8 @@ const http = require('http');
 const {Server} = require('socket.io');
 const cors = require('cors');
 //const { generateRoomCode } = require('./utils');
+
+import { RoomData } from '../common/types';
 
 const PORT = process.env.PORT || 3000;
 
@@ -31,11 +33,10 @@ io.on("connection", (socket) => {
     socket.on('host_new_room', (data) => {
         const roomCode = generateRoomCode();
 
-        const roomData = {
+        const roomData:RoomData = {
             roomCode: roomCode,
             hostId: socket.id,
             users: [{id: socket.id, name: data.name, isHost: true}],
-            gameState: {}
         }
 
         socket.join(roomCode);
@@ -87,6 +88,45 @@ io.on("connection", (socket) => {
 
         console.log(`User with id: ${socket.id} left room: ${roomCode}`);
 
+    })
+
+
+    socket.on('start_game', (data) => {
+        const roomCode = data.roomData.roomCode;
+
+        console.log("trying to start game")
+
+        if(!roomDataMap[roomCode]) {
+            socket.emit('start_game_error', {error: 'Room not found'});
+            return;
+        }
+
+        const roomData = roomDataMap[roomCode];
+
+        // generate the game state
+        
+        // TODO: make this change throughout the game
+        const numberItemsPerCard = 10;
+
+        const gameItems = getItemsForCard(numberItemsPerCard);
+
+        const gameState = {
+            totalRounds: 3,
+            currentRound: 1,
+            ...gameItems,
+            userIdsWithCorrectAnswerForRound: [],
+            roundExpiryTimeUTC: new Date(Date.now() + 30000) // 30 seconds
+        }
+
+        // set all scores to 0
+        roomData.users.forEach(user => user.score = 0);
+
+        roomData.gameState = gameState;
+
+        // send the game state to all users in the room
+        socket.to(roomCode).emit('game_start', {roomData});
+        socket.emit('game_start', {roomData}); // TODO: pass back info about the room
+        
     })
 
 })
