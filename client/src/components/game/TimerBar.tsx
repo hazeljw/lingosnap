@@ -34,7 +34,7 @@ function TimerBar({expiryTime, handleTimeOut}:{expiryTime?:Date, handleTimeOut:(
       setProgress(progress);
 
       // if the time has expired, clear the interval
-      if(progress <= 0) {
+      if(progress >= 100) {
         handleTimeOut();
         clearInterval(interval);
       }
