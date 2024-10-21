@@ -76,6 +76,10 @@ function App() {
     socket.emit('correct_answer', {roomData});
   }
 
+  const handleTimeOut = () => {
+    // TODO: If the user is the host, end the round.
+  }
+
 
   return (
     <div className="App">
@@ -84,7 +88,7 @@ function App() {
 
       { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame}/>}
 
-      { gameStatus === GameStatus.InGame && <GameOn roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} />}
+      { gameStatus === GameStatus.InGame && <GameOn roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
       { gameStatus === GameStatus.GameOver && <div>Game Over!</div>}
 

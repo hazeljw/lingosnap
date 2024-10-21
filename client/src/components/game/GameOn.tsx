@@ -7,8 +7,9 @@ import HintMenu from './HintMenu';
 import { Language } from '../common/enums';
 import { mapLanguageToFlag } from '../common/mappers';
 import UserScore from './UserScore';
+import TimerBar from './TimerBar';
 
-function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void}) {
+function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void, handleTimeOut: () => void}) {
     const [itemData, setItemData] = React.useState<GameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
@@ -21,6 +22,8 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
 
     // TODO: get from user settings
     const chosenLanguage = Language.English;
+
+    
 
 
     const determineCelebration = () => {
@@ -223,7 +226,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
                                         </InputAdornment>
                                     ),
                                     onKeyDown: (event) => {
-                                        const enterKeys = ['Enter', ' ']
+                                        const enterKeys = ['Enter']
                                         if (enterKeys.includes(event.key) && enteredAnswer?.length) {
                                             handleSubmitAnswer()
                                         }
@@ -233,6 +236,9 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer}: {roomData?: R
                                 
                             />
                             <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebation?.length}>Submit</Button>
+                        </Box>
+                        <Box height={10}>
+                            <TimerBar expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={handleTimeOut} />
                         </Box>
                         <Box>
                             {celebation}
