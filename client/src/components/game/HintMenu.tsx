@@ -21,7 +21,7 @@ function HintMenu({handleClose, chosenLanguage, open}: {handleClose: () => void,
                     return (
                         <Grid size={{ xs: 6, md: 4, lg: 3 }}>
                             <Box  key={index}className='wordItem' >
-                                <img src={word.image} alt={word.word} width={"32px"}/>
+                                <img src={word.image} alt={word.word} width={"32px"} className='pixelImage'/>
                                 {word.languages[chosenLanguage]}
                             </Box>
                         </Grid>

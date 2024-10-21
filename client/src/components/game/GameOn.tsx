@@ -11,7 +11,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
     // TODO: update dynamically as game progresses
-    const itemsPerCard = 7;
+    const itemsPerCard = 10;
 
 
     useEffect(() => {   
@@ -53,7 +53,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
                             return (
                                 <Box key={index} style={{position: 'absolute', top: y, left: x}} className='item'>
-                                    <img src={item.image} alt={item.word} width={"64px"}/>
+                                    <img className='pixelImage' src={item.image} alt={item.word} width={"64px"}/>
                                 </Box>
                             )
                             
@@ -76,7 +76,7 @@ function GameOn({roomData, handleLeaveLobby}: {roomData?: RoomData, handleLeaveL
 
                             return (
                                 <Box key={index} style={{position: 'absolute', top: y, left: x}} className='item'>
-                                    <img src={item.image} alt={item.word} width={"64px"}/>
+                                    <img className='pixelImage' src={item.image} alt={item.word} width={"64px"}/>
                                 </Box>
                             )
                             

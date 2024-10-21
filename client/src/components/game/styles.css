@@ -38,3 +38,11 @@
     font-size: 1.5em;
     font-weight: bold;
 }
+
+.pixelImage {
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+}
