@@ -9,7 +9,7 @@ export interface User {
 export interface RoomData {
     roomCode: string;
     hostId?: string;
-    users?: User[];
+    users: User[];
     gameState?: GameState;
 }
 

@@ -180,6 +180,17 @@ io.on("connection", (socket) => {
         
     })
 
+    socket.on('return_to_lobby', (data) => {
+        const roomCode = data.roomData.roomCode;
+        const roomData = roomDataMap[roomCode];
+    
+        // reset the game state
+        roomData.gameState = undefined;
+
+        io.in(roomCode).emit('return_to_lobby', {roomData});
+
+    })
+
 })
 
 

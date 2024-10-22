@@ -6,6 +6,7 @@ import Lobby from './components/lobby/Lobby';
 import io from 'socket.io-client';
 import {RoomData} from '../../common/types';
 import GameOn from './components/game/GameOn';
+import ResultsScreen from './components/postGame/ResultsScreen';
 
 enum GameStatus {
   NotJoined='NotJoined',
@@ -56,6 +57,11 @@ function App() {
       //setGameStatus(GameStatus.InGame);
     });
 
+    socket.on('return_to_lobby', (data) => {
+      setRoomData(data?.roomData)
+      setGameStatus(GameStatus.InLobby);
+    });
+
   }, [socket]);
 
   const handleLeaveLobby = () => {
@@ -84,6 +90,11 @@ function App() {
     }
   }
 
+  const isHost = roomData?.hostId === socket.id;
+
+  const handleReturnToLobby = () => {
+    socket.emit('return_to_lobby', {roomData});
+  }
 
   return (
     <div className="App">
@@ -94,7 +105,7 @@ function App() {
 
       { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
-      { gameStatus === GameStatus.GameOver && <div>Game Over!</div>}
+      { gameStatus === GameStatus.GameOver && <ResultsScreen roomData={roomData} isHost={isHost} handleReturnToLobby={handleReturnToLobby}/>}
 
     </div>
   );
