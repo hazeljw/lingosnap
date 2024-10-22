@@ -8,8 +8,9 @@ import { Language } from '../common/enums';
 import { mapLanguageToFlag } from '../common/mappers';
 import UserScore from './UserScore';
 import TimerBar from './TimerBar';
+import { Socket } from 'socket.io-client';
 
-function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void, handleTimeOut: () => void}) {
+function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut, socket}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void, handleTimeOut: () => void, socket:Socket}) {
     const [itemData, setItemData] = React.useState<GameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
@@ -17,13 +18,28 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut}
     const [cardTwoPositions, setCardTwoPositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
 
     const [celebation, setCelebration] = React.useState<string>('');
+    const [missedAnswerText, setMissedAnswerText] = React.useState<string>("");
 
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
 
     // TODO: get from user settings
     const chosenLanguage = Language.English;
 
+    useEffect(() => {
     
+        socket.on('out_of_time', (data) => {
+
+            const roomData:RoomData = data?.roomData
+
+            setMissedAnswerText(`Answer was ${roomData?.gameState?.commonItem?.languages[chosenLanguage]}! ` + roomData?.gameState?.commonItem?.sorry);
+
+            // set time out to clear
+            setTimeout(() => {
+                setMissedAnswerText("");
+            }, 1000)
+        })
+    
+      }, [socket]);
 
 
     const determineCelebration = () => {
@@ -241,7 +257,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut}
                             <TimerBar expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={handleTimeOut} />
                         </Box>
                         <Box>
-                            {celebation}
+                            {celebation} {missedAnswerText}
                         </Box>
                         
                     </Box>
@@ -256,9 +272,13 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut}
 
                     <Box>
 
-                        {roomData?.users?.map((user, index) => {
+                        {roomData?.users?.sort((a, b)=>{
+                            const aScore = a?.score ?? 0;
+                            const bScore = b?.score ?? 0;
+                            return bScore - aScore
+                        })?.map((user, index) => {
                             return (
-                                <UserScore user={user} position={1}/>
+                                <UserScore user={user} position={index+1}/>
                             )
                         })}
                     </Box>

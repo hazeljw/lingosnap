@@ -32,9 +32,8 @@ function TimerBar({expiryTime, handleTimeOut}:{expiryTime?:Date, handleTimeOut:(
       const timeDiff = expiry.getTime() - now.getTime();
       const progress = (timeDiff / 30000) * 100;
       setProgress(progress);
-
       // if the time has expired, clear the interval
-      if(progress >= 100) {
+      if(progress <= 0) {
         handleTimeOut();
         clearInterval(interval);
       }

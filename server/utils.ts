@@ -1,5 +1,5 @@
 import data from '../client/src/configs/contentData.json';
-import { ContentItem } from '../common/types';
+import { ContentItem, RoomData } from '../common/types';
 
 
 export const generateRoomCode = () => {
@@ -54,4 +54,33 @@ export const getItemsForCard = (numItemsPerCard:number, numCards=2):GameContentD
         commonItem,
         allItems: randomItems
     }
+}
+
+
+export const moveToNextRound = (roomData:RoomData) => {
+    if(!roomData.gameState) return roomData;
+
+    roomData.gameState.currentRound += 1;
+
+    if(roomData.gameState.currentRound > roomData.gameState.totalRounds) {
+        // end the game
+
+        // TODO: any relevant stuff here
+
+    } else {
+        // generate the game state
+        const numberItemsPerCard = 10;
+        const gameItems = getItemsForCard(numberItemsPerCard);
+        const gameState = {
+            ...roomData.gameState,
+            ...gameItems,
+            userIdsWithCorrectAnswerForRound: [],
+            roundExpiryTimeUTC: new Date(Date.now() + 30000) // 30 seconds
+        }
+
+        roomData.gameState = gameState;
+    }  
+
+
+    return roomData;
 }

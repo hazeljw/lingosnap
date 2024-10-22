@@ -77,7 +77,11 @@ function App() {
   }
 
   const handleTimeOut = () => {
+    console.log("handling timeout")
     // TODO: If the user is the host, end the round.
+    if(roomData?.hostId === socket.id) {
+      socket.emit('ran_out_of_time', {roomData});
+    }
   }
 
 
@@ -88,7 +92,7 @@ function App() {
 
       { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame}/>}
 
-      { gameStatus === GameStatus.InGame && <GameOn roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
+      { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
       { gameStatus === GameStatus.GameOver && <div>Game Over!</div>}
 

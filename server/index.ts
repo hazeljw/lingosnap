@@ -1,4 +1,4 @@
-import { generateRoomCode, getItemsForCard } from "./utils";
+import { generateRoomCode, getItemsForCard, moveToNextRound } from "./utils";
 
 const express = require('express');
 const app = express();
@@ -151,32 +151,33 @@ io.on("connection", (socket) => {
         // check if all users have answered correctly
         if(roomData.gameState?.userIdsWithCorrectAnswerForRound.length === totalUsers) {
             // move to the next round
-            roomData.gameState.currentRound += 1;
-
-            if(roomData.gameState.currentRound > roomData.gameState.totalRounds) {
-                // end the game
-
-                // TODO: any relevant stuff here
-
-            } else {
-                // generate the game state
-                const numberItemsPerCard = 10;
-                const gameItems = getItemsForCard(numberItemsPerCard);
-                const gameState = {
-                    ...roomData.gameState,
-                    ...gameItems,
-                    userIdsWithCorrectAnswerForRound: [],
-                    roundExpiryTimeUTC: new Date(Date.now() + 30000) // 30 seconds
-                }
-    
-                roomData.gameState = gameState;
-            }   
+            moveToNextRound(roomData)  
         }
 
 
 
         socket.to(roomCode).emit('game_update', {roomData});
         socket.emit('game_update', {roomData}); 
+    })
+
+    socket.on('ran_out_of_time', (data) => {
+        // ran out of time to answer
+        const roomCode = data.roomData.roomCode;
+        const roomData = roomDataMap[roomCode];
+
+
+        // ping anyone who didn't make it in time 
+        const usersWhoDidntAnswer = roomData.users.filter(user => !roomData.gameState.userIdsWithCorrectAnswerForRound.includes(user.id));
+        for(const user of usersWhoDidntAnswer) {
+            io.to(user.id).emit('out_of_time', {roomData});
+        }
+        
+        // move to the next round
+        moveToNextRound(roomData)
+
+        io.in(roomCode).emit('game_update', {roomData});
+        //socket.emit('game_update', {roomData});
+        
     })
 
 })
