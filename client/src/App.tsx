@@ -7,6 +7,7 @@ import io from 'socket.io-client';
 import {RoomData} from '../../common/types';
 import GameOn from './components/game/GameOn';
 import ResultsScreen from './components/postGame/ResultsScreen';
+import RainbowTitle from './components/landingScreen/RainbowTitle';
 
 enum GameStatus {
   NotJoined='NotJoined',

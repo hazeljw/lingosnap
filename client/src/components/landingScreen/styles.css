@@ -1,3 +1,12 @@
+.LandingScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    /* background-color: #f5f5f5; */
+}
+
 .title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -10,3 +19,68 @@
     justify-content: center;
     align-items: center;
 }
+
+.main-title {
+    font-family: 'Helvetica';
+    font-size: 90px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px 1px 0 #000,  
+      -5px 5px 0 #000,
+      1px -1px 0 #000,
+      -1px -1px 0 #000;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .title-word {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .title-letter {
+    transition: transform 0.1s;
+    cursor: pointer;
+  }
+
+  .shift-right .main-title {
+    max-width: 50vw;
+    padding-left: 30px;
+  }
+  
+  .title-letter:hover {
+    transform: translateY(-15px);
+    
+  }
+
+  .specific-title-letter {
+    transition: transform 0.1s;
+    cursor: pointer;
+  }
+
+  .specific-title-letter:hover {
+    transform: translate(163.905px, 130px);
+    
+  }
+
+  .pathDash {
+    stroke-dasharray: 500;
+  }
+
+  .path {
+    
+    stroke-linejoin:"round";
+    stroke-linecap:"round";
+    animation: dash 35s linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 5000;
+    }
+  }

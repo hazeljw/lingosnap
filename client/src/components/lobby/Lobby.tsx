@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './styles.css';
 import { Avatar, Box, Button, TextField } from '@mui/material';
 import { RoomData } from '../../../../common/types';
+import RainbowTitle from '../landingScreen/RainbowTitle';
 
 function Lobby({roomData, handleLeaveLobby, handleStartGame}: {roomData?: RoomData, handleLeaveLobby: () => void, handleStartGame: () => void}) {
 

@@ -1,10 +1,21 @@
 import React from 'react';
 import './styles.css';
-import { Avatar, Box, Button, TextField } from '@mui/material';
+import { Avatar, Badge, Box, Button, IconButton, TextField } from '@mui/material';
 import { Socket } from 'socket.io-client';
+import RainbowTitle from './RainbowTitle';
+import { mapLanguageToFlag } from '../common/mappers';
+import { Language } from '../common/enums';
+
+const avatarOptions = ['/avatars/avatarOne.svg', '/avatars/avatarTwo.svg', '/avatars/avatarThree.svg', '/avatars/avatarFour.svg', '/avatars/chef.svg'];
+
+const getRandomAvatar = () => {
+  return avatarOptions[Math.floor(Math.random()*avatarOptions.length)];
+}
 
 function LandingScreen({socket}: {socket:Socket}) {
     const [name, setName] = React.useState("Guest"+Math.floor(Math.random()*1000));
+    const [selectedLanguage, setSelectedLanguage] = React.useState(Language.Spanish);
+    const [selectedAvatar, setSelectedAvatar] = React.useState(getRandomAvatar());
 
     const [enteredGameCode, setEnteredGameCode] = React.useState("");
 
@@ -16,21 +27,68 @@ function LandingScreen({socket}: {socket:Socket}) {
       socket.emit('join_room', {name, room: enteredGameCode});
     }
 
+    const languages = Object.values(Language);
+
   return (
     <Box className="LandingScreen flexCenter" gap={3} flexDirection={'column'}>
-        <Box className="title">LingoSnap</Box>
+
+        <div className="main-title">
+          <div className="title-word">
+
+            <div className="title-letter">L</div>
+            <div className="title-letter">i</div>
+            <div className="title-letter">n</div>
+            <div className="title-letter">g</div>
+            <div className="title-letter">o</div>
+          </div>
+          <div className="title-word">
+            <div className="title-letter">S</div>
+            <div className="title-letter">N</div>
+            <div className="title-letter">A</div>
+            <div className="title-letter">P</div>
+          </div>
+
+        </div>
+
+
+        <Box className="flexCenter" gap={1}>
+          <Box>
+            Pick a language:
+          </Box>
+          {languages.map((language, index) => {
+
+            return (
+              <IconButton key={index} aria-label={language} color="primary" onClick={() => {setSelectedLanguage(language)}}>
+                {mapLanguageToFlag(language)}
+              </IconButton>
+            )
+          })}
+
+        </Box>
 
         <Box className="flexCenter"  gap={1} >
-            <Avatar alt={name?.length ? name : "LingoSnap"} src="/static/images/avatar/1.jpg" />
+          <Badge
+            overlap="circular"
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            badgeContent={
+              <Box style={{fontSize: 20}}>
+                {mapLanguageToFlag(selectedLanguage)}
+              </Box>
+            }
+          >
+            <Avatar alt={name?.length ? name : "LingoSnap"} src={selectedAvatar}  sx={{ width: 56, height: 56 }}/>
+            </Badge>
             <TextField id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(v) => {setName(v.target?.value)}} />
         </Box>
 
-        <Button variant="contained" color="primary" onClick={handleHostNewGame}>Host New Game</Button>
+        
 
         <Box className="flexCenter" gap={1}>
             <TextField id="outlined-basic" label="Game Code" variant="outlined" value={enteredGameCode} onChange={(v)=>{setEnteredGameCode(v.target?.value)}} />
             <Button variant="contained" color="primary" onClick={handleJoinGame} disabled={enteredGameCode?.length !== 6}>Join Game</Button>
         </Box>
+
+        <Button variant="contained" color="primary" onClick={handleHostNewGame}>Host New Game</Button>
 
     </Box>
   );
