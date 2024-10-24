@@ -23,7 +23,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
 
     // TODO: get from user settings
-    const chosenLanguage = Language.English;
+    const chosenLanguage = roomData?.users?.find((user) => user.id === socket.id)?.selectedLanguage ?? Language.Spanish;
 
     useEffect(() => {
     

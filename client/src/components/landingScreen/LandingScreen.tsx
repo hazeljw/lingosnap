@@ -5,6 +5,7 @@ import { Socket } from 'socket.io-client';
 import RainbowTitle from './RainbowTitle';
 import { mapLanguageToFlag } from '../common/mappers';
 import { Language } from '../common/enums';
+import UserAvatar from '../common/userAvatar';
 
 const avatarOptions = ['/avatars/avatarOne.svg', '/avatars/avatarTwo.svg', '/avatars/avatarThree.svg', '/avatars/avatarFour.svg', '/avatars/chef.svg'];
 
@@ -20,11 +21,11 @@ function LandingScreen({socket}: {socket:Socket}) {
     const [enteredGameCode, setEnteredGameCode] = React.useState("");
 
     const handleHostNewGame = () => {
-      socket.emit('host_new_room', {name});
+      socket.emit('host_new_room', {name, selectedLanguage, selectedAvatar});
     }
 
     const handleJoinGame = () => {
-      socket.emit('join_room', {name, room: enteredGameCode});
+      socket.emit('join_room', {name, room: enteredGameCode, selectedLanguage, selectedAvatar});
     }
 
     const languages = Object.values(Language);
@@ -67,18 +68,8 @@ function LandingScreen({socket}: {socket:Socket}) {
         </Box>
 
         <Box className="flexCenter"  gap={1} >
-          <Badge
-            overlap="circular"
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            badgeContent={
-              <Box style={{fontSize: 20}}>
-                {mapLanguageToFlag(selectedLanguage)}
-              </Box>
-            }
-          >
-            <Avatar alt={name?.length ? name : "LingoSnap"} src={selectedAvatar}  sx={{ width: 56, height: 56 }}/>
-            </Badge>
-            <TextField id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(v) => {setName(v.target?.value)}} />
+          <UserAvatar name={name} selectedAvatar={selectedAvatar} selectedLanguage={selectedLanguage} />
+          <TextField id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(v) => {setName(v.target?.value)}} />
         </Box>
 
         

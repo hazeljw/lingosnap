@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './styles.css';
-import { Avatar, Box, Button, TextField } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import { RoomData } from '../../../../common/types';
-import RainbowTitle from '../landingScreen/RainbowTitle';
+import UserAvatar from '../common/userAvatar';
 
 function Lobby({roomData, handleLeaveLobby, handleStartGame}: {roomData?: RoomData, handleLeaveLobby: () => void, handleStartGame: () => void}) {
 
@@ -19,7 +18,9 @@ function Lobby({roomData, handleLeaveLobby, handleStartGame}: {roomData?: RoomDa
 
                     return (
                         <Box className="flexSimple" gap={1} key={index + user?.id}>
-                            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+
+                            <UserAvatar name={user?.name} selectedAvatar={user.avatar} selectedLanguage={user.selectedLanguage} />
+
                             <Box>
                                 {user?.name}:{user?.isHost ? 'Host' : ''}
                             </Box>

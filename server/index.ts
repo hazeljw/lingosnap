@@ -35,7 +35,7 @@ io.on("connection", (socket) => {
         const roomData:RoomData = {
             roomCode: roomCode,
             hostId: socket.id,
-            users: [{id: socket.id, name: data.name, isHost: true, score: 0}],
+            users: [{id: socket.id, name: data.name, isHost: true, score: 0, selectedLanguage: data.selectedLanguage, avatar: data.selectedAvatar}],
         }
 
         socket.join(roomCode);
@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
 
         const roomData = roomDataMap[data.room];
 
-        const user = {id: socket.id, name: data.name, isHost: false, score: 0};
+        const user = {id: socket.id, name: data.name, isHost: false, score: 0, selectedLanguage: data.selectedLanguage, avatar: data.selectedAvatar};
 
         roomData.users.push(user);
 

@@ -4,6 +4,7 @@ export interface User {
     isHost: boolean;
     selectedLanguage?: Language;
     score?: number;
+    avatar?: string;
 }
 
 export interface RoomData {
