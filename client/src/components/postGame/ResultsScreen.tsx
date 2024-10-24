@@ -3,6 +3,7 @@ import { RoomData } from "../../../../common/types";
 import { Box, Button } from "@mui/material";
 import UserAvatar from "../common/userAvatar";
 import './styles.css';
+import MainTitle from "../common/MainTitle";
 
 
 function ResultsScreen({roomData, handleReturnToLobby, isHost}:{roomData?:RoomData, handleReturnToLobby:()=>void, isHost:boolean}) {
@@ -17,30 +18,30 @@ function ResultsScreen({roomData, handleReturnToLobby, isHost}:{roomData?:RoomDa
   });
 
   return (
-    <div>
-      <h1>Results</h1>
+    <Box display={'flex'} flexDirection={'column'} width={'100%'} alignItems={'center'} mt={2} gap={2}>
+      <MainTitle />
+      <h1 className="noBackgroundText">Results</h1>
 
-      <Box className='podiumContainer'>
-        <Box className='podium secondPlace'></Box>
-        <Box className='podium firstPlace'></Box>
-        <Box className='podium thirdPlace'></Box>
-      </Box>
-
-      <Box maxWidth={'500px'}>
+      <Box maxWidth={'500px'} width={'100%'}>
           {sortedUsers.map((player, index) => {
             const evenIndex = index % 2 === 0;
             const isLast = index === sortedUsers.length - 1;
             const isFirst = index === 0;
+            const borderRadius = `${isFirst ? '16px 16px' : '0 0'} ${isLast ? '16px 16px' : '0 0'}`;
+
             return (
-              <Box key={player.id} className={`playerResult ${evenIndex ? 'even' : 'odd'}`} borderRadius={isFirst ? '16px 16px 0 0' : isLast ? '0 0 16px 16px' : '0'}>
-
-                <UserAvatar selectedAvatar={player.avatar} selectedLanguage={player.selectedLanguage} name={player.name} />
+              <Box key={player.id} className={`playerResult ${evenIndex ? 'even' : 'odd'}`} borderRadius={borderRadius}>
                 
-                <Box className='positionText'>#{index+1}</Box>
+                <Box className='flexCenter'>
+                  <UserAvatar selectedAvatar={player.avatar} selectedLanguage={player.selectedLanguage} name={player.name} />
+                  
+                  <Box className='positionText'>#{index+1}</Box>
 
-                <Box className='playerName'>{player.name}</Box>
+                </Box>
 
-                <Box className='playerScore'>{player.score}</Box>
+                <Box className='playerName' flexGrow={100} ml={2}>{player.name}</Box>
+
+                <Box className='playerScore' justifySelf={'flex-end'}>{player.score}</Box>
               </Box>
             )
           })}
@@ -51,7 +52,7 @@ function ResultsScreen({roomData, handleReturnToLobby, isHost}:{roomData?:RoomDa
         <Button variant="contained" color="primary" onClick={handleReturnToLobby}>Back to lobby</Button>
       </Box>}
       
-    </div>
+    </Box>
   );
 }
 
