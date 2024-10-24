@@ -17,7 +17,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
     const [cardOnePositions, setCardOnePositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
     const [cardTwoPositions, setCardTwoPositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
 
-    const [celebation, setCelebration] = React.useState<string>('');
+    const [celebration, setCelebration] = React.useState<string>('');
     const [missedAnswerText, setMissedAnswerText] = React.useState<string>("");
 
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
@@ -226,8 +226,8 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                         </Box>
                     </Box>
 
-                    <Box>
-                        <Box className="flexCenter" gap={1}>
+                    <Box >
+                        <Box className="flexCenter contentBox" gap={1}>
                             <TextField 
                                 id="outlined-basic" 
                                 label="" 
@@ -251,13 +251,13 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                 }}
                                 
                             />
-                            <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebation?.length}>Submit</Button>
+                            <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebration?.length}>Submit</Button>
                         </Box>
                         <Box height={10}>
                             <TimerBar expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={handleTimeOut} />
                         </Box>
-                        <Box>
-                            {celebation} {missedAnswerText}
+                        <Box className={`${celebration?.length ? 'celebrationText' : missedAnswerText?.length && 'missedAnswerText'}`}>
+                            {celebration} {missedAnswerText}
                         </Box>
                         
                     </Box>

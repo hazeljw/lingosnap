@@ -1,24 +1,38 @@
 import { LinearProgress, linearProgressClasses, styled } from "@mui/material";
 import React, { useEffect } from "react";
 
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+const BorderLinearProgress = styled(LinearProgress)((props) => {
+  console.log(props);
+
+  const theme = props.theme;
+  const progress = props.value ?? 100
+
+  let barColor = '#5ce37a'; // green
+
+  if(progress < 50) {
+    barColor = '#f3a738'; // orange
+  }
+
+  if(progress < 25) {
+    barColor = '#d84b3b'; // red
+  }
+
+  return{
   marginTop: 10,
   height: 10,
   borderRadius: 5,
+  animation: progress < 10 ? 'shake 0.2s infinite' : undefined,
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.palette.grey[200],
-    ...theme.applyStyles('dark', {
-      backgroundColor: theme.palette.grey[800],
-    }),
+    backgroundColor: `hsla(271, 98%, 80%, 0.2)`,
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: '#1a90ff',
+    backgroundColor: barColor,
     ...theme.applyStyles('dark', {
-      backgroundColor: '#308fe8',
+      backgroundColor: barColor,
     }),
   },
-}));
+}});
 
 function TimerBar({expiryTime, handleTimeOut}:{expiryTime?:Date, handleTimeOut:()=>void}) {
 

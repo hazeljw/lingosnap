@@ -25,7 +25,7 @@ function Lobby({roomData, handleLeaveLobby, handleStartGame}: {roomData?: RoomDa
                             <UserAvatar name={user?.name} selectedAvatar={user.avatar} selectedLanguage={user.selectedLanguage} />
 
                             <Box>
-                                {user?.name}:{user?.isHost ? 'Host' : ''}
+                                {user?.name}{user?.isHost ? ':Host' : ''}
                             </Box>
                         </Box>
                     )
