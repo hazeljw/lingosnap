@@ -32,7 +32,7 @@ function LandingScreen({socket}: {socket:Socket}) {
 
   return (
     <Box className="LandingScreen flexCenter" gap={3} flexDirection={'column'}>
-x
+
         <MainTitle />
 
 

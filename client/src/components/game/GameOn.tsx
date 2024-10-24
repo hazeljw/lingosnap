@@ -9,6 +9,7 @@ import { mapLanguageToFlag } from '../common/mappers';
 import UserScore from './UserScore';
 import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
+import MainTitle from '../common/MainTitle';
 
 function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut, socket}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void, handleTimeOut: () => void, socket:Socket}) {
     const [itemData, setItemData] = React.useState<GameContentData>();
@@ -36,11 +37,10 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
             // set time out to clear
             setTimeout(() => {
                 setMissedAnswerText("");
-            }, 1000)
+            }, 2000)
         })
     
       }, [socket]);
-
 
     const determineCelebration = () => {
         const peopleWhoGotIt = roomData?.gameState?.userIdsWithCorrectAnswerForRound?.length ?? 0;
@@ -56,7 +56,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
         //     setCelebration('');
         // }, 5000)
     }
-
 
     const handleSubmitAnswer = () => {
         // todo: check if answer is correct
@@ -135,22 +134,21 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
         return positions
     }
 
-    useEffect(() => {
-        console.log("Game state changed", roomData?.gameState);
+    // useEffect(() => {
+    //     console.log("Game state changed", roomData?.gameState);
 
-        // if(roomData?.gameState) {
-        //     setItemData({
-        //         cardOne: roomData?.gameState?.cardOne,
-        //         cardTwo: roomData?.gameState?.cardTwo,
-        //         commonItem: roomData?.gameState?.commonItem,
-        //         allItems: roomData?.gameState?.allItems
-        //     })
+    //     // if(roomData?.gameState) {
+    //     //     setItemData({
+    //     //         cardOne: roomData?.gameState?.cardOne,
+    //     //         cardTwo: roomData?.gameState?.cardTwo,
+    //     //         commonItem: roomData?.gameState?.commonItem,
+    //     //         allItems: roomData?.gameState?.allItems
+    //     //     })
 
-        //     setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
-        //     setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
-        // }
-    }, [roomData?.gameState])
-
+    //     //     setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
+    //     //     setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
+    //     // }
+    // }, [roomData?.gameState])
 
     useEffect(() => {
         // on round change
@@ -176,21 +174,25 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
     const border = 64
 
     return (
-        <Box display={'flex'} justifyContent={'space-between'}>
+        <Box display={'flex'} flexWrap={'wrap'} minHeight={'100vh'}>
 
-            <Box>
-                <Box className="header" display='flex'>
+            <Box flexGrow={100}>
+                <Box className="header noBackgroundText" display='flex' padding={2}>
                     <Button variant="contained" color="primary" onClick={handleLeaveLobby}>Leave Game</Button>
                     <Box>
-                        CODE: {roomData?.roomCode}
+                        <MainTitle size={'small'} />
                     </Box>
                     <Box>
-                        Round {roomData?.gameState?.currentRound} of {roomData?.gameState?.totalRounds}
+                        {roomData?.roomCode} - Round {roomData?.gameState?.currentRound} of {roomData?.gameState?.totalRounds}
                     </Box>
                 </Box>
 
 
-                <Box>
+                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} height="90%" justifyContent={'center'}>
+                    <span className='noBackgroundText'>
+                        What do these have in common?
+                    </span>
+
                     <Box className="cardContainer">
                         <Box className="card" width={cardWidth} height={cardHeight}>
                             {itemData?.cardOne.map((item, index) => {
@@ -226,7 +228,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                         </Box>
                     </Box>
 
-                    <Box >
+                    <Box>
                         <Box className="flexCenter contentBox" gap={1}>
                             <TextField 
                                 id="outlined-basic" 
@@ -238,7 +240,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                     input: {
                                     startAdornment: (
                                         <InputAdornment position="start">
-                                        {mapLanguageToFlag(chosenLanguage)}
+                                            <span style={{fontSize: '2rem'}}>{mapLanguageToFlag(chosenLanguage)}</span>
                                         </InputAdornment>
                                     ),
                                     onKeyDown: (event) => {
@@ -254,41 +256,38 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                             <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebration?.length}>Submit</Button>
                         </Box>
                         <Box height={10}>
-                            <TimerBar expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={handleTimeOut} />
+                            <TimerBar expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={()=>{
+                                handleTimeOut();
+                            }} />
                         </Box>
-                        <Box className={`${celebration?.length ? 'celebrationText' : missedAnswerText?.length && 'missedAnswerText'}`}>
-                            {celebration} {missedAnswerText}
+                        <Box mt={3} className={`${celebration?.length ? 'celebrationText' : missedAnswerText?.length && 'missedAnswerText'}`}>
+                            {celebration}{missedAnswerText}
                         </Box>
                         
                     </Box>
                 </Box>
+
             </Box>
 
 
-            <Box className="rightSideBar"  style={{backgroundColor: 'lightGreen'}} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+            <Box paddingTop={2} flexShrink={0} className="rightSideBarContainer" display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
 
-                <Box>
-                    Players:
-
-                    <Box>
-
-                        {roomData?.users?.sort((a, b)=>{
-                            const aScore = a?.score ?? 0;
-                            const bScore = b?.score ?? 0;
-                            return bScore - aScore
-                        })?.map((user, index) => {
-                            return (
-                                <UserScore user={user} position={index+1}/>
-                            )
-                        })}
-                    </Box>
-
-
-
+                <Box className="rightSideBar">
+                    {roomData?.users?.sort((a, b)=>{
+                        const aScore = a?.score ?? 0;
+                        const bScore = b?.score ?? 0;
+                        return bScore - aScore
+                    })?.map((user, index) => {
+                        return (
+                            <UserScore user={user} position={index+1}/>
+                        )
+                    })}
                 </Box>
 
-                <Box>
-                    <Button variant="contained" color="primary" onClick={() => {setHintMenuOpen(true)}}>Hint</Button>
+                <Box padding={2}>
+                    <Button size='large' variant="contained" color="primary" onClick={() => {setHintMenuOpen(true)}} fullWidth={true}>
+                       Reference sheet
+                    </Button>
                 </Box>
 
             </Box>

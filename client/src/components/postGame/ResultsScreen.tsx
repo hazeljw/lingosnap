@@ -26,11 +26,13 @@ function ResultsScreen({roomData, handleReturnToLobby, isHost}:{roomData?:RoomDa
         <Box className='podium thirdPlace'></Box>
       </Box>
 
-      <Box maxWidth={'500px'} borderRadius={'16px'}>
+      <Box maxWidth={'500px'}>
           {sortedUsers.map((player, index) => {
             const evenIndex = index % 2 === 0;
+            const isLast = index === sortedUsers.length - 1;
+            const isFirst = index === 0;
             return (
-              <Box key={player.id} className={`playerResult ${evenIndex ? 'even' : 'odd'}`}>
+              <Box key={player.id} className={`playerResult ${evenIndex ? 'even' : 'odd'}`} borderRadius={isFirst ? '16px 16px 0 0' : isLast ? '0 0 16px 16px' : '0'}>
 
                 <UserAvatar selectedAvatar={player.avatar} selectedLanguage={player.selectedLanguage} name={player.name} />
                 

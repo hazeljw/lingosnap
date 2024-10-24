@@ -1,8 +1,12 @@
 import React from "react";
 
-function MainTitle() {
+function MainTitle({size}:{size?:string}) {
+
+  const small = size === 'small';
+
+
   return (
-    <div className="main-title">
+    <div className={small ? "main-title-small" : "main-title"}>
       <div className="title-word">
         <div className="title-letter">L</div>
         <div className="title-letter">i</div>

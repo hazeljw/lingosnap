@@ -15,6 +15,12 @@ const theme = createTheme({
       main: '#44287b',
     },
   },
+  typography: {
+    fontFamily: [
+      "Nunito",
+      'sans-serif',
+    ].join(','),
+  },
 });
 
 const root = ReactDOM.createRoot(
