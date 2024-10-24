@@ -1,0 +1,14 @@
+.playerResult {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.even {
+    background-color: var(--content-background-default);
+}
+
+.odd {
+    background-color: var(--content-background-alt);
+}

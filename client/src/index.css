@@ -6,6 +6,9 @@
   --brand-green: #5ce37a;
   --brand-red: #d84b3b;
   --brand-orange: #f3a738;
+
+  --content-background-default: hsla(271, 98%, 80%, 0.492);
+  --content-background-alt: hsla(271, 72%, 78%, 0.716);
 }
 
 body {
