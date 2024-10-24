@@ -84,3 +84,17 @@
       stroke-dashoffset: 5000;
     }
   }
+
+
+  .contentBox {
+    background-color: hsla(271, 98%, 80%, 0.492);
+    padding: 20px;
+    border-radius: 16px;
+    font-weight: 600;
+    color: rgb(13, 13, 75);
+  }
+
+  .selectedIcon {
+    text-decoration: underline !important;
+    color: black !important
+  }

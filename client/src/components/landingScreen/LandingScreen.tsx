@@ -52,34 +52,37 @@ function LandingScreen({socket}: {socket:Socket}) {
         </div>
 
 
-        <Box className="flexCenter" gap={1}>
+        <Box className="flexCenter contentBox" gap={1}>
           <Box>
             Pick a language:
           </Box>
           {languages.map((language, index) => {
 
             return (
-              <IconButton key={index} aria-label={language} color="primary" onClick={() => {setSelectedLanguage(language)}}>
+              <IconButton className={selectedLanguage === language ? 'selectedIcon' : ''} key={index} aria-label={language} color="primary" onClick={() => {setSelectedLanguage(language)}}>
                 {mapLanguageToFlag(language)}
               </IconButton>
             )
           })}
+        </Box>
+
+        <Box className="flexCenter contentBox" flexDirection={'column'} gap={3} width={'fit-content'}>
+          <Box className="flexCenter"   gap={1} >
+            <UserAvatar name={name} selectedAvatar={selectedAvatar} selectedLanguage={selectedLanguage} />
+            <TextField id="outlined-basic" label="Name" variant="outlined" value={name} color={"secondary"} onChange={(v) => {setName(v.target?.value)}} />
+          </Box>
+
+          <Box className="flexCenter" gap={1}>
+              <TextField id="outlined-basic" label="Game Code" variant="outlined" color={"secondary"} value={enteredGameCode} onChange={(v)=>{setEnteredGameCode(v.target?.value)}} />
+              <Button variant="contained" color="primary" onClick={handleJoinGame} disabled={enteredGameCode?.length !== 6}>Join Game</Button>
+          </Box>
+
+          <Button variant="contained" color="primary" onClick={handleHostNewGame}>Host New Game</Button>
+
+
 
         </Box>
 
-        <Box className="flexCenter"  gap={1} >
-          <UserAvatar name={name} selectedAvatar={selectedAvatar} selectedLanguage={selectedLanguage} />
-          <TextField id="outlined-basic" label="Name" variant="outlined" value={name} onChange={(v) => {setName(v.target?.value)}} />
-        </Box>
-
-        
-
-        <Box className="flexCenter" gap={1}>
-            <TextField id="outlined-basic" label="Game Code" variant="outlined" value={enteredGameCode} onChange={(v)=>{setEnteredGameCode(v.target?.value)}} />
-            <Button variant="contained" color="primary" onClick={handleJoinGame} disabled={enteredGameCode?.length !== 6}>Join Game</Button>
-        </Box>
-
-        <Button variant="contained" color="primary" onClick={handleHostNewGame}>Host New Game</Button>
 
     </Box>
   );
