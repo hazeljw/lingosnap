@@ -1,1 +1,1 @@
-web: node index.ts
+web: npx tsx index.ts

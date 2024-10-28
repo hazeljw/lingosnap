@@ -1,13 +1,13 @@
-import { generateRoomCode, getItemsForCard, moveToNextRound } from "./utils";
+import generateRoomCode from "./utils/generateRoomCode";
+import getItemsForCard from "./utils/getItemsForCard";
+import moveToNextRound from "./utils/moveToNextRound";
+import express from 'express'
+import http from 'http'
+import { Server } from 'socket.io'
+import cors from 'cors'
 
-const express = require('express');
+
 const app = express();
-const http = require('http');
-
-const {Server} = require('socket.io');
-const cors = require('cors');
-
-import { RoomData } from '../common/types';
 
 const PORT = process.env.PORT || 3000;
 
@@ -33,7 +33,7 @@ io.on("connection", (socket) => {
     socket.on('host_new_room', (data) => {
         const roomCode = generateRoomCode();
 
-        const roomData:RoomData = {
+        const roomData = {
             roomCode: roomCode,
             hostId: socket.id,
             users: [{id: socket.id, name: data.name, isHost: true, score: 0, selectedLanguage: data.selectedLanguage, avatar: data.selectedAvatar}],
