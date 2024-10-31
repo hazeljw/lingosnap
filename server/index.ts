@@ -109,14 +109,18 @@ io.on("connection", (socket) => {
 
         const gameItems = getItemsForCard(numberItemsPerCard);
 
+        const rounds = data.rounds;
+        const timePerRound = data.timePerRound * 1000; // convert to milliseconds
+
         const gameState = {
-            totalRounds: 3,
+            totalRounds: rounds,
+            timePerRound: timePerRound,
             currentRound: 1,
             ...gameItems,
             userIdsWithCorrectAnswerForRound: [],
-            roundExpiryTimeUTC: new Date(Date.now() + 30000) // 30 seconds
+            roundExpiryTimeUTC: new Date(Date.now() + timePerRound)
         }
-
+        
         // set all scores to 0
         roomData.users.forEach(user => user.score = 0);
 

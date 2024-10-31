@@ -69,13 +69,15 @@ export const moveToNextRound = (roomData:RoomData) => {
 
     } else {
         // generate the game state
+
+        const timeForRound = roomData.gameState.timePerRound ?? 30000;
         const numberItemsPerCard = 10;
         const gameItems = getItemsForCard(numberItemsPerCard);
         const gameState = {
             ...roomData.gameState,
             ...gameItems,
             userIdsWithCorrectAnswerForRound: [],
-            roundExpiryTimeUTC: new Date(Date.now() + 30000) // 30 seconds
+            roundExpiryTimeUTC: new Date(Date.now() + timeForRound)
         }
 
         roomData.gameState = gameState;
