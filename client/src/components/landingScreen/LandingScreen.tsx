@@ -67,7 +67,12 @@ function LandingScreen({socket}: {socket:Socket}) {
 
         </Box>
 
-
+        <a href="https://github.com/hazeljw/lingosnap" target="_blank" rel="noreferrer">
+          <Box style={{display: 'flex', alignItems: 'center', gap: 4, color: 'white', position: 'absolute', bottom: '20px', left: '20px'}}>
+            <img src="/github-logo.svg" alt="github-logo" width={24} height={24} />
+            hazeljw
+          </Box>
+        </a>
     </Box>
   );
 }
