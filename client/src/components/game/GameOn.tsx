@@ -10,6 +10,7 @@ import UserScore from './UserScore';
 import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
 import MainTitle from '../common/MainTitle';
+import SymbolKeyboard from './LanguageSymbolKeyboard';
 
 interface GameOnProps {
     roomData?: RoomData;
@@ -31,7 +32,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
 
-    // TODO: get from user settings
     const chosenLanguage = roomData?.users?.find((user) => user.id === socket.id)?.selectedLanguage ?? Language.Spanish;
 
     useEffect(() => {
@@ -176,6 +176,11 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
     }, [roomData?.gameState?.currentRound])
 
+
+    const handleSymbolClick = (symbol: string) => {
+        setEnteredAnswer(enteredAnswer + symbol);
+    }
+
     // TODO: update dynamically
     const cardHeight = 400
     const cardWidth = 400
@@ -270,6 +275,11 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                         </Box>
                         <Box mt={3} className={`${celebration?.length ? 'celebrationText' : missedAnswerText?.length && 'missedAnswerText'}`}>
                             {celebration}{missedAnswerText}
+                        </Box>
+
+
+                        <Box>
+                            <SymbolKeyboard language={chosenLanguage} onSymbolClick={handleSymbolClick}/>
                         </Box>
                         
                     </Box>

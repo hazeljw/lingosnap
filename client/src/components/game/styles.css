@@ -100,3 +100,9 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.symbol-keyboard {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
