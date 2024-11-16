@@ -34,17 +34,21 @@ const BorderLinearProgress = styled(LinearProgress)((props) => {
   },
 }});
 
-function TimerBar({expiryTime, handleTimeOut}:{expiryTime?:Date, handleTimeOut:()=>void}) {
+function TimerBar({expiryTime, handleTimeOut, timePerRound}:{expiryTime?:Date, handleTimeOut:()=>void, timePerRound?:number}) {
 
   const [progress, setProgress] = React.useState(100);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log(timePerRound)
+
+      const totalTime = timePerRound ?? 30000;
+
       if(!expiryTime) return;
       const expiry = new Date(expiryTime);
       const now = new Date();
       const timeDiff = expiry.getTime() - now.getTime();
-      const progress = (timeDiff / 30000) * 100;
+      const progress = (timeDiff / totalTime) * 100;
       setProgress(progress);
       // if the time has expired, clear the interval
       if(progress <= 0) {

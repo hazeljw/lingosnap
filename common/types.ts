@@ -17,6 +17,7 @@ export interface RoomData {
 export interface GameState {
     totalRounds: number;
     currentRound: number;
+    timePerRound: number;
     cardOne: ContentItem[];
     cardTwo: ContentItem[];
     commonItem: ContentItem;

@@ -11,7 +11,15 @@ import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
 import MainTitle from '../common/MainTitle';
 
-function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut, socket}: {roomData?: RoomData, handleLeaveLobby: () => void, handleCorrectAnswer: () => void, handleTimeOut: () => void, socket:Socket}) {
+interface GameOnProps {
+    roomData?: RoomData;
+    handleLeaveLobby: () => void;
+    handleCorrectAnswer: () => void;
+    handleTimeOut: () => void;
+    socket: Socket;
+}
+
+function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut, socket}: GameOnProps) {
     const [itemData, setItemData] = React.useState<GameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
@@ -256,7 +264,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                             <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebration?.length}>Submit</Button>
                         </Box>
                         <Box height={10}>
-                            <TimerBar expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={()=>{
+                            <TimerBar timePerRound={roomData?.gameState?.timePerRound} expiryTime={roomData?.gameState?.roundExpiryTimeUTC} handleTimeOut={()=>{
                                 handleTimeOut();
                             }} />
                         </Box>

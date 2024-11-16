@@ -71,10 +71,10 @@ function App() {
     setRoomData(undefined);
   }
 
-  const handleStartGame = () => {
+  const handleStartGame = (rounds:number, timePerRound:number) => {
     // TODO: start the game for everyone in the room
     //socket.emit('start_game', {roomData});
-    socket.emit('start_game', {roomData});
+    socket.emit('start_game', {roomData, rounds, timePerRound});
 
     //setGameStatus(GameStatus.InGame);
   }
@@ -102,7 +102,7 @@ function App() {
 
       { gameStatus === GameStatus.NotJoined && <LandingScreen socket={socket} />}
 
-      { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame}/>}
+      { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame} isHost={isHost}/>}
 
       { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
