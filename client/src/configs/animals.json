@@ -1,0 +1,405 @@
+{
+    "_comment": "Animal content",
+    "data": [
+        {
+            "word": "shark",
+            "languages": {
+                "english": "shark",
+                "spanish": "tiburón",
+                "french": "requin",
+                "german": "hai",
+                "italian": "squalo",
+                "portuguese": "tubarão",
+                "dutch": "haai",
+                "japanese": "same",
+                "korean": "sangeo",
+                "finnish": "hai",
+                "tereo": "mango"
+            },
+            "tags": ["animal", "fish", "predator", "marine", "ocean"],
+            "image": "/images/animals/shark.png",
+            "funFact": "Sharks can detect one drop of blood in 100 liters of water!",
+            "congrats": "You're swimming with success!",
+            "sorry": "Don't let this bite get you down!"
+        },
+        {
+            "word": "dolphin",
+            "languages": {
+                "english": "dolphin",
+                "spanish": "delfín",
+                "french": "dauphin",
+                "german": "delfin",
+                "italian": "delfino",
+                "portuguese": "golfinho",
+                "dutch": "dolfijn",
+                "japanese": "iruka",
+                "korean": "gorae",
+                "finnish": "delfiini",
+                "tereo": "aihe"
+            },
+            "tags": ["animal", "mammal", "marine", "intelligent", "ocean"],
+            "image": "/images/animals/dolphin.png",
+            "funFact": "Dolphins sleep with one half of their brain at a time!",
+            "congrats": "You're making waves of progress!",
+            "sorry": "Keep swimming, you'll get there!"
+        },
+        {
+            "word": "deer",
+            "languages": {
+                "english": "deer",
+                "spanish": "ciervo",
+                "french": "cerf",
+                "german": "hirsch",
+                "italian": "cervo",
+                "portuguese": "veado",
+                "dutch": "hert",
+                "japanese": "shika",
+                "korean": "saseum",
+                "finnish": "peura",
+                "tereo": "tia"
+            },
+            "tags": ["animal", "mammal", "forest", "herbivore", "antlers"],
+            "image": "/images/animals/deer.png",
+            "funFact": "Male deer shed and regrow their antlers every year!",
+            "congrats": "You've leaped to success!",
+            "sorry": "Don't be a deer in headlights, try again!"
+        },
+        {
+            "word": "chicken",
+            "languages": {
+                "english": "chicken",
+                "spanish": "pollo",
+                "french": "poulet",
+                "german": "huhn",
+                "italian": "pollo",
+                "portuguese": "frango",
+                "dutch": "kip",
+                "japanese": "niwatori",
+                "korean": "dak",
+                "finnish": "kana",
+                "tereo": "heihei"
+            },
+            "tags": ["animal", "bird", "farm", "food", "domestic"],
+            "image": "/images/animals/chicken.png",
+            "funFact": "Chickens can remember over 100 different faces of people or animals!",
+            "congrats": "You're ruling the roost!",
+            "sorry": "Don't chicken out, try again!"
+        },
+        {
+            "word": "owl",
+            "languages": {
+                "english": "owl",
+                "spanish": "búho",
+                "french": "hibou",
+                "german": "eule",
+                "italian": "gufo",
+                "portuguese": "coruja",
+                "dutch": "uil",
+                "japanese": "fukurou",
+                "korean": "puengi",
+                "finnish": "pöllö",
+                "tereo": "ruru"
+            },
+            "tags": ["animal", "bird", "predator", "nocturnal", "wise"],
+            "image": "/images/animals/owl.png",
+            "funFact": "An owl's eyes are not true eyeballs - they're elongated tubes held in place by bones in the skull!",
+            "congrats": "You're as wise as can be!",
+            "sorry": "Who who who made a mistake? Try again!"
+        },
+        {
+            "word": "squirrel",
+            "languages": {
+                "english": "squirrel",
+                "spanish": "ardilla",
+                "french": "écureuil",
+                "german": "eichhörnchen",
+                "italian": "scoiattolo",
+                "portuguese": "esquilo",
+                "dutch": "eekhoorn",
+                "japanese": "risu",
+                "korean": "daram-i",
+                "finnish": "orava",
+                "tereo": "kata"
+            },
+            "tags": ["animal", "mammal", "rodent", "forest", "nuts"],
+            "image": "/images/animals/squirrel.png",
+            "funFact": "Squirrels can find food buried beneath a foot of snow just by smell!",
+            "congrats": "You're nuts about learning!",
+            "sorry": "Don't scatter your thoughts, gather them and try again!"
+        },
+        {
+            "word": "bunny",
+            "languages": {
+                "english": "bunny",
+                "spanish": "conejo",
+                "french": "lapin",
+                "german": "hase",
+                "italian": "coniglio",
+                "portuguese": "coelho",
+                "dutch": "konijn",
+                "japanese": "usagi",
+                "korean": "tokki",
+                "finnish": "pupu",
+                "tereo": "rapeti"
+            },
+            "tags": ["animal", "mammal", "pet", "cute", "herbivore"],
+            "image": "/images/animals/bunny.png",
+            "funFact": "A rabbit's teeth never stop growing - they wear them down by chewing!",
+            "congrats": "You're hopping ahead!",
+            "sorry": "Don't get scared like a rabbit in headlights, hop to it again!"
+        },
+        {
+            "word": "fish",
+            "languages": {
+                "english": "fish",
+                "spanish": "pez",
+                "french": "poisson",
+                "german": "fisch",
+                "italian": "pesce",
+                "portuguese": "peixe",
+                "dutch": "vis",
+                "japanese": "sakana",
+                "korean": "mulgogi",
+                "finnish": "kala",
+                "tereo": "ika"
+            },
+            "tags": ["animal", "aquatic", "marine", "scales", "gills"],
+            "image": "/images/animals/fish.png",
+            "funFact": "Some species of fish can fly for up to 45 seconds!",
+            "congrats": "You're swimming in success!",
+            "sorry": "There are plenty more fish in the sea - try again!"
+        },
+        {
+            "word": "dinosaur",
+            "languages": {
+                "english": "dinosaur",
+                "spanish": "dinosaurio",
+                "french": "dinosaure",
+                "german": "dinosaurier",
+                "italian": "dinosauro",
+                "portuguese": "dinossauro",
+                "dutch": "dinosaurus",
+                "japanese": "kyouryuu",
+                "korean": "gongryong",
+                "finnish": "dinosaurus",
+                "tereo": "mokonui"
+            },
+            "tags": ["animal", "extinct", "prehistoric", "reptile", "fossil"],
+            "image": "/images/animals/dinosaur.png",
+            "funFact": "The smallest dinosaur was the size of a chicken, while the largest was longer than three school buses!",
+            "congrats": "You're roaring with success!",
+            "sorry": "Don't let this answer go extinct - try again!"
+        },
+        {
+            "word": "seagull",
+            "languages": {
+                "english": "seagull",
+                "spanish": "gaviota",
+                "french": "mouette",
+                "german": "möwe",
+                "italian": "gabbiano",
+                "portuguese": "gaivota",
+                "dutch": "meeuw",
+                "japanese": "kamome",
+                "korean": "galmaegi",
+                "finnish": "lokki",
+                "tereo": "karoro"
+            },
+            "tags": ["animal", "bird", "coastal", "flying", "scavenger"],
+            "image": "/images/animals/seagull.png",
+            "funFact": "Seagulls can drink both fresh and salt water thanks to special glands that filter out the salt!",
+            "congrats": "You're soaring high!",
+            "sorry": "Don't let this answer ruffle your feathers!"
+        },
+        {
+            "word": "dog",
+            "languages": {
+                "english": "dog",
+                "spanish": "perro",
+                "french": "chien",
+                "german": "hund",
+                "italian": "cane",
+                "portuguese": "cachorro",
+                "dutch": "hond",
+                "japanese": "inu",
+                "korean": "gae",
+                "finnish": "koira",
+                "tereo": "kurī"
+            },
+            "tags": ["animal", "mammal", "pet", "domestic", "loyal"],
+            "image": "/images/animals/dog.png",
+            "funFact": "A dog's sense of smell is up to 100,000 times stronger than humans - they can even smell emotions!",
+            "congrats": "You're pawsitively brilliant!",
+            "sorry": "Every dog has its day - try again!"
+        },
+        {
+            "word": "cat",
+            "languages": {
+                "english": "cat",
+                "spanish": "gato",
+                "french": "chat",
+                "german": "katze",
+                "italian": "gatto",
+                "portuguese": "gato",
+                "dutch": "kat",
+                "japanese": "neko",
+                "korean": "goyangi",
+                "finnish": "kissa",
+                "tereo": "ngeru"
+            },
+            "tags": ["animal", "mammal", "pet", "domestic", "feline"],
+            "image": "/images/animals/cat.png",
+            "funFact": "Cats can make over 100 different vocal sounds, while dogs can only make around 10!",
+            "congrats": "You're the cat's whiskers!",
+            "sorry": "Don't let curiosity get the better of you - try again!"
+        },
+        {
+            "word": "hedgehog",
+            "languages": {
+                "english": "hedgehog",
+                "spanish": "erizo",
+                "french": "hérisson",
+                "german": "igel",
+                "italian": "riccio",
+                "portuguese": "ouriço",
+                "dutch": "egel",
+                "japanese": "harinezumi",
+                "korean": "goseumdochi",
+                "finnish": "siili",
+                "tereo": "tuatete"
+            },
+            "tags": ["animal", "mammal", "spikes", "nocturnal", "small"],
+            "image": "/images/animals/hedgehog.png",
+            "funFact": "A hedgehog has between 5,000 and 7,000 spines, each of which can last about a year before falling out and being replaced!",
+            "congrats": "You're sharp as a hedgehog's spines!",
+            "sorry": "Don't curl up in defeat - try again!"
+        },
+        {
+            "word": "snail",
+            "languages": {
+                "english": "snail",
+                "spanish": "caracol",
+                "french": "escargot",
+                "german": "schnecke",
+                "italian": "lumaca",
+                "portuguese": "caracol",
+                "dutch": "slak",
+                "japanese": "katatsumuri",
+                "korean": "dalpaengi",
+                "finnish": "etana",
+                "tereo": "ngata"
+            },
+            "tags": ["animal", "mollusk", "slow", "shell", "garden"],
+            "image": "/images/animals/snail.png",
+            "funFact": "Snails can sleep for up to three years at a time when the weather is unfavorable!",
+            "congrats": "Slow and steady wins the race!",
+            "sorry": "Don't retreat into your shell - try again!"
+        },
+        {
+            "word": "worm",
+            "languages": {
+                "english": "worm",
+                "spanish": "gusano",
+                "french": "ver",
+                "german": "wurm",
+                "italian": "verme",
+                "portuguese": "minhoca",
+                "dutch": "worm",
+                "japanese": "mimizu",
+                "korean": "jirengi",
+                "finnish": "mato",
+                "tereo": "noke"
+            },
+            "tags": ["animal", "invertebrate", "soil", "garden", "decomposer"],
+            "image": "/images/animals/worm.png",
+            "funFact": "If a worm is cut in half, the head end can survive and regenerate its tail (but the tail end can't grow a new head)!",
+            "congrats": "You're really digging deep!",
+            "sorry": "Don't squirm away - wiggle back and try again!"
+        },
+        {
+            "word": "fox",
+            "languages": {
+                "english": "fox",
+                "spanish": "zorro",
+                "french": "renard",
+                "german": "fuchs",
+                "italian": "volpe",
+                "portuguese": "raposa",
+                "dutch": "vos",
+                "japanese": "kitsune",
+                "korean": "yeou",
+                "finnish": "kettu",
+                "tereo": "pokakē"
+            },
+            "tags": ["animal", "mammal", "predator", "cunning", "wild"],
+            "image": "/images/animals/fox.png",
+            "funFact": "Foxes use the Earth's magnetic field to help them hunt - they are more successful when facing north!",
+            "congrats": "You're as clever as a fox!",
+            "sorry": "Don't let this outfox you - try again!"
+        },
+        {
+            "word": "crow",
+            "languages": {
+                "english": "crow",
+                "spanish": "cuervo",
+                "french": "corbeau",
+                "german": "krähe",
+                "italian": "corvo",
+                "portuguese": "corvo",
+                "dutch": "kraai",
+                "japanese": "karasu",
+                "korean": "kkamakgwi",
+                "finnish": "varis",
+                "tereo": "kākāriki"
+            },
+            "tags": ["animal", "bird", "intelligent", "black", "urban"],
+            "image": "/images/animals/crow.png",
+            "funFact": "Crows can recognize human faces and remember if you've been kind or mean to them for years!",
+            "congrats": "You're showing real bird-brain smarts!",
+            "sorry": "Don't get in a flap - spread your wings and try again!"
+        },
+        {
+            "word": "pigeon",
+            "languages": {
+                "english": "pigeon",
+                "spanish": "paloma",
+                "french": "pigeon",
+                "german": "taube",
+                "italian": "piccione",
+                "portuguese": "pombo",
+                "dutch": "duif",
+                "japanese": "hato",
+                "korean": "bidulgi",
+                "finnish": "kyyhky",
+                "tereo": "kukupa"
+            },
+            "tags": ["animal", "bird", "urban", "flying", "messenger"],
+            "image": "/images/animals/pigeon.png",
+            "funFact": "Pigeons can recognize all 26 letters of the English alphabet and can be taught to perform complex sequences of actions!",
+            "congrats": "You're carrying the message of success!",
+            "sorry": "Don't let your hopes fly away - try again!"
+        },
+        {
+            "word": "mouse",
+            "languages": {
+                "english": "mouse",
+                "spanish": "ratón",
+                "french": "souris",
+                "german": "maus",
+                "italian": "topo",
+                "portuguese": "rato",
+                "dutch": "muis",
+                "japanese": "nezumi",
+                "korean": "saengchuyi",
+                "finnish": "hiiri",
+                "tereo": "kiore"
+            },
+            "tags": ["animal", "mammal", "rodent", "small", "whiskers"],
+            "image": "/images/animals/mouse.png",
+            "funFact": "Mice sing complex ultrasonic songs to attract mates - we just can't hear them without special equipment!",
+            "congrats": "You're mighty like a mouse!",
+            "sorry": "Don't scurry away - squeak back for another try!"
+        }
+    ]
+}
+
