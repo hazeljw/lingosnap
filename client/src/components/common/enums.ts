@@ -11,3 +11,10 @@ export enum Language {
     Finnish = 'finnish',
     TeReo = 'tereo',
 }
+
+export enum ContentMode {
+    Animals = 'Animals',
+    Food = 'Food',
+    Hiragana = 'Hiragana',
+    Katakana = 'Katakana'
+}
