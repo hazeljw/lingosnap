@@ -9,15 +9,13 @@ const cors = require('cors');
 
 import { RoomData } from '../common/types';
 
-const PORT = process.env.PORT || 3000;
-
 app.use(cors());
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.CLIENT_URL || "http://localhost:3000",
         method: ["GET", "POST"]
     }
 });
@@ -198,6 +196,6 @@ io.on("connection", (socket) => {
 })
 
 
-server.listen(3002, () => {
-    console.log('Server is running on port 3002');
+server.listen(process.env.SERVER_PORT || 3002, () => {
+    console.log(`Server is running on port ${process.env.SERVER_PORT || 3002}`);
 })

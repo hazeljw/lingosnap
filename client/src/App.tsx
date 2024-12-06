@@ -16,7 +16,7 @@ enum GameStatus {
   GameOver='GameOver'
 }
 
-const socket = io('http://localhost:3002');
+const socket = io(process.env.SERVER_URL || 'http://localhost:3002');
 
 function App() {
   const [gameStatus, setGameStatus] = React.useState<GameStatus>(GameStatus.NotJoined);
