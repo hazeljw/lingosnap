@@ -1,9 +1,9 @@
 import React from "react";
-import { RoomData } from "../../../../common/types";
 import { Box, Button } from "@mui/material";
 import UserAvatar from "../common/userAvatar";
 import './styles.css';
 import MainTitle from "../common/MainTitle";
+import { RoomData } from "../common/types";
 
 
 function ResultsScreen({roomData, handleReturnToLobby, isHost}:{roomData?:RoomData, handleReturnToLobby:()=>void, isHost:boolean}) {

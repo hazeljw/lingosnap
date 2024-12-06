@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import LandingScreen from './components/landingScreen/LandingScreen';
 import Lobby from './components/lobby/Lobby';
 import io from 'socket.io-client';
-import {RoomData} from '../../common/types';
 import GameOn from './components/game/GameOn';
 import ResultsScreen from './components/postGame/ResultsScreen';
-import RainbowTitle from './components/landingScreen/RainbowTitle';
+import { RoomData } from './components/common/types';
 
 enum GameStatus {
   NotJoined='NotJoined',

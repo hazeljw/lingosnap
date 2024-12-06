@@ -1,4 +1,4 @@
-import { ContentItem } from '../../../../common/types';
+import { ContentItem } from "../common/types";
 
 export interface GameContentData {
     cardOne: ContentItem[];

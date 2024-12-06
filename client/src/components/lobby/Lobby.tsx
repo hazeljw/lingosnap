@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.css';
-import { Box, Button, InputLabel, MenuItem, Select, TextField } from '@mui/material';
-import { RoomData } from '../../../../common/types';
+import { Box, Button, MenuItem, Select, TextField } from '@mui/material';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
 import { ContentMode } from '../common/enums';
+import { RoomData } from '../common/types';
 
 
 const DEFAULT_CONTENT_SELECTION = ContentMode.Food

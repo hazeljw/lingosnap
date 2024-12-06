@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles.css';
 import { Box, Dialog } from '@mui/material';
 import data from '../../configs/contentData.json';

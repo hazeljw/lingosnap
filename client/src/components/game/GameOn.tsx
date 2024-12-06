@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './styles.css';
-import { Avatar, Box, Button, InputAdornment, TextField } from '@mui/material';
-import { RoomData } from '../../../../common/types';
+import { Box, Button, InputAdornment, TextField } from '@mui/material';
 import { GameContentData } from './helpers';
 import HintMenu from './HintMenu';
 import { Language } from '../common/enums';
@@ -11,6 +10,7 @@ import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
 import MainTitle from '../common/MainTitle';
 import SymbolKeyboard from './LanguageSymbolKeyboard';
+import { RoomData } from '../common/types';
 
 interface GameOnProps {
     roomData?: RoomData;

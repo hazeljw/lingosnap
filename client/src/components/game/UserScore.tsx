@@ -1,8 +1,8 @@
 import React from "react";
-import { User } from '../../../../common/types';
-import { Avatar, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import './styles.css';
 import UserAvatar from "../common/userAvatar";
+import { User } from "../common/types";
 
 
 function UserScore({user, position}: {user: User, position: number}) {
