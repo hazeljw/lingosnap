@@ -12,6 +12,8 @@ import MainTitle from '../common/MainTitle';
 import SymbolKeyboard from './LanguageSymbolKeyboard';
 import { RoomData } from '../common/types';
 
+const ANSWER_INPUT_ID = 'answer-input-id'
+
 interface GameOnProps {
     roomData?: RoomData;
     handleLeaveLobby: () => void;
@@ -179,6 +181,8 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
     const handleSymbolClick = (symbol: string) => {
         setEnteredAnswer(enteredAnswer + symbol);
+        // focus back on the input
+        document?.getElementById(ANSWER_INPUT_ID)?.focus()
     }
 
     // TODO: update dynamically
@@ -244,7 +248,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                     <Box>
                         <Box className="flexCenter contentBox" gap={1}>
                             <TextField 
-                                id="outlined-basic" 
+                                id={ANSWER_INPUT_ID} 
                                 label="" 
                                 variant="outlined" 
                                 value={enteredAnswer} 
