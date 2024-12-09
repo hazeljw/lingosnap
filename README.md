@@ -1,6 +1,7 @@
 # lingosnap
 A react language learning game inspired by Tākaro
 
+Live here: [https://lingosnap.netlify.app/](https://lingosnap.netlify.app/).
 
 The problem:
 I've gotten really into language learning and so have a bunch of my friends, but we are all learning such different languages its hard to practice together. We are also globally distributed, so an online solution would work best.
@@ -25,3 +26,6 @@ Languages my friends are interested in:
 
 Game description:
 Players are presented with two sets of images, where only one image is common between the two. The goal is to be the first person to name the object in that shared image in their chosen language.
+
+Deployment:
+Server deployed on Heroku, client deployed on Netlify.
