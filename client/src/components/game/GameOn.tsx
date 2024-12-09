@@ -68,7 +68,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
     }
 
     const handleSubmitAnswer = () => {
-        // todo: check if answer is correct
         const correctAnswer = itemData?.commonItem?.languages[chosenLanguage];
 
         if(enteredAnswer?.toLowerCase() === correctAnswer?.toLowerCase()) {
