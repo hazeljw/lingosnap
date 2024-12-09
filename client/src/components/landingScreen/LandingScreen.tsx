@@ -6,6 +6,7 @@ import { mapLanguageToFlag } from '../common/mappers';
 import { Language } from '../common/enums';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
+import LanguageSelectMenu from '../common/LanguageSelectMenu';
 
 const avatarOptions = ['/avatars/avatarOne.svg', '/avatars/avatarTwo.svg', '/avatars/avatarThree.svg', '/avatars/avatarFour.svg', '/avatars/chef.svg'];
 
@@ -35,20 +36,7 @@ function LandingScreen({socket}: {socket:Socket}) {
 
         <MainTitle />
 
-
-        <Box className="flexCenter contentBox" gap={1}>
-          <Box>
-            Pick a language:
-          </Box>
-          {languages.map((language, index) => {
-
-            return (
-              <IconButton className={selectedLanguage === language ? 'selectedIcon' : ''} key={index} aria-label={language} color="primary" onClick={() => {setSelectedLanguage(language)}}>
-                {mapLanguageToFlag(language)}
-              </IconButton>
-            )
-          })}
-        </Box>
+        <LanguageSelectMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
 
         <Box className="flexCenter contentBox" flexDirection={'column'} gap={3} width={'fit-content'}>
           <Box className="flexCenter"   gap={1} >
