@@ -1,30 +1,35 @@
 const http = require('http');
 const express = require('express');
-const {Server} = require('socket.io'); // this is different
+const socketio = require('socket.io');
 const cors = require('cors');
 const router = require('./router');
 
 const { generateRoomCode, getItemsForCard, moveToNextRound } = require("./utils");
 
 const app = express();
+const server = http.createServer(app);
+const io = socketio(server, {
+    cors: {
+        origin: "*",
+        method: ["GET", "POST"]
+    }
+});
 
 app.use(cors());
 app.use(router);
 
 const SERVER_PORT = process.env.PORT || 3002
 
-const server = http.createServer(app);
-
-const io = new Server(server, {
-    cors: {
-        origin: process.env.CLIENT_URL || "http://localhost:3000",
-        method: ["GET", "POST"]
-    }
-});
+// const io = new Server(server, {
+//     cors: {
+//         origin: process.env.CLIENT_URL || "http://localhost:3000",
+//         method: ["GET", "POST"]
+//     }
+// });
 
 const roomDataMap = {}
 
-io.on("connection", (socket) => {
+io.on("connect", (socket) => {
     console.log(`User connected: ${socket.id}`)
 
     socket.on('host_new_room', (data) => {

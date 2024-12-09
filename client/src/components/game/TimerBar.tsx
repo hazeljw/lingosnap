@@ -2,7 +2,6 @@ import { LinearProgress, linearProgressClasses, styled } from "@mui/material";
 import React, { useEffect } from "react";
 
 const BorderLinearProgress = styled(LinearProgress)((props) => {
-  console.log(props);
 
   const theme = props.theme;
   const progress = props.value ?? 100
@@ -40,7 +39,6 @@ function TimerBar({expiryTime, handleTimeOut, timePerRound}:{expiryTime?:Date, h
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(timePerRound)
 
       const totalTime = timePerRound ?? 30000;
 

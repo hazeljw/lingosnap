@@ -14,7 +14,10 @@ enum GameStatus {
   GameOver='GameOver'
 }
 
-const socket = io(process.env.SERVER_URL || 'http://localhost:3002');
+const socket = io('https://lingosnap-server-78dfee2150c1.herokuapp.com/');
+// const socket = io('http://localhost:3002');
+
+
 
 function App() {
   const [gameStatus, setGameStatus] = React.useState<GameStatus>(GameStatus.NotJoined);
