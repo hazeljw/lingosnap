@@ -1,7 +1,7 @@
 // TYPES SHARED WITH BE - KEEP IN SYNC
 // TODO: export this as a package that both FE and BE can install
 
-import { Language } from "./enums";
+import { ContentMode, Language } from "./enums";
 
 export interface User {
     id: string;
@@ -23,6 +23,7 @@ export interface GameState {
     totalRounds: number;
     currentRound: number;
     timePerRound: number;
+    contentMode: ContentMode;
     cardOne: ContentItem[];
     cardTwo: ContentItem[];
     commonItem: ContentItem;

@@ -4,7 +4,6 @@ import { Box, Button, InputAdornment, TextField } from '@mui/material';
 import { GameContentData } from './helpers';
 import HintMenu from './HintMenu';
 import { Language } from '../common/enums';
-import { mapLanguageToFlag } from '../common/mappers';
 import UserScore from './UserScore';
 import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
@@ -13,6 +12,7 @@ import SymbolKeyboard from './LanguageSymbolKeyboard';
 import { RoomData } from '../common/types';
 import GameCard from './GameCard';
 import LanguageFlag from '../common/LanguageFlag';
+import { mapContentModeToGameItemSize } from '../common/mappers';
 
 const ANSWER_INPUT_ID = 'answer-input-id'
 
@@ -70,17 +70,12 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
         const correctAnswer = itemData?.commonItem?.languages[chosenLanguage];
 
         if(enteredAnswer?.toLowerCase() === correctAnswer?.toLowerCase()) {
-            console.log("CORRECT");
 
             handleCorrectAnswer();
             determineCelebration();
 
-            // handle correct answer
-
         } else {
-            console.log("INCORRECT");
-            // handle incorrect answer
-            
+            // TODO: give some ui feedback for incorrect answer
         }
 
         setEnteredAnswer("");
@@ -136,12 +131,22 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
                     <Box className="cardContainer">
                         <Box className="card" width={cardWidth} height={cardHeight}>
-                            <GameCard difficulty={2} cardHeight={cardHeight} cardWidth={cardWidth} items={itemData?.cardOne} />
+                            <GameCard 
+                                difficulty={2} 
+                                cardHeight={cardHeight} 
+                                cardWidth={cardWidth} 
+                                items={itemData?.cardOne} 
+                                size={mapContentModeToGameItemSize(roomData?.gameState?.contentMode)}
+                            />
                         </Box>
                         <Box className="card" width={cardWidth} height={cardHeight} position={'relative'}>
-
-                            <GameCard difficulty={2} cardHeight={cardHeight} cardWidth={cardWidth} items={itemData?.cardTwo} />
-
+                            <GameCard 
+                                difficulty={2} 
+                                cardHeight={cardHeight} 
+                                cardWidth={cardWidth} 
+                                items={itemData?.cardTwo}
+                                size={mapContentModeToGameItemSize(roomData?.gameState?.contentMode)}
+                            />
                         </Box>
                     </Box>
 
@@ -185,7 +190,10 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
 
                         <Box>
-                            <SymbolKeyboard language={chosenLanguage} onSymbolClick={handleSymbolClick}/>
+                            <SymbolKeyboard 
+                                language={chosenLanguage}
+                                onSymbolClick={handleSymbolClick}
+                            />
                         </Box>
                         
                     </Box>
@@ -216,7 +224,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
             </Box>
 
-            <HintMenu open={hintMenuOpen} handleClose={() => {setHintMenuOpen(false)}} chosenLanguage={chosenLanguage}/>
+            <HintMenu open={hintMenuOpen} handleClose={() => {setHintMenuOpen(false)}} chosenLanguage={chosenLanguage} contentMode={roomData?.gameState?.contentMode}/>
         </Box>
     );
 }

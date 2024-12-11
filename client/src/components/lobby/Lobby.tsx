@@ -13,7 +13,7 @@ const DEFAULT_CONTENT_SELECTION = ContentMode.Food
 interface ILobbyProps {
     roomData?: RoomData;
     handleLeaveLobby: () => void;
-    handleStartGame: (rounds:number, timePerRound:number) => void;
+    handleStartGame: (rounds:number, timePerRound:number, selectedContent:ContentMode) => void;
     isHost: boolean;
     userData?: User;
     handleUserChangeSelectedLanguage: (language:Language) => void;
@@ -70,7 +70,7 @@ function Lobby({roomData, handleLeaveLobby, handleStartGame, isHost, userData, h
                         <MenuItem value={ContentMode.Hiragana}>Hiragana</MenuItem>
                         <MenuItem value={ContentMode.Katakana}>Katakana</MenuItem>
                     </Select>
-                    <Button variant="contained" color="primary" onClick={() => handleStartGame(rounds, timePerRound)}>Start Game</Button>
+                    <Button variant="contained" color="primary" onClick={() => handleStartGame(rounds, timePerRound, selectedContent)}>Start Game</Button>
                 </Box>
             ) : (
                 <Box className="rightBox contentBox" height={"100%"} display={'flex'} justifyContent={'space-between'} flexDirection={'column'}>

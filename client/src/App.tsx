@@ -9,7 +9,7 @@ import { RoomData } from './components/common/types';
 import { Box } from '@mui/material';
 import GameCard from './components/game/GameCard';
 import data from './configs/contentData.json';
-import { Language } from './components/common/enums';
+import { ContentMode, Language } from './components/common/enums';
 
 const randomListOfData = [...data.data, ...data.data]
 
@@ -49,21 +49,17 @@ function App() {
     });
 
     socket.on('game_start', (data) => {
-      console.log('game_start got!', data);
       setRoomData(data?.roomData)
       setGameStatus(GameStatus.InGame);
     });
 
     socket.on('game_update', (data) => {
-      console.log('game_start got!', data);
       setRoomData(data?.roomData)
 
       // check for game over
       if(data?.roomData?.gameState?.currentRound > data?.roomData?.gameState?.totalRounds) {
         setGameStatus(GameStatus.GameOver);
       }
-
-      //setGameStatus(GameStatus.InGame);
     });
 
     socket.on('return_to_lobby', (data) => {
@@ -79,10 +75,10 @@ function App() {
     setRoomData(undefined);
   }
 
-  const handleStartGame = (rounds:number, timePerRound:number) => {
+  const handleStartGame = (rounds:number, timePerRound:number, contentMode:ContentMode) => {
     // TODO: start the game for everyone in the room
     //socket.emit('start_game', {roomData});
-    socket.emit('start_game', {roomData, rounds, timePerRound});
+    socket.emit('start_game', {roomData, rounds, timePerRound, contentMode});
 
     //setGameStatus(GameStatus.InGame);
   }
@@ -92,7 +88,6 @@ function App() {
   }
 
   const handleTimeOut = () => {
-    console.log("handling timeout")
     // TODO: If the user is the host, end the round.
     if(roomData?.hostId === socket.id) {
       socket.emit('ran_out_of_time', {roomData});

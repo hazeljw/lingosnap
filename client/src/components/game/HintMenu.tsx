@@ -1,14 +1,20 @@
 import React from 'react';
 import './styles.css';
 import { Box, Dialog } from '@mui/material';
-import data from '../../configs/contentData.json';
-import { Language } from '../common/enums';
+import { ContentMode, Language } from '../common/enums';
 import Grid from '@mui/material/Grid2';
-import { mapLanguageToFlag } from '../common/mappers';
+import { mapContentModeToData, mapLanguageToFlag } from '../common/mappers';
 
-function HintMenu({handleClose, chosenLanguage, open}: {handleClose: () => void, chosenLanguage: Language, open: boolean}) {
+interface HintMenuProps {
+    handleClose: () => void,
+    chosenLanguage: Language,
+    open: boolean,
+    contentMode?: ContentMode
+}
 
-    const words = data.data;
+function HintMenu({handleClose, chosenLanguage, open, contentMode=ContentMode.Food}:HintMenuProps) {
+
+    const words = mapContentModeToData(contentMode).data;
     words.sort(() => Math.random() - 0.5);
 
     return (

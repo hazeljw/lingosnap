@@ -1,15 +1,26 @@
 const data = require('./data/contentData.json');
+const animals = require('./data/animals.json');
 
 const generateRoomCode = () => {
     return Math.random().toString(36).substr(2, 6).toUpperCase();
 }
 
-const getItemsForCard = (numItemsPerCard, numCards=2) => {
+const getItemOptions = (contentMode) => {
+    switch(contentMode) {
+        case "Animals":
+            return animals;
+        case "Food":
+            return data;
+        default:
+            return data;
+    }
+}
+
+const getItemsForCard = (numItemsPerCard, contentMode, numCards=2) => {
     // The total unique items to be retrieved
     const totalNumberOfItems = (numItemsPerCard * numCards) - (numCards-1);
 
-    const itemOptions = data.data
-
+    const itemOptions = getItemOptions(contentMode).data
 
     if(totalNumberOfItems > itemOptions.length){
         throw new Error('Not enough items to choose fromm')
@@ -62,7 +73,7 @@ const moveToNextRound = (roomData) => {
 
         const timeForRound = roomData.gameState.timePerRound ?? 30000;
         const numberItemsPerCard = 10;
-        const gameItems = getItemsForCard(numberItemsPerCard);
+        const gameItems = getItemsForCard(numberItemsPerCard, roomData.gameState.contentMode);
         const gameState = {
             ...roomData.gameState,
             ...gameItems,

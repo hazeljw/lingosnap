@@ -375,7 +375,7 @@
             },
             "tags": ["animal", "bird", "urban", "flying", "messenger"],
             "image": "/images/animals/pigeon.png",
-            "funFact": "Pigeons can recognize all 26 letters of the English alphabet and can be taught to perform complex sequences of actions!",
+            "funFact": "Pigeons can recognize all 26 letters of the English alphabet!",
             "congrats": "You're carrying the message of success!",
             "sorry": "Don't let your hopes fly away - try again!"
         },

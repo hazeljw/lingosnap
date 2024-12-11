@@ -1,4 +1,6 @@
-import { Language } from "./enums";
+import { ContentMode, Language } from "./enums";
+import data from '../../configs/contentData.json';
+import animals from '../../configs/animals.json';
 
 export const mapLanguageToFlag = (language: Language) => {
     switch(language){
@@ -24,5 +26,28 @@ export const mapLanguageToFlag = (language: Language) => {
             return '🇫🇮';
         case Language.TeReo:
             return '🇳🇿'; // TODO: get a te reo emoji
+    }
+}
+
+export const mapContentModeToData = (contentMode: ContentMode) => {
+    switch(contentMode) {
+        case ContentMode.Animals:
+            return animals;
+        case ContentMode.Food:
+            return data;
+        default:
+            return data;
+    }
+}
+
+
+export const mapContentModeToGameItemSize = (contentMode?: ContentMode) => {
+    switch(contentMode) {
+        case ContentMode.Animals:
+            return 0.8;
+        case ContentMode.Food:
+            return 2;
+        default:
+            return 2;
     }
 }

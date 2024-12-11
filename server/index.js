@@ -110,7 +110,9 @@ io.on("connect", (socket) => {
         // TODO: make this change throughout the game
         const numberItemsPerCard = 3;
 
-        const gameItems = getItemsForCard(numberItemsPerCard);
+        const contentMode = data.contentMode
+
+        const gameItems = getItemsForCard(numberItemsPerCard, contentMode);
 
         const rounds = data.rounds;
         const timePerRound = data.timePerRound * 1000; // convert to milliseconds
@@ -118,6 +120,7 @@ io.on("connect", (socket) => {
         const gameState = {
             totalRounds: rounds,
             timePerRound: timePerRound,
+            contentMode,
             currentRound: 1,
             ...gameItems,
             userIdsWithCorrectAnswerForRound: [],

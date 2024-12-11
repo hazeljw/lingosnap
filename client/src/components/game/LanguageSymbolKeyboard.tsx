@@ -9,11 +9,11 @@ const getSymbolsForLanguage = (language: Language):string[] => {
 
     switch (language) {
         case Language.Spanish:
-            return ['á','é','í','ñ'];
+            return ['á','é','í','ó','ú','ñ'];
         case Language.French:
             return ['è','é','œ'];
         case Language.German:
-            return ['ä'];
+            return ['ä','ö'];
         case Language.Italian:
             return ['è']
         case Language.Portuguese:
