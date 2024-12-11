@@ -11,6 +11,7 @@ import { Socket } from 'socket.io-client';
 import MainTitle from '../common/MainTitle';
 import SymbolKeyboard from './LanguageSymbolKeyboard';
 import { RoomData } from '../common/types';
+import GameCard from './GameCard';
 
 const ANSWER_INPUT_ID = 'answer-input-id'
 
@@ -25,9 +26,6 @@ interface GameOnProps {
 function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut, socket}: GameOnProps) {
     const [itemData, setItemData] = React.useState<GameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
-
-    const [cardOnePositions, setCardOnePositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
-    const [cardTwoPositions, setCardTwoPositions] = React.useState<{x: number, y: number, rotate: number}[]>([]);
 
     const [celebration, setCelebration] = React.useState<string>('');
     const [missedAnswerText, setMissedAnswerText] = React.useState<string>("");
@@ -88,76 +86,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
     }
 
-    const assignPositionsForItems = (numItems:number):{x: number, y: number, rotate:number}[] => {
-        const positions:{x: number, y: number, rotate:number}[] = []
-
-        let attempts = 0;
-
-        while(positions.length < numItems && attempts < 1000) {
-            attempts++;
-
-            // place randomly within the card
-            let x = Math.floor(Math.random() * cardWidth - border) + border;
-            let y = Math.floor(Math.random() * cardHeight - border) + border;
-
-            let rotate = Math.floor(Math.random() * (5)) * 90;
-
-            if(x > cardWidth - border){
-                x = x - border
-            }
-            if(y > cardHeight - border){
-                y = y - border
-            }
-
-            // check if position is already taken
-            if(positions.find((pos) => {
-
-                const imageWidth = 100;
-
-                const l1 = {x: x, y: y};
-                const r1 = {x: x + imageWidth, y: y + imageWidth};
-                const l2 = {x: pos.x, y: pos.y};
-                const r2 = {x: pos.x + imageWidth, y: pos.y + imageWidth};
-
-
-                 // If one rectangle is to the left of the other
-                if (l1.x > r2.x || l2.x > r1.x)
-                    return false;
-
-                // If one rectangle is above the other
-                if (r1.y > l2.y || r2.y > l1.y)
-                    return false;
-
-                console.log("COLLISION");
-
-                return true;
-            })) {
-                continue
-            }
-
-            console.log("all good");
-
-            positions.push({x, y, rotate})
-        }
-
-        return positions
-    }
-
-    // useEffect(() => {
-    //     console.log("Game state changed", roomData?.gameState);
-
-    //     // if(roomData?.gameState) {
-    //     //     setItemData({
-    //     //         cardOne: roomData?.gameState?.cardOne,
-    //     //         cardTwo: roomData?.gameState?.cardTwo,
-    //     //         commonItem: roomData?.gameState?.commonItem,
-    //     //         allItems: roomData?.gameState?.allItems
-    //     //     })
-
-    //     //     setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
-    //     //     setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
-    //     // }
-    // }, [roomData?.gameState])
 
     useEffect(() => {
         // on round change
@@ -170,9 +98,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                 commonItem: roomData?.gameState?.commonItem,
                 allItems: roomData?.gameState?.allItems
             })
-
-            setCardOnePositions(assignPositionsForItems(roomData?.gameState?.cardOne.length));
-            setCardTwoPositions(assignPositionsForItems(roomData?.gameState?.cardTwo.length));
         }
 
     }, [roomData?.gameState?.currentRound])
@@ -187,7 +112,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
     // TODO: update dynamically
     const cardHeight = 400
     const cardWidth = 400
-    const border = 64
 
     return (
         <Box display={'flex'} flexWrap={'wrap'} minHeight={'100vh'}>
@@ -211,35 +135,11 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
                     <Box className="cardContainer">
                         <Box className="card" width={cardWidth} height={cardHeight}>
-                            {itemData?.cardOne.map((item, index) => {
-                                // place randomly within the card
-                                const x = cardOnePositions[index]?.x;
-                                const y = cardOnePositions[index]?.y;
-
-
-                                return (
-                                    <Box key={index} style={{position: 'absolute', top: y, left: x, transform:`rotate(${cardOnePositions[index]?.rotate}deg)`}} className='item'>
-                                        <img className='pixelImage' src={item.image} alt={item.word} width={"64px"}/>
-                                    </Box>
-                                )
-                                
-                            })}
-
+                            <GameCard difficulty={2} cardHeight={cardHeight} cardWidth={cardWidth} items={itemData?.cardOne} />
                         </Box>
                         <Box className="card" width={cardWidth} height={cardHeight} position={'relative'}>
 
-                            {itemData?.cardTwo.map((item, index) => {
-                                // place randomly within the card
-                                const x = cardTwoPositions[index]?.x;
-                                const y = cardTwoPositions[index]?.y;
-
-                                return (
-                                    <Box key={index} style={{position: 'absolute', top: y, left: x, transform:`rotate(${cardTwoPositions[index]?.rotate}deg)`}} className='item'>
-                                        <img className='pixelImage' src={item.image} alt={item.word} width={"64px"}/>
-                                    </Box>
-                                )
-                                
-                            })}
+                            <GameCard difficulty={2} cardHeight={cardHeight} cardWidth={cardWidth} items={itemData?.cardTwo} />
 
                         </Box>
                     </Box>
@@ -312,8 +212,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                 </Box>
 
             </Box>
-
-
 
             <HintMenu open={hintMenuOpen} handleClose={() => {setHintMenuOpen(false)}} chosenLanguage={chosenLanguage}/>
         </Box>
