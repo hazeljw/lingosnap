@@ -12,6 +12,7 @@ import MainTitle from '../common/MainTitle';
 import SymbolKeyboard from './LanguageSymbolKeyboard';
 import { RoomData } from '../common/types';
 import GameCard from './GameCard';
+import LanguageFlag from '../common/LanguageFlag';
 
 const ANSWER_INPUT_ID = 'answer-input-id'
 
@@ -156,7 +157,9 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                     input: {
                                     startAdornment: (
                                         <InputAdornment position="start">
-                                            <span style={{fontSize: '2rem'}}>{mapLanguageToFlag(chosenLanguage)}</span>
+                                            <span style={{fontSize: '2rem'}}>
+                                                <LanguageFlag language={chosenLanguage} />
+                                            </span>
                                         </InputAdornment>
                                     ),
                                     onKeyDown: (event) => {
