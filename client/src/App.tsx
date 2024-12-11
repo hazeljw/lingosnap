@@ -9,6 +9,7 @@ import { RoomData } from './components/common/types';
 import { Box } from '@mui/material';
 import GameCard from './components/game/GameCard';
 import data from './configs/contentData.json';
+import { Language } from './components/common/enums';
 
 const randomListOfData = [...data.data, ...data.data]
 
@@ -20,7 +21,7 @@ enum GameStatus {
   GameOver='GameOver'
 }
 
- const socket = io('https://lingosnap-server-78dfee2150c1.herokuapp.com/');
+const socket = io('https://lingosnap-server-78dfee2150c1.herokuapp.com/');
 // const socket = io('http://localhost:3002');
 
 
@@ -99,9 +100,14 @@ function App() {
   }
 
   const isHost = roomData?.hostId === socket.id;
+  const userData = roomData?.users?.find((user) => user.id === socket.id)
 
   const handleReturnToLobby = () => {
     socket.emit('return_to_lobby', {roomData});
+  }
+
+  const handleUserChangeSelectedLanguage = (language:Language) => {
+    socket.emit('player_changed_language', {roomData, language, user: userData});
   }
 
   return (
@@ -109,7 +115,7 @@ function App() {
 
       { gameStatus === GameStatus.NotJoined && <LandingScreen socket={socket} />}
 
-      { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame} isHost={isHost}/>}
+      { gameStatus === GameStatus.InLobby && <Lobby roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleStartGame={handleStartGame} isHost={isHost} userData={userData} handleUserChangeSelectedLanguage={handleUserChangeSelectedLanguage} />}
 
       { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       

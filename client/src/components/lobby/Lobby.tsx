@@ -3,8 +3,9 @@ import './styles.css';
 import { Box, Button, MenuItem, Select, TextField } from '@mui/material';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
-import { ContentMode } from '../common/enums';
-import { RoomData } from '../common/types';
+import { ContentMode, Language } from '../common/enums';
+import { RoomData, User } from '../common/types';
+import LanguageSelectMenu from '../common/LanguageSelectMenu';
 
 
 const DEFAULT_CONTENT_SELECTION = ContentMode.Food
@@ -14,19 +15,25 @@ interface ILobbyProps {
     handleLeaveLobby: () => void;
     handleStartGame: (rounds:number, timePerRound:number) => void;
     isHost: boolean;
+    userData?: User;
+    handleUserChangeSelectedLanguage: (language:Language) => void;
 }
 
-function Lobby({roomData, handleLeaveLobby, handleStartGame, isHost}:ILobbyProps) {
+function Lobby({roomData, handleLeaveLobby, handleStartGame, isHost, userData, handleUserChangeSelectedLanguage}:ILobbyProps) {
   const [rounds, setRounds] = React.useState(3);
   const [timePerRound, setTimePerRound] = React.useState(30);
   const [selectedContent, setSelectedContent] = React.useState<ContentMode>(DEFAULT_CONTENT_SELECTION)
+
 
   return (
     <Box className="LandingScreen flexCenter" gap={3} flexDirection={'column'}>
         <MainTitle />
 
         <Box className="title contentBox">Game code: {roomData?.roomCode}</Box>
-
+        <Box mb={2}>
+            <LanguageSelectMenu selectedLanguage={userData?.selectedLanguage} setSelectedLanguage={handleUserChangeSelectedLanguage} />
+        </Box>
+        
         <Box className="flexSimple">
             <Box className="leftBox contentBox" mr={2} height={"100%"}>
                 <Box>Players:</Box>

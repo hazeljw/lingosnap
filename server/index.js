@@ -198,6 +198,21 @@ io.on("connect", (socket) => {
 
     })
 
+    socket.on('player_changed_language', (data) => {
+        const roomCode = data?.roomData?.roomCode;
+        const roomData = roomDataMap[roomCode];
+
+        const user = roomData?.users?.find((user) => user.id === data.user?.id)
+
+        if(user) {
+          user.selectedLanguage = data.language
+        }
+
+        socket.emit('room_data_update', {roomData});
+        socket.to(roomCode).emit('room_data_update', {roomData});
+
+    })
+
 })
 
 
