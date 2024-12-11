@@ -1,8 +1,7 @@
 import React from 'react';
 import './styles.css';
-import { Box, Button, IconButton, TextField } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import { Socket } from 'socket.io-client';
-import { mapLanguageToFlag } from '../common/mappers';
 import { Language } from '../common/enums';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
@@ -28,8 +27,6 @@ function LandingScreen({socket}: {socket:Socket}) {
     const handleJoinGame = () => {
       socket.emit('join_room', {name, room: enteredGameCode, selectedLanguage, selectedAvatar});
     }
-
-    const languages = Object.values(Language);
 
   return (
     <Box className="LandingScreen flexCenter" gap={3} flexDirection={'column'}>

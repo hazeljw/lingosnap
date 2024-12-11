@@ -6,6 +6,12 @@ import io from 'socket.io-client';
 import GameOn from './components/game/GameOn';
 import ResultsScreen from './components/postGame/ResultsScreen';
 import { RoomData } from './components/common/types';
+import { Box } from '@mui/material';
+import GameCard from './components/game/GameCard';
+import data from './configs/contentData.json';
+
+const randomListOfData = [...data.data, ...data.data]
+
 
 enum GameStatus {
   NotJoined='NotJoined',
@@ -14,7 +20,7 @@ enum GameStatus {
   GameOver='GameOver'
 }
 
-const socket = io('https://lingosnap-server-78dfee2150c1.herokuapp.com/');
+ const socket = io('https://lingosnap-server-78dfee2150c1.herokuapp.com/');
 // const socket = io('http://localhost:3002');
 
 
@@ -108,6 +114,28 @@ function App() {
       { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
       { gameStatus === GameStatus.GameOver && <ResultsScreen roomData={roomData} isHost={isHost} handleReturnToLobby={handleReturnToLobby}/>}
+
+      { gameStatus !== GameStatus.InGame && (
+        <Box style={{
+          position: 'absolute',
+          zIndex: -1,
+          top: 1,
+          opacity: 0.2
+        }}>
+          <GameCard cardHeight={window.innerHeight} cardWidth={2000} difficulty={50} items={randomListOfData} size={0.5}/>
+        </Box>
+      )}
+
+      { gameStatus !== GameStatus.InGame && (
+        <Box style={{
+          position: 'absolute',
+          zIndex: -1,
+          top: 1,
+          opacity: 0.2
+        }}>
+          <GameCard cardHeight={window.innerHeight} cardWidth={2000} difficulty={50} items={data.data} size={2}/>
+        </Box>
+      )}
 
     </div>
   );
