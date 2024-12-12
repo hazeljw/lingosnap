@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import './styles.css';
 import { Box, Button, InputAdornment, TextField } from '@mui/material';
-import { GameContentData } from './helpers';
+import { CharacterGameContentData, GameContentData } from './helpers';
 import HintMenu from './HintMenu';
-import { Language } from '../common/enums';
+import { ContentMode, Language } from '../common/enums';
 import UserScore from './UserScore';
 import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
 import MainTitle from '../common/MainTitle';
 import SymbolKeyboard from './LanguageSymbolKeyboard';
-import { RoomData } from '../common/types';
+import { CharacterGameState, CharacterItem, ContentItem, GameState, RoomData } from '../common/types';
 import GameCard from './GameCard';
 import LanguageFlag from '../common/LanguageFlag';
 import { mapContentModeToGameItemSize } from '../common/mappers';
@@ -25,7 +25,7 @@ interface GameOnProps {
 }
 
 function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut, socket}: GameOnProps) {
-    const [itemData, setItemData] = React.useState<GameContentData>();
+    const [itemData, setItemData] = React.useState<GameContentData | CharacterGameContentData>();
     const [hintMenuOpen, setHintMenuOpen] = React.useState<boolean>(false);
 
     const [celebration, setCelebration] = React.useState<string>('');
@@ -33,15 +33,28 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
     const [enteredAnswer, setEnteredAnswer] = React.useState<string>("");
 
-    const chosenLanguage = roomData?.users?.find((user) => user.id === socket.id)?.selectedLanguage ?? Language.Spanish;
+    const isCharacterMode = roomData?.gameState?.contentMode && [ContentMode.Hiragana, ContentMode.Katakana].includes(roomData?.gameState?.contentMode)
+    const chosenLanguage = isCharacterMode ? Language.Japanese : roomData?.users?.find((user) => user.id === socket.id)?.selectedLanguage ?? Language.Spanish;
 
     useEffect(() => {
     
         socket.on('out_of_time', (data) => {
-
+            let textToDisplay = ''
+            
             const roomData:RoomData = data?.roomData
 
-            setMissedAnswerText(`Answer was ${roomData?.gameState?.commonItem?.languages[chosenLanguage]}! ` + roomData?.gameState?.commonItem?.sorry);
+            if(isCharacterMode){
+                const gameState = roomData?.gameState as CharacterGameState
+
+                textToDisplay = `Answer was ${gameState?.commonItem?.character}, ${gameState?.commonItem?.sound}`
+
+            } else {
+                const gameState = roomData?.gameState as GameState
+
+                textToDisplay = `Answer was ${gameState?.commonItem?.languages[chosenLanguage]}! ` + gameState?.commonItem?.sorry
+            }
+
+            setMissedAnswerText(textToDisplay);
 
             // set time out to clear
             setTimeout(() => {
@@ -52,12 +65,19 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
       }, [socket]);
 
     const determineCelebration = () => {
+        if(isCharacterMode) {
+            setCelebration('Well done!!');
+            return
+        }
+
         const peopleWhoGotIt = roomData?.gameState?.userIdsWithCorrectAnswerForRound?.length ?? 0;
 
+        const commonItem = itemData?.commonItem as ContentItem
+
         if(peopleWhoGotIt >= 1) {
-            setCelebration(itemData?.commonItem?.funFact ?? '');
+            setCelebration(commonItem?.funFact ?? '');
         } else {
-            setCelebration(itemData?.commonItem?.congrats ?? '');
+            setCelebration(commonItem?.congrats ?? '');
         }
 
         // set time out to clear
@@ -66,8 +86,18 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
         // }, 5000)
     }
 
+    const determineCorrectAnswer = () => {
+        if(isCharacterMode) {
+            const commonItem = itemData?.commonItem as CharacterItem
+            return commonItem?.sound;
+        } else {
+            const commonItem = itemData?.commonItem as ContentItem
+            return commonItem?.languages[chosenLanguage];
+        }
+    }
+
     const handleSubmitAnswer = () => {
-        const correctAnswer = itemData?.commonItem?.languages[chosenLanguage];
+        const correctAnswer = determineCorrectAnswer();
 
         if(enteredAnswer?.toLowerCase() === correctAnswer?.toLowerCase()) {
 
@@ -89,10 +119,10 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
         if(roomData?.gameState) {
             setItemData({
-                cardOne: roomData?.gameState?.cardOne,
-                cardTwo: roomData?.gameState?.cardTwo,
-                commonItem: roomData?.gameState?.commonItem,
-                allItems: roomData?.gameState?.allItems
+                cardOne: roomData?.gameState?.cardOne as ContentItem[],
+                cardTwo: roomData?.gameState?.cardTwo as ContentItem[],
+                commonItem: roomData?.gameState?.commonItem as ContentItem,
+                allItems: roomData?.gameState?.allItems as ContentItem[]
             })
         }
 
@@ -137,6 +167,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                 cardWidth={cardWidth} 
                                 items={itemData?.cardOne} 
                                 size={mapContentModeToGameItemSize(roomData?.gameState?.contentMode)}
+                                isCharacterMode={isCharacterMode}
                             />
                         </Box>
                         <Box className="card" width={cardWidth} height={cardHeight} position={'relative'}>
@@ -146,6 +177,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                 cardWidth={cardWidth} 
                                 items={itemData?.cardTwo}
                                 size={mapContentModeToGameItemSize(roomData?.gameState?.contentMode)}
+                                isCharacterMode={isCharacterMode}
                             />
                         </Box>
                     </Box>

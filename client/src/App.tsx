@@ -13,7 +13,6 @@ import { ContentMode, Language } from './components/common/enums';
 
 const randomListOfData = [...data.data, ...data.data]
 
-
 enum GameStatus {
   NotJoined='NotJoined',
   InLobby='InLobby',
@@ -23,7 +22,6 @@ enum GameStatus {
 
 const socket = io('https://lingosnap-server-78dfee2150c1.herokuapp.com/');
 // const socket = io('http://localhost:3002');
-
 
 
 function App() {
@@ -121,9 +119,9 @@ function App() {
           position: 'absolute',
           zIndex: -1,
           top: 1,
-          opacity: 0.2
+          opacity: 0.2,
         }}>
-          <GameCard cardHeight={window.innerHeight} cardWidth={2000} difficulty={50} items={randomListOfData} size={0.5}/>
+          <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={randomListOfData} size={0.5}/>
         </Box>
       )}
 
@@ -134,7 +132,7 @@ function App() {
           top: 1,
           opacity: 0.2
         }}>
-          <GameCard cardHeight={window.innerHeight} cardWidth={2000} difficulty={50} items={data.data} size={2}/>
+          <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={data.data} size={2}/>
         </Box>
       )}
 

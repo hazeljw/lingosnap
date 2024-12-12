@@ -1,32 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Box } from '@mui/material';
-import { ContentItem } from '../common/types';
+import { CharacterItem, ContentItem } from '../common/types';
 import Canvas from '../common/Canvas/Canvas';
+import { ContentMode } from '../common/enums';
 
 interface GameCardProps {
     cardHeight: number;
     cardWidth: number;
-    items?: ContentItem[]
+    items?: ContentItem[] | CharacterItem[]
     difficulty: number; // a number between 0 and 100 representing how difficult the level should be.
     level?:number,
     size?:number
+    isCharacterMode?: boolean
 }
 
 interface ItemWithPosition  {
     position:{x:number,y:number,rotation:number},
     movement:{vx:number, vy:number},
-    item: ContentItem,
-    image: HTMLImageElement
+    item: ContentItem | CharacterItem,
+    image?: HTMLImageElement
 }
 
 const MIN_SPEED = 0.01
 const MAX_SPEED = 0.08
 
-const GameCard = ({items, cardHeight, cardWidth, difficulty, level, size=2}:GameCardProps) => {
+const BASE_FONT_SIZE = 20
+
+const GameCard = ({items, cardHeight, cardWidth, difficulty, level, isCharacterMode=false, size=2}:GameCardProps) => {
 
     const [cardItems, setCardItems] = useState<ItemWithPosition[]>([])
     const [initTime, setInitTime] = useState<Date>(new Date())
+
+    const fontSize = BASE_FONT_SIZE*size
 
     function init() {
         const maxSpeed = MAX_SPEED
@@ -47,8 +53,17 @@ const GameCard = ({items, cardHeight, cardWidth, difficulty, level, size=2}:Game
                 vy: Math.random() * (maxSpeed - minSpeed) + minSpeed,
             }
 
+            
+            if(isCharacterMode) {
+                return {
+                    item,
+                    movement,
+                    position
+                }
+            }
+
             const image = new Image();
-            image.src = item.image;
+            image.src = (item as ContentItem).image;
 
             return {
                 item,
@@ -90,7 +105,8 @@ const GameCard = ({items, cardHeight, cardWidth, difficulty, level, size=2}:Game
 
         ctx.clearRect(0,0,ctx.canvas.width, ctx.canvas.height)
    
-        ctx.fillStyle = 'grey'
+        ctx.fillStyle = 'black';
+        ctx.font = `${fontSize}px sans-serif`;
         ctx.imageSmoothingEnabled = false;
 
 
@@ -98,19 +114,24 @@ const GameCard = ({items, cardHeight, cardWidth, difficulty, level, size=2}:Game
             // loop through and render
             const cardItem = cardItems[i]
 
-            const imageHeight = cardItem.image.height*size;
-            const imageWidth = cardItem.image.width*size;
+            const imageHeight = cardItem.image ? cardItem.image.height*size : fontSize;
+            const imageWidth = cardItem.image ? cardItem.image.width*size : fontSize;
 
             const x = findCoordinate(cardItem.position.x, cardItem.movement.vx, cardWidth - imageWidth, timeSinceStart)
             const y = findCoordinate(cardItem.position.y, cardItem.movement.vy, cardHeight - imageHeight, timeSinceStart)
 
-            ctx.drawImage(cardItem.image, x, y, imageWidth, imageHeight);
+            if(cardItem.image) {
+                ctx.drawImage(cardItem.image, x, y, imageWidth, imageHeight);
+            } else {
+                const item = cardItem.item as CharacterItem
+                ctx.fillText(item.character, x, y);
+            }
+            
         }
     }
 
 
     useEffect(() => {
-        console.log("use effecting", items)
         const values = init()
         setCardItems(values)
         setInitTime(new Date())

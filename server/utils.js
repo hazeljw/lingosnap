@@ -1,8 +1,22 @@
 const data = require('./data/contentData.json');
 const animals = require('./data/animals.json');
+const characters = require('./data/characterMode.json');
 
 const generateRoomCode = () => {
     return Math.random().toString(36).substr(2, 6).toUpperCase();
+}
+
+const getCharacterItemOptions = (characterType) => {
+    const mapped = characters.data.map((item)=> {
+        if(characterType === "Hiragana") {
+            return item.hiragana
+        } else {
+            return item.katakana
+        }
+    })
+
+    return {data: mapped ?? []} 
+
 }
 
 const getItemOptions = (contentMode) => {
@@ -11,6 +25,10 @@ const getItemOptions = (contentMode) => {
             return animals;
         case "Food":
             return data;
+        case "Hiragana": 
+            return getCharacterItemOptions(contentMode);
+        case "Katakana": 
+            return getCharacterItemOptions(contentMode);
         default:
             return data;
     }

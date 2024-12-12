@@ -16,7 +16,7 @@ export interface RoomData {
     roomCode: string;
     hostId?: string;
     users: User[];
-    gameState?: GameState;
+    gameState?: GameState | CharacterGameState;
 }
 
 export interface GameState {
@@ -31,6 +31,20 @@ export interface GameState {
     userIdsWithCorrectAnswerForRound: string[]
     roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
 }
+
+export interface CharacterGameState {
+    totalRounds: number;
+    currentRound: number;
+    timePerRound: number;
+    contentMode: ContentMode;
+    cardOne: CharacterItem[];
+    cardTwo: CharacterItem[];
+    commonItem: CharacterItem;
+    allItems: CharacterItem[];
+    userIdsWithCorrectAnswerForRound: string[]
+    roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
+}
+
 
 export interface ContentItem {
     word: string;
@@ -52,4 +66,10 @@ export interface ContentItem {
     funFact: string;
     congrats: string;
     sorry: string;
+}
+
+export interface CharacterItem {
+    character: string;
+    sound: string;
+    language: string;
 }
