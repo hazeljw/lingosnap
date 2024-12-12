@@ -120,6 +120,9 @@ function App() {
           zIndex: -1,
           top: 1,
           opacity: 0.2,
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden'
         }}>
           <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={randomListOfData} size={0.5}/>
         </Box>
@@ -130,7 +133,10 @@ function App() {
           position: 'absolute',
           zIndex: -1,
           top: 1,
-          opacity: 0.2
+          opacity: 0.2,
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden'
         }}>
           <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={data.data} size={2}/>
         </Box>

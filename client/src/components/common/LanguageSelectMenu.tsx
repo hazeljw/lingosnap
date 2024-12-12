@@ -7,7 +7,7 @@ function LanguageSelectMenu({selectedLanguage, setSelectedLanguage}:{selectedLan
   const languages = Object.values(Language);
 
   return (
-    <Box className="flexCenter contentBox" gap={1}>
+    <Box className="flexCenter contentBox" gap={1} flexWrap={'wrap'}>
         <Box>
         Pick a language:
         </Box>

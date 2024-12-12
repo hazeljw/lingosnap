@@ -13,5 +13,16 @@
 
 .flexSimple {
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.leftBox {
+    margin-bottom: 10px;
+}
+
+.rightBox {
+    margin-bottom: 10px;
 }
