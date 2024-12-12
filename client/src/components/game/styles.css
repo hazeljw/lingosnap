@@ -9,7 +9,7 @@
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center;
     margin-top: 20px;
     padding: 10px;
     gap: 10px
@@ -63,9 +63,10 @@
 
 
 .noBackgroundText {
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* font-weight: bold; */
     color: white;
+    
     
 }
 
@@ -105,9 +106,14 @@
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .character {
     font-weight: 400;
     font-size: 1.5rem;
+}
+
+.answerInput {
+    flex-wrap: wrap;
 }

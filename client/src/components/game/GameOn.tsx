@@ -135,16 +135,19 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
         document?.getElementById(ANSWER_INPUT_ID)?.focus()
     }
 
+    const baseDimension = 400
+
     // TODO: update dynamically
-    const cardHeight = 400
-    const cardWidth = 400
+    const cardWidth = Math.min(baseDimension, window.innerWidth-40);
+    const cardHeight = window.innerWidth - cardWidth < cardWidth ? Math.max(200, (window.innerHeight-400)/2) : baseDimension
+ 
 
     return (
         <Box display={'flex'} flexWrap={'wrap'} minHeight={'100vh'}>
 
             <Box flexGrow={100}>
                 <Box className="header noBackgroundText" display='flex' padding={2}>
-                    <Button variant="contained" color="primary" onClick={handleLeaveLobby}>Leave Game</Button>
+                    <Button size={'small'} variant="contained" color="primary" onClick={handleLeaveLobby}>Leave</Button>
                     <Box>
                         <MainTitle size={'small'} />
                     </Box>
@@ -154,8 +157,8 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                 </Box>
 
 
-                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} height="90%" justifyContent={'center'}>
-                    <span className='noBackgroundText'>
+                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} height="90%" justifyContent={'center'} maxWidth={'100vw'}>
+                    <span className='noBackgroundText' style={{fontSize: '1.5rem'}}>
                         What do these have in common?
                     </span>
 
@@ -182,8 +185,8 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                         </Box>
                     </Box>
 
-                    <Box>
-                        <Box className="flexCenter contentBox" gap={1}>
+                    <Box maxWidth={'100vw'}>
+                        <Box className="flexCenter contentBox answerInput" gap={1}>
                             <TextField 
                                 id={ANSWER_INPUT_ID} 
                                 label="" 
@@ -207,7 +210,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                       }
                                     },
                                 }}
-                                
                             />
                             <Button variant="contained" color="primary" onClick={handleSubmitAnswer} disabled={!enteredAnswer?.length || !!celebration?.length}>Submit</Button>
                         </Box>
@@ -221,7 +223,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                         </Box>
 
 
-                        <Box>
+                        <Box mt={3}>
                             <SymbolKeyboard 
                                 language={chosenLanguage}
                                 onSymbolClick={handleSymbolClick}
