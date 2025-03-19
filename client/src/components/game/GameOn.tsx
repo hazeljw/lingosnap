@@ -13,6 +13,9 @@ import { CharacterGameState, CharacterItem, ContentItem, GameState, RoomData } f
 import GameCard from './GameCard';
 import LanguageFlag from '../common/LanguageFlag';
 import { mapContentModeToGameItemSize } from '../common/mappers';
+import { Notepad } from '@phosphor-icons/react';
+import IconButton, { ICON_BUTTON_SIZE } from '../common/IconButton';
+import ScoreBoard from './ScoreBoard';
 
 const ANSWER_INPUT_ID = 'answer-input-id'
 
@@ -141,7 +144,6 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
     const cardWidth = Math.min(baseDimension, window.innerWidth-40);
     const cardHeight = window.innerWidth - cardWidth < cardWidth ? Math.max(200, (window.innerHeight-400)/2) : baseDimension
  
-
     return (
         <Box display={'flex'} flexWrap={'wrap'} minHeight={'100vh'}>
 
@@ -153,6 +155,13 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                     </Box>
                     <Box>
                         {roomData?.roomCode} - Round {roomData?.gameState?.currentRound} of {roomData?.gameState?.totalRounds}
+                    </Box>
+
+                    <Box className='mobileRefBtn'>
+                        <Button size='small' variant="contained" color="primary" onClick={() => {setHintMenuOpen(true)}} fullWidth={false}>
+                            <Notepad size={ICON_BUTTON_SIZE}  weight="thin"/>
+                        </Button>
+
                     </Box>
                 </Box>
 
@@ -186,6 +195,12 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                     </Box>
 
                     <Box maxWidth={'100vw'}>
+                        <Box mb={1}>
+                            <SymbolKeyboard 
+                                language={chosenLanguage}
+                                onSymbolClick={handleSymbolClick}
+                            />
+                        </Box>
                         <Box className="flexCenter contentBox answerInput" gap={1}>
                             <TextField 
                                 id={ANSWER_INPUT_ID} 
@@ -221,44 +236,30 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                         <Box mt={3} className={`${celebration?.length ? 'celebrationText' : missedAnswerText?.length && 'missedAnswerText'}`}>
                             {celebration}{missedAnswerText}
                         </Box>
-
-
-                        <Box mt={3}>
-                            <SymbolKeyboard 
-                                language={chosenLanguage}
-                                onSymbolClick={handleSymbolClick}
-                            />
-                        </Box>
-                        
                     </Box>
                 </Box>
 
             </Box>
 
 
-            <Box paddingTop={2} flexShrink={0} className="rightSideBarContainer" display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
+            <Box paddingTop={2} className="rightSideBarContainer">
 
-                <Box className="rightSideBar">
-                    {roomData?.users?.sort((a, b)=>{
-                        const aScore = a?.score ?? 0;
-                        const bScore = b?.score ?? 0;
-                        return bScore - aScore
-                    })?.map((user, index) => {
-                        return (
-                            <UserScore user={user} position={index+1}/>
-                        )
-                    })}
-                </Box>
+                <ScoreBoard users={roomData?.users} />
 
                 <Box padding={2}>
                     <Button size='large' variant="contained" color="primary" onClick={() => {setHintMenuOpen(true)}} fullWidth={true}>
-                       Reference sheet
+                        <IconButton text='Reference Sheet' icon={<Notepad size={ICON_BUTTON_SIZE}  weight="thin"/>} />
                     </Button>
                 </Box>
 
             </Box>
 
-            <HintMenu open={hintMenuOpen} handleClose={() => {setHintMenuOpen(false)}} chosenLanguage={chosenLanguage} contentMode={roomData?.gameState?.contentMode}/>
+            <HintMenu 
+                open={hintMenuOpen} 
+                handleClose={() => {setHintMenuOpen(false)}} 
+                chosenLanguage={chosenLanguage} 
+                contentMode={roomData?.gameState?.contentMode}
+            />
         </Box>
     );
 }

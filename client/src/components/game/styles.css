@@ -3,7 +3,6 @@
     text-align: left;
     align-items: center;
     gap: 10px;
-    padding: 10px;
 }
 
 .cardContainer {
@@ -72,7 +71,10 @@
 
 .rightSideBarContainer {
     min-width: 200px;
-   
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: space-between;
 }
 
 .rightSideBar {
@@ -116,4 +118,46 @@
 
 .answerInput {
     flex-wrap: wrap;
+}
+
+.textAndIcon {
+    font-size: 0.2rem !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    For responsive web design, 
+    consider these screen sizes and breakpoints: 
+    mobile (320-768px), 
+    tablet (768-1024px), 
+    and desktop (1024px and up).
+*/
+
+.mobileRefBtn {
+    display: none;
+}
+
+/* styling for screen width less than 1024px */
+@media screen and (max-width: 1065px) {
+    .rightSideBar {
+        border-radius: 18px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .rightSideBarContainer {
+        min-width: 200px;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .mobileRefBtn {
+        display: flex;
+        align-self: flex-end;
+        flex-grow: 2;
+        justify-content: end;
+        margin-right: 30px;
+    }
+
 }
