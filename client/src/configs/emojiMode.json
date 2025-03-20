@@ -966,7 +966,384 @@
             "funFact": "The world's oldest candy is Turkish Delight.",
             "congrats": "Sweet success is yours for the taking!",
             "sorry": "Don't let this leave a sour taste!"
+          },
+          {
+            "word": "juice",
+            "languages": {
+              "english": "juice",
+              "spanish": "zumo",
+              "french": "jus",
+              "german": "saft",
+              "italian": "succo",
+              "portuguese": "suco",
+              "dutch": "sap",
+              "japanese": "jūsu",
+              "korean": "juseu",
+              "finnish": "mehu",
+              "tereo": "hūhuka"
+            },
+            "tags": ["drink", "beverage", "fruit", "refreshing", "sweet", "healthy"],
+            "symbol": "🧃",
+            "funFact": "It takes about 2-3 oranges to make one 8-ounce glass of orange juice.",
+            "congrats": "You're squeezing every drop of potential!",
+            "sorry": "Don't let this situation leave a pulpy aftertaste!"
+          },
+          {
+            "word": "wine",
+            "languages": {
+              "english": "wine",
+              "spanish": "vino",
+              "french": "vin",
+              "german": "wein",
+              "italian": "vino",
+              "portuguese": "vinho",
+              "dutch": "wijn",
+              "japanese": "wain",
+              "korean": "wain",
+              "finnish": "viini",
+              "tereo": "waina"
+            },
+            "tags": ["drink", "alcohol", "grapes", "fermented", "celebration", "dining"],
+            "symbol": "🍷",
+            "funFact": "There are more than 10,000 varieties of wine grapes worldwide.",
+            "congrats": "You're aging to perfection like fine wine!",
+            "sorry": "Don't let this be your corked moment!"
+          },
+          {
+            "word": "ice",
+            "languages": {
+              "english": "ice",
+              "spanish": "hielo",
+              "french": "glace",
+              "german": "eis",
+              "italian": "ghiaccio",
+              "portuguese": "gelo",
+              "dutch": "ijs",
+              "japanese": "kōri",
+              "korean": "eoreum",
+              "finnish": "jää",
+              "tereo": "hukapapa"
+            },
+            "tags": ["cold", "water", "frozen", "clear", "slippery", "winter", "natural", "object"],
+            "symbol": "🧊",
+            "funFact": "Hot water freezes faster than cold water under certain conditions.",
+            "congrats": "You've broken the ice on this challenge!",
+            "sorry": "Don't let this give you the cold shoulder!"
+          },
+          {
+            "word": "spoon",
+            "languages": {
+              "english": "spoon",
+              "spanish": "cuchara",
+              "french": "cuillère",
+              "german": "löffel",
+              "italian": "cucchiaio",
+              "portuguese": "colher",
+              "dutch": "lepel",
+              "japanese": "supūn",
+              "korean": "seupeun",
+              "finnish": "lusikka",
+              "tereo": "pune"
+            },
+            "tags": ["utensil", "kitchen", "eating", "soup", "metal", "rounded", "object"],
+            "symbol": "🥄",
+            "funFact": "The world's largest spoon is in Minnesota and is 5,728 times larger than a regular teaspoon.",
+            "congrats": "You've really stirred up success!",
+            "sorry": "Don't let this be a bitter taste to swallow!"
+          },
+          {
+            "word": "happy",
+            "languages": {
+              "english": "happy",
+              "spanish": "feliz",
+              "french": "heureux",
+              "german": "glücklich",
+              "italian": "felice",
+              "portuguese": "feliz",
+              "dutch": "blij",
+              "japanese": "shiawase",
+              "korean": "haengbokhan",
+              "finnish": "onnellinen",
+              "tereo": "koa"
+            },
+            "tags": ["emotion", "positive", "joy", "smiling", "cheerful", "upbeat"],
+            "symbol": "😀",
+            "funFact": "Happiness is contagious and can spread up to three degrees of separation in social networks.",
+            "congrats": "You're radiating pure joy!",
+            "sorry": "Don't let this dim your bright outlook!"
+          },
+          {
+            "word": "sad",
+            "languages": {
+              "english": "sad",
+              "spanish": "triste",
+              "french": "triste",
+              "german": "traurig",
+              "italian": "triste",
+              "portuguese": "triste",
+              "dutch": "verdrietig",
+              "japanese": "kanashii",
+              "korean": "seulpeun",
+              "finnish": "surullinen",
+              "tereo": "pōuri"
+            },
+            "tags": ["emotion", "negative", "unhappy", "down", "blue", "melancholy"],
+            "symbol": "☹️",
+            "funFact": "Listening to sad music when you're feeling down can actually improve your mood by triggering the release of prolactin.",
+            "congrats": "You've turned those frowns upside down!",
+            "sorry": "Don't let your spirits sink too low!"
+          },
+          {
+            "word": "angry",
+            "languages": {
+              "english": "angry",
+              "spanish": "enfadado",
+              "french": "en colère",
+              "german": "wütend",
+              "italian": "arrabbiato",
+              "portuguese": "zangado",
+              "dutch": "boos",
+              "japanese": "okotta",
+              "korean": "hwaga-nan",
+              "finnish": "vihainen",
+              "tereo": "riri"
+            },
+            "tags": ["emotion", "negative", "rage", "upset", "furious", "mad"],
+            "symbol": "😡",
+            "funFact": "Studies show that the average adult gets angry about once a day and annoyed about three times a day.",
+            "congrats": "You've channeled that fire into something positive!",
+            "sorry": "Don't let your temperature rise over this!"
+          },
+          {
+            "word": "angel",
+            "languages": {
+              "english": "angel",
+              "spanish": "ángel",
+              "french": "ange",
+              "german": "engel",
+              "italian": "angelo",
+              "portuguese": "anjo",
+              "dutch": "engel",
+              "japanese": "tenshi",
+              "korean": "cheonsa",
+              "finnish": "enkeli",
+              "tereo": "anahera"
+            },
+            "tags": ["emotion", "innocent", "good", "pure", "heavenly", "halo"],
+            "symbol": "😇",
+            "funFact": "Early Christian art portrayed angels without wings until the 4th century.",
+            "congrats": "You're absolutely heaven-sent!",
+            "sorry": "Don't let this tarnish your halo!"
+          },
+          {
+            "word": "wink",
+            "languages": {
+              "english": "wink",
+              "spanish": "guiño",
+              "french": "clin d'œil",
+              "german": "zwinkern",
+              "italian": "occhiolino",
+              "portuguese": "piscadela",
+              "dutch": "knipoog",
+              "japanese": "winku",
+              "korean": "winkeu",
+              "finnish": "silmänisku",
+              "tereo": "kimo"
+            },
+            "tags": ["emotion", "gesture", "playful", "flirty", "knowing", "mischievous"],
+            "symbol": "😉",
+            "funFact": "Winking is one of the few facial expressions that is almost always intentional.",
+            "congrats": "You've got this situation all wink-wink, nudge-nudge!",
+            "sorry": "Don't let this make you miss a beat!"
+          },
+          {
+            "word": "cool",
+            "languages": {
+              "english": "cool",
+              "spanish": "genial",
+              "french": "cool",
+              "german": "cool",
+              "italian": "figo",
+              "portuguese": "legal",
+              "dutch": "cool",
+              "japanese": "kūru",
+              "korean": "kul",
+              "finnish": "siisti",
+              "tereo": "rawe"
+            },
+            "tags": ["emotion", "attitude", "sunglasses", "confident", "relaxed", "admired"],
+            "symbol": "😎",
+            "funFact": "The slang use of 'cool' to mean stylish or excellent began in the jazz scene of the 1930s.",
+            "congrats": "You're the definition of cool under pressure!",
+            "sorry": "Don't let this crack your shades!"
+          },
+          {
+            "word": "kiss",
+            "languages": {
+              "english": "kiss",
+              "spanish": "beso",
+              "french": "baiser",
+              "german": "kuss",
+              "italian": "bacio",
+              "portuguese": "beijo",
+              "dutch": "kus",
+              "japanese": "kisu",
+              "korean": "kiseu",
+              "finnish": "suudelma",
+              "tereo": "kihi"
+            },
+            "tags": ["emotion", "affection", "love", "romantic", "heart", "lips"],
+            "symbol": "😘",
+            "funFact": "A passionate kiss burns about 2-3 calories per minute and engages 146 muscles.",
+            "congrats": "You've sealed it with a kiss of success!",
+            "sorry": "Don't let this miss blow you a goodbye kiss!"
+          },
+          {
+            "word": "flustered",
+            "languages": {
+              "english": "flustered",
+              "spanish": "nervioso",
+              "french": "troublé",
+              "german": "verwirrt",
+              "italian": "agitato",
+              "portuguese": "nervoso",
+              "dutch": "zenuwachtig",
+              "japanese": "awateta",
+              "korean": "dangwhang",
+              "finnish": "hämmentynyt",
+              "tereo": "porangi"
+            },
+            "tags": ["emotion", "embarrassed", "shocked", "blushing", "surprised", "overwhelmed"],
+            "symbol": "😳",
+            "funFact": "Blushing is unique to humans and is caused by an adrenaline rush that dilates blood vessels in the face.",
+            "congrats": "You've turned that flush of doubt into a glow of success!",
+            "sorry": "Don't let this make your cheeks burn!"
+          },
+          {
+            "word": "silly",
+            "languages": {
+              "english": "silly",
+              "spanish": "tonto",
+              "french": "idiot",
+              "german": "albern",
+              "italian": "sciocco",
+              "portuguese": "bobo",
+              "dutch": "gek",
+              "japanese": "baka",
+              "korean": "eoliseokhan",
+              "finnish": "hassu",
+              "tereo": "wairangi"
+            },
+            "tags": ["emotion", "playful", "goofy", "wild", "crazy", "funny"],
+            "symbol": "🤪",
+            "funFact": "Silly originally meant 'blessed' or 'happy' in Old English.",
+            "congrats": "Your zany approach knocked it out of the park!",
+            "sorry": "Don't let this goof trip you up!"
+          },
+          {
+            "word": "cowboy",
+            "languages": {
+              "english": "cowboy",
+              "spanish": "vaquero",
+              "french": "cow-boy",
+              "german": "cowboy",
+              "italian": "cowboy",
+              "portuguese": "cowboy",
+              "dutch": "cowboy",
+              "japanese": "kaubōi",
+              "korean": "kawooboi",
+              "finnish": "cowboy",
+              "tereo": "kaupōi"
+            },
+            "tags": ["person", "western", "hat", "rancher", "rodeo", "adventurous"],
+            "symbol": "🤠",
+            "funFact": "The average age of real cowboys of the American West was only 24.",
+            "congrats": "Yeehaw! You've lassoed that success!",
+            "sorry": "Don't let this buck you off your horse!"
+          },
+          {
+            "word": "clown",
+            "languages": {
+              "english": "clown",
+              "spanish": "payaso",
+              "french": "clown",
+              "german": "clown",
+              "italian": "pagliaccio",
+              "portuguese": "palhaço",
+              "dutch": "clown",
+              "japanese": "piero",
+              "korean": "keulraun",
+              "finnish": "pelle",
+              "tereo": "kauna"
+            },
+            "tags": ["person", "performer", "funny", "circus", "colorful", "makeup"],
+            "symbol": "🤡",
+            "funFact": "Joseph Grimaldi is considered the first modern clown, creating the white-face makeup design in the early 1800s.",
+            "congrats": "You've juggled this challenge with spectacular skill!",
+            "sorry": "Don't let this turn your smile upside down!"
+          },
+          {
+            "word": "poop",
+            "languages": {
+              "english": "poop",
+              "spanish": "caca",
+              "french": "caca",
+              "german": "kacke",
+              "italian": "cacca",
+              "portuguese": "cocô",
+              "dutch": "poep",
+              "japanese": "unchi",
+              "korean": "ddong",
+              "finnish": "kakka",
+              "tereo": "paru"
+            },
+            "tags": ["waste", "bathroom", "brown", "stinky", "toilet", "organic"],
+            "symbol": "💩",
+            "funFact": "The poop emoji is actually modeled after a soft-serve ice cream design in Japan.",
+            "congrats": "You've turned a crappy situation into gold!",
+            "sorry": "Don't let this stink up your day!"
+          },
+          {
+            "word": "dizzy",
+            "languages": {
+              "english": "dizzy",
+              "spanish": "mareado",
+              "french": "étourdi",
+              "german": "schwindelig",
+              "italian": "stordito",
+              "portuguese": "tonto",
+              "dutch": "duizelig",
+              "japanese": "memai",
+              "korean": "hyeongi",
+              "finnish": "huimaava",
+              "tereo": "āponapona"
+            },
+            "tags": ["feeling", "disoriented", "spinning", "confused", "unsteady", "wobbly"],
+            "symbol": "😵",
+            "funFact": "Dizziness occurs when there's a disconnect between what your eyes see and what your inner ear senses.",
+            "congrats": "You've steadied yourself and found your balance!",
+            "sorry": "Don't let this make your head spin!"
+          },
+          {
+            "word": "scared",
+            "languages": {
+              "english": "scared",
+              "spanish": "asustado",
+              "french": "effrayé",
+              "german": "erschrocken",
+              "italian": "spaventato",
+              "portuguese": "assustado",
+              "dutch": "bang",
+              "japanese": "kowai",
+              "korean": "museowohaneun",
+              "finnish": "peloissaan",
+              "tereo": "mataku"
+            },
+            "tags": ["emotion", "fear", "terrified", "frightened", "anxious", "alarmed"],
+            "symbol": "😱",
+            "funFact": "Fear can give people temporary superhuman strength.",
+            "congrats": "You've faced your fears and conquered them!",
+            "sorry": "Don't let this give you nightmares!"
           }
     ]
 }
-
