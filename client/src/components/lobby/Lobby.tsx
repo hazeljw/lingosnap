@@ -6,6 +6,7 @@ import MainTitle from '../common/MainTitle';
 import { ContentMode, Language } from '../common/enums';
 import { RoomData, User } from '../common/types';
 import LanguageSelectMenu from '../common/LanguageSelectMenu';
+import { CrownSimple } from '@phosphor-icons/react';
 
 
 const DEFAULT_CONTENT_SELECTION = ContentMode.Food
@@ -46,8 +47,8 @@ function Lobby({roomData, handleLeaveLobby, handleStartGame, isHost, userData, h
 
                                 <UserAvatar name={user?.name} selectedAvatar={user.avatar} selectedLanguage={user.selectedLanguage} />
 
-                                <Box>
-                                    {user?.name}{user?.isHost ? ':Host' : ''}
+                                <Box display={'flex'} alignItems={"flex-start"} gap={0.4}>
+                                    {user?.name}{user?.isHost ?  <CrownSimple size={20}  color="#f7ba02" weight="fill"/> : ''}
                                 </Box>
                             </Box>
                         )

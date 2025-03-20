@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import './styles.css';
 import UserAvatar from "../common/userAvatar";
 import { User } from "../common/types";
+import { CrownSimple } from "@phosphor-icons/react";
 
 
 function UserScore({user, position}: {user: User, position: number}) {
@@ -11,11 +12,11 @@ function UserScore({user, position}: {user: User, position: number}) {
             <UserAvatar name={user?.name} selectedAvatar={user.avatar} selectedLanguage={user.selectedLanguage} />
 
             <Box className='dongle-regular'>
-                <Box>
-                    {user?.name}{user?.isHost ? ':Host' : ''}
+                <Box display={'flex'} alignItems={"flex-start"} gap={0.4}>
+                    {user?.name}{user?.isHost ?  <CrownSimple size={20}  color="#f7ba02" weight="fill"/> : ''}
                 </Box>
                 
-                Score: {user?.score}
+                {user?.score} pts
             </Box>
 
 
