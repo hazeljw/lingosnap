@@ -7,12 +7,15 @@ interface ItemMotion {
     xSpeed: number;
     ySpeed: number;
     zSpeed: number;
+    clockwise?: boolean;
 }
 
 export interface GameCardItem {
     item: ContentItem | CharacterItem
     icon: ReactNode;
     motion: ItemMotion;
+    height: string;
+    width: string;
     size: string;
 }
 
@@ -24,7 +27,7 @@ interface ItemProps {
 
 const Item = ({item, containerWidth, containerHeight}:ItemProps) => {
 
-    const {xSpeed, ySpeed, zSpeed} = item.motion
+    const {xSpeed, ySpeed, zSpeed, clockwise} = item.motion
 
     const animationKey = `size-${item.size}`
 
@@ -46,7 +49,7 @@ const Item = ({item, containerWidth, containerHeight}:ItemProps) => {
             </style>
             <div className="el-wrap" style={{animation: `${animationKey}-x ${xSpeed}s linear infinite alternate`}}>
                 <div style={{animation: `${animationKey}-y ${ySpeed}s linear infinite alternate`}}>
-                    <Box className="el" style={{animation: `z ${zSpeed}s linear infinite`}} height={item.size} width={item.size}>
+                    <Box className="el" style={{animation: `z ${zSpeed}s linear infinite ${clockwise ? '' : 'reverse'}`}} height={item.size} width={item.size}>
                         {item.icon}
                     </Box>
                 </div>

@@ -16,5 +16,6 @@ export enum ContentMode {
     Animals = 'Animals',
     Food = 'Food',
     Hiragana = 'Hiragana',
-    Katakana = 'Katakana'
+    Katakana = 'Katakana',
+    Emojis = 'Emojis'
 }

@@ -5,6 +5,7 @@ import { ContentMode, Language } from '../common/enums';
 import Grid from '@mui/material/Grid2';
 import { mapContentModeToData, mapLanguageToFlag } from '../common/mappers';
 import characterModeJson from '../../configs/characterMode.json';
+import { ContentItem } from '../common/types';
 
 interface HintMenuProps {
     handleClose: () => void,
@@ -39,7 +40,7 @@ function HintMenu({handleClose, chosenLanguage, open, contentMode=ContentMode.Fo
 
     const isCharacterMode = [ContentMode.Hiragana, ContentMode.Katakana].includes(contentMode)
 
-    const words = mapContentModeToData(contentMode).data;
+    const words:ContentItem[] = mapContentModeToData(contentMode).data;
     words.sort(() => Math.random() - 0.5);
 
     return (
@@ -55,7 +56,9 @@ function HintMenu({handleClose, chosenLanguage, open, contentMode=ContentMode.Fo
                             return (
                                 <Grid size={{ xs: 6, md: 4, lg: 3 }}>
                                     <Box  key={index}className='wordItem' >
-                                        <img src={word.image} alt={word.word} width={"32px"} className='pixelImage'/>
+                                        {word.image ? (
+                                            <img src={word.image} alt={word.word} width={"32px"} className='pixelImage'/>
+                                        ) : `${word.symbol} `}
                                         {word.languages[chosenLanguage]}
                                     </Box>
                                 </Grid>

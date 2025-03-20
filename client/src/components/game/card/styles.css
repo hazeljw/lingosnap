@@ -13,6 +13,15 @@
     }
 }
 
+@keyframes z {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform:  rotate(360deg);
+    }
+}
+
 .pixelImage {
     image-rendering: pixelated;
 }

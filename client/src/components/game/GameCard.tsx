@@ -3,7 +3,6 @@ import './styles.css';
 import { Box } from '@mui/material';
 import { CharacterItem, ContentItem } from '../common/types';
 import Canvas from '../common/Canvas/Canvas';
-import { ContentMode } from '../common/enums';
 
 interface GameCardProps {
     cardHeight: number;
@@ -63,7 +62,9 @@ const GameCard = ({items, cardHeight, cardWidth, difficulty, level, isCharacterM
             }
 
             const image = new Image();
-            image.src = (item as ContentItem).image;
+            if(!!(item as ContentItem).image) {
+                image.src = (item as ContentItem).image || "";
+            }
 
             return {
                 item,

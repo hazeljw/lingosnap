@@ -1,6 +1,7 @@
 import { ContentMode, Language } from "./enums";
 import data from '../../configs/contentData.json';
 import animals from '../../configs/animals.json';
+import emojis from '../../configs/emojiMode.json';
 
 export const mapLanguageToFlag = (language: Language) => {
     switch(language){
@@ -35,6 +36,8 @@ export const mapContentModeToData = (contentMode: ContentMode) => {
             return animals;
         case ContentMode.Food:
             return data;
+        case ContentMode.Emojis:
+            return emojis;
         default:
             return data;
     }

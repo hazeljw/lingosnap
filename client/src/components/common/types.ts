@@ -62,7 +62,9 @@ export interface ContentItem {
         [Language.TeReo]: string;
     };
     tags: string[];
-    image: string;
+    image?: string;
+    symbol?: string;
+    isPixel?: boolean;
     funFact: string;
     congrats: string;
     sorry: string;

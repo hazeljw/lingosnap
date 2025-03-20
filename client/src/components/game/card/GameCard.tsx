@@ -21,7 +21,7 @@ const MIN_SPEED = 20
 const MAX_SPEED = 100
 
 const MIN_ROTATION_SPEED = 1
-const MAX_ROTATION_SPEED = 12
+const MAX_ROTATION_SPEED = 50
 
 
 const BASE_FONT_SIZE = 20
@@ -38,46 +38,86 @@ const GameCard = ({
 }:GameCardProps) => {
     const [cardItems, setCardItems] = useState<GameCardItem[]>([])
 
+    
+    const fontSize = BASE_FONT_SIZE*size
+
+
+
+    function getNodeForContentItem(contentItem:ContentItem) {
+
+        if(!!contentItem.image) {
+            const image = new Image();
+            image.src = contentItem.image;
+            const width = image.width*size + 'px'
+            const height = image.height*size + 'px'
+
+            return {
+                icon: <Box>
+                    <img 
+                        src={contentItem.image} 
+                        alt={contentItem.word} 
+                        width={width} 
+                        className={contentItem.isPixel ? 'pixelImage' : ''}
+                    />
+                </Box>,
+                size: Math.max(image.width*size, image.height*size)+'px',
+                height,
+                width
+            }
+        }
+
+        if(!!contentItem.symbol) {
+            return {
+                icon: <Box fontSize={fontSize+'px'}>{contentItem.symbol}</Box>,
+                size: fontSize+'px',
+                width: fontSize+'px',
+                height: fontSize+'px'
+            }
+        }
+
+        // UNKNOWN content data shape
+        return {
+            icon: <Box></Box>,
+            size: '10px',
+            width: '10px',
+            height: '10px'
+        }
+
+    }
+
 
     function init() {
-        const maxSpeed = MAX_SPEED
-        const minSpeed = MIN_SPEED
 
         // assign directions, spaces, vectors etc to each object.
         const details:GameCardItem[] = items?.map((item)=>{
+            const maxSpeed = MAX_SPEED
+            const minSpeed = MIN_SPEED
 
             const motion = {
                 xSpeed:  cardWidth / (Math.random() * (maxSpeed - minSpeed) + minSpeed),
                 ySpeed:  cardHeight / (Math.random() * (maxSpeed - minSpeed) + minSpeed),
-                zSpeed:  disableRotation ? 0 : Math.random() * (MAX_ROTATION_SPEED - MIN_ROTATION_SPEED) + MIN_ROTATION_SPEED
+                zSpeed:  disableRotation ? 0 : Math.random() * (MAX_ROTATION_SPEED - MIN_ROTATION_SPEED) + MIN_ROTATION_SPEED,
+                clockwise: Math.random() > 0.5
             }
-            
+
             if(isCharacterMode) {
                 const characterItem = item as CharacterItem
                 return {
                     item,
                     icon: <Box fontSize={fontSize+'px'}>{characterItem.character}</Box>,
                     motion,
-                    size: fontSize+'px'
+                    size: fontSize+'px',
+                    width: fontSize+'px',
+                    height: fontSize+'px'
                 }
             }
 
-            const image = new Image();
-            image.src = (item as ContentItem).image;
-            const width = image.width*size + 'px'
+            const nodeInfo = getNodeForContentItem(item as ContentItem)
 
             return {
                 item,
                 motion,
-                icon: <Box>
-                    <img 
-                        src={(item as ContentItem).image} 
-                        alt={(item as ContentItem).word} 
-                        width={width} 
-                        className={(item as ContentItem).isPixel ? 'pixelImage' : ''}
-                    />
-                </Box>,
-                size: width
+                ...nodeInfo
             }
 
         }) ?? []
@@ -90,10 +130,8 @@ const GameCard = ({
         setCardItems(values) 
     },[items])
 
-    const fontSize = BASE_FONT_SIZE*size
-
     return (
-        <Box height={cardHeight} width={cardWidth}>
+        <Box height={cardHeight} width={cardWidth} overflow={'none'}>
             {cardItems.map((cardItem)=> {
                 return (
                     <Item item={cardItem} containerHeight={cardHeight+'px'} containerWidth={`${cardWidth}px`} />

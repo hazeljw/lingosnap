@@ -4,13 +4,12 @@ import { Box, Button, InputAdornment, TextField } from '@mui/material';
 import { CharacterGameContentData, GameContentData } from './helpers';
 import HintMenu from './HintMenu';
 import { ContentMode, Language } from '../common/enums';
-import UserScore from './UserScore';
 import TimerBar from './TimerBar';
 import { Socket } from 'socket.io-client';
 import MainTitle from '../common/MainTitle';
 import SymbolKeyboard from './LanguageSymbolKeyboard';
 import { CharacterGameState, CharacterItem, ContentItem, GameState, RoomData } from '../common/types';
-import GameCard from './GameCard';
+import GameCard from './card/GameCard';
 import LanguageFlag from '../common/LanguageFlag';
 import { mapContentModeToGameItemSize } from '../common/mappers';
 import { Notepad } from '@phosphor-icons/react';
@@ -180,6 +179,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                 items={itemData?.cardOne} 
                                 size={mapContentModeToGameItemSize(roomData?.gameState?.contentMode)}
                                 isCharacterMode={isCharacterMode}
+                                disableRotation={isCharacterMode}
                             />
                         </Box>
                         <Box className="card" width={cardWidth} height={cardHeight} position={'relative'}>
@@ -190,6 +190,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                                 items={itemData?.cardTwo}
                                 size={mapContentModeToGameItemSize(roomData?.gameState?.contentMode)}
                                 isCharacterMode={isCharacterMode}
+                                disableRotation={isCharacterMode}
                             />
                         </Box>
                     </Box>

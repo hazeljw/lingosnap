@@ -1,6 +1,7 @@
 const data = require('./data/contentData.json');
 const animals = require('./data/animals.json');
 const characters = require('./data/characterMode.json');
+const emojis = require('./data/emojiMode.json');
 
 const generateRoomCode = () => {
     return Math.random().toString(36).substr(2, 6).toUpperCase();
@@ -29,6 +30,8 @@ const getItemOptions = (contentMode) => {
             return getCharacterItemOptions(contentMode);
         case "Katakana": 
             return getCharacterItemOptions(contentMode);
+        case "Emojis":
+            return emojis
         default:
             return data;
     }
