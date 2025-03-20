@@ -13,3 +13,7 @@
     }
 }
 
+.pixelImage {
+    image-rendering: pixelated;
+}
+

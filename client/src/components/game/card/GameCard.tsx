@@ -56,7 +56,7 @@ const GameCard = ({
                 const characterItem = item as CharacterItem
                 return {
                     item,
-                    icon: <Box>{characterItem.character}</Box>,
+                    icon: <Box fontSize={fontSize+'px'}>{characterItem.character}</Box>,
                     motion,
                     size: fontSize+'px'
                 }
@@ -70,7 +70,12 @@ const GameCard = ({
                 item,
                 motion,
                 icon: <Box>
-                    <img src={(item as ContentItem).image} alt={(item as ContentItem).word} width={width}/>
+                    <img 
+                        src={(item as ContentItem).image} 
+                        alt={(item as ContentItem).word} 
+                        width={width} 
+                        className={(item as ContentItem).isPixel ? 'pixelImage' : ''}
+                    />
                 </Box>,
                 size: width
             }
@@ -88,9 +93,8 @@ const GameCard = ({
     const fontSize = BASE_FONT_SIZE*size
 
     return (
-        <Box height={cardHeight} width={cardWidth} border={"1px solid black"}>
+        <Box height={cardHeight} width={cardWidth}>
             {cardItems.map((cardItem)=> {
-
                 return (
                     <Item item={cardItem} containerHeight={cardHeight+'px'} containerWidth={`${cardWidth}px`} />
                 )
