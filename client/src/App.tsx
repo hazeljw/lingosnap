@@ -7,7 +7,7 @@ import GameOn from './components/game/GameOn';
 import ResultsScreen from './components/postGame/ResultsScreen';
 import { RoomData } from './components/common/types';
 import { Box } from '@mui/material';
-import GameCard from './components/game/GameCard';
+import GameCard from './components/game/card/GameCard';
 import data from './configs/contentData.json';
 import { ContentMode, Language } from './components/common/enums';
 
@@ -113,7 +113,7 @@ function App() {
       { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
       { gameStatus === GameStatus.GameOver && <ResultsScreen roomData={roomData} isHost={isHost} handleReturnToLobby={handleReturnToLobby}/>}
-
+      
       { gameStatus !== GameStatus.InGame && (
         <Box style={{
           position: 'absolute',
@@ -140,6 +140,16 @@ function App() {
         }}>
           <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={data.data} size={2}/>
         </Box>
+      )}
+
+
+      {gameStatus !== GameStatus.InGame && (
+        <a href="https://github.com/hazeljw/lingosnap" target="_blank" rel="noreferrer">
+          <Box style={{display: 'flex', alignItems: 'center', gap: 4, color: 'white', position: 'absolute', bottom: '20px', left: '20px'}}>
+            <img src="/github-logo.svg" alt="github-logo" width={24} height={24} />
+            hazeljw
+          </Box>
+        </a>
       )}
 
     </div>
