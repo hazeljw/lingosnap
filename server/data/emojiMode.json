@@ -504,7 +504,469 @@
             "funFact": "Watermelon is both a fruit and a vegetable - it's related to cucumbers, pumpkins, and squash.",
             "congrats": "You've seeded out the right answer!",
             "sorry": "This answer's not quite ripe, let it grow and try again!"
-        }
+        },
+        {
+            "word": "pear",
+            "languages": {
+              "english": "pear",
+              "spanish": "pera",
+              "french": "poire",
+              "german": "birne",
+              "italian": "pera",
+              "portuguese": "pêra",
+              "dutch": "peer",
+              "japanese": "nashi",
+              "korean": "bae",
+              "finnish": "päärynä",
+              "tereo": "pea"
+            },
+            "tags": ["food", "fruit", "healthy", "snack", "green", "sweet"],
+            "symbol": "🍐",
+            "funFact": "Pears have more fiber than apples and are one of the least allergenic foods.",
+            "congrats": "You're a perfect pear for this job!",
+            "sorry": "Don't let this be a tough pear to swallow!"
+          },
+          {
+            "word": "lemon",
+            "languages": {
+              "english": "lemon",
+              "spanish": "limón",
+              "french": "citron",
+              "german": "zitrone",
+              "italian": "limone",
+              "portuguese": "limão",
+              "dutch": "citroen",
+              "japanese": "remon",
+              "korean": "remon",
+              "finnish": "sitruuna",
+              "tereo": "remana"
+            },
+            "tags": ["food", "fruit", "sour", "yellow", "citrus"],
+            "symbol": "🍋",
+            "funFact": "Lemons float in water, while limes sink.",
+            "congrats": "When life gives you lemons, you make success!",
+            "sorry": "Don't let this sour your day!"
+          },
+          {
+            "word": "grape",
+            "languages": {
+              "english": "grape",
+              "spanish": "uva",
+              "french": "raisin",
+              "german": "traube",
+              "italian": "uva",
+              "portuguese": "uva",
+              "dutch": "druif",
+              "japanese": "budō",
+              "korean": "poudo",
+              "finnish": "viinirypäle",
+              "tereo": "kerepe"
+            },
+            "tags": ["food", "fruit", "sweet", "snack", "purple", "wine"],
+            "symbol": "🍇",
+            "funFact": "Grapes can explode if you put them in the microwave.",
+            "congrats": "You're crushing it like fine wine!",
+            "sorry": "Don't let this bunch of mistakes wither your vine!"
+          },
+          {
+            "word": "strawberry",
+            "languages": {
+              "english": "strawberry",
+              "spanish": "fresa",
+              "french": "fraise",
+              "german": "erdbeere",
+              "italian": "fragola",
+              "portuguese": "morango",
+              "dutch": "aardbei",
+              "japanese": "ichigo",
+              "korean": "ttalgi",
+              "finnish": "mansikka",
+              "tereo": "tōrōpere"
+            },
+            "tags": ["food", "fruit", "sweet", "red", "berry", "summer"],
+            "symbol": "🍓",
+            "funFact": "The average strawberry has about 200 seeds on its surface.",
+            "congrats": "You're the pick of the patch!",
+            "sorry": "Don't let this be your jam session gone wrong!"
+          },
+          {
+            "word": "peach",
+            "languages": {
+              "english": "peach",
+              "spanish": "melocotón",
+              "french": "pêche",
+              "german": "pfirsich",
+              "italian": "pesca",
+              "portuguese": "pêssego",
+              "dutch": "perzik",
+              "japanese": "momo",
+              "korean": "boksunga",
+              "finnish": "persikka",
+              "tereo": "pītiti"
+            },
+            "tags": ["food", "fruit", "sweet", "juicy", "orange", "summer"],
+            "symbol": "🍑",
+            "funFact": "Peaches and nectarines are genetically the same fruit.",
+            "congrats": "You're just peachy keen!",
+            "sorry": "Don't let this bruise your day!"
+          },
+          {
+            "word": "coconut",
+            "languages": {
+              "english": "coconut",
+              "spanish": "coco",
+              "french": "noix de coco",
+              "german": "kokosnuss",
+              "italian": "cocco",
+              "portuguese": "coco",
+              "dutch": "kokosnoot",
+              "japanese": "kokoyashi",
+              "korean": "kokonet",
+              "finnish": "kookospähkinä",
+              "tereo": "kōkonati"
+            },
+            "tags": ["food", "fruit", "tropical", "milk", "brown", "water"],
+            "symbol": "🥥",
+            "funFact": "Coconuts have been known to travel over 3,000 miles across oceans to populate new islands.",
+            "congrats": "You've cracked it open to success!",
+            "sorry": "Don't let this be a tough nut to crack!"
+          },
+          {
+            "word": "tomato",
+            "languages": {
+              "english": "tomato",
+              "spanish": "tomate",
+              "french": "tomate",
+              "german": "tomate",
+              "italian": "pomodoro",
+              "portuguese": "tomate",
+              "dutch": "tomaat",
+              "japanese": "tomato",
+              "korean": "tomato",
+              "finnish": "tomaatti",
+              "tereo": "tōmato"
+            },
+            "tags": ["food", "fruit", "vegetable", "red", "savory", "cooking"],
+            "symbol": "🍅",
+            "funFact": "Botanically, tomatoes are fruits, but legally they're vegetables for tax purposes.",
+            "congrats": "You're crushing it like a sauce boss!",
+            "sorry": "Don't let this squash your spirits!"
+          },
+          {
+            "word": "eggplant",
+            "languages": {
+              "english": "eggplant",
+              "spanish": "berenjena",
+              "french": "aubergine",
+              "german": "aubergine",
+              "italian": "melanzana",
+              "portuguese": "berinjela",
+              "dutch": "aubergine",
+              "japanese": "nasu",
+              "korean": "gaji",
+              "finnish": "munakoiso",
+              "tereo": "ekapārata"
+            },
+            "tags": ["food", "vegetable", "purple", "nightshade", "cooking"],
+            "symbol": "🍆",
+            "funFact": "Eggplants are berries, and they contain nicotine, though you'd need to eat about 20 pounds to get the nicotine equivalent of one cigarette.",
+            "congrats": "You've planted the seeds of excellence!",
+            "sorry": "Don't let this situation leave a bitter taste!"
+          },
+          {
+            "word": "broccoli",
+            "languages": {
+              "english": "broccoli",
+              "spanish": "brócoli",
+              "french": "brocoli",
+              "german": "brokkoli",
+              "italian": "broccoli",
+              "portuguese": "brócolis",
+              "dutch": "broccoli",
+              "japanese": "burokkorī",
+              "korean": "beurokkoli",
+              "finnish": "parsakaali",
+              "tereo": "porokori"
+            },
+            "tags": ["food", "vegetable", "green", "healthy", "cruciferous"],
+            "symbol": "🥦",
+            "funFact": "Broccoli was created by selectively breeding wild cabbage plants.",
+            "congrats": "You're branching out toward success!",
+            "sorry": "Don't let this stalk your progress!"
+          },
+          {
+            "word": "chili",
+            "languages": {
+              "english": "chili",
+              "spanish": "chile",
+              "french": "piment",
+              "german": "chili",
+              "italian": "peperoncino",
+              "portuguese": "pimenta",
+              "dutch": "chilipeper",
+              "japanese": "tōgarashi",
+              "korean": "gochu",
+              "finnish": "chili",
+              "tereo": "hiri"
+            },
+            "tags": ["food", "vegetable", "spicy", "hot", "red", "cooking"],
+            "symbol": "🌶️",
+            "funFact": "Capsaicin triggers pain receptors, not taste buds.",
+            "congrats": "You're bringing the heat to success!",
+            "sorry": "Don't let this burn your chances!"
+          },
+          {
+            "word": "corn",
+            "languages": {
+              "english": "corn",
+              "spanish": "maíz",
+              "french": "maïs",
+              "german": "mais",
+              "italian": "mais",
+              "portuguese": "milho",
+              "dutch": "maïs",
+              "japanese": "tōmorokoshi",
+              "korean": "oksusu",
+              "finnish": "maissi",
+              "tereo": "kōnati"
+            },
+            "tags": ["food", "vegetable", "grain", "yellow", "summer", "farming"],
+            "symbol": "🌽",
+            "funFact": "Corn is grown on every continent except Antarctica.",
+            "congrats": "You're popping with potential!",
+            "sorry": "Don't let this be your corny mistake!"
+          },
+          {
+            "word": "garlic",
+            "languages": {
+              "english": "garlic",
+              "spanish": "ajo",
+              "french": "ail",
+              "german": "knoblauch",
+              "italian": "aglio",
+              "portuguese": "alho",
+              "dutch": "knoflook",
+              "japanese": "ninniku",
+              "korean": "manul",
+              "finnish": "valkosipuli",
+              "tereo": "kārika"
+            },
+            "tags": ["food", "vegetable", "spice", "pungent", "white", "cooking"],
+            "symbol": "🧄",
+            "funFact": "During World War I, garlic was used as an antiseptic for wounds.",
+            "congrats": "You've got a clove of genius!",
+            "sorry": "Don't let this leave a strong aftertaste!"
+          },
+          {
+            "word": "onion",
+            "languages": {
+              "english": "onion",
+              "spanish": "cebolla",
+              "french": "oignon",
+              "german": "zwiebel",
+              "italian": "cipolla",
+              "portuguese": "cebola",
+              "dutch": "ui",
+              "japanese": "tamanegi",
+              "korean": "yangpa",
+              "finnish": "sipuli",
+              "tereo": "aniana"
+            },
+            "tags": ["food", "vegetable", "pungent", "cooking", "layers", "aromatic"],
+            "symbol": "🧅",
+            "funFact": "Onions make you cry because they release a gas called syn-propanethial-S-oxide which irritates the eyes.",
+            "congrats": "You're bringing layers of excellence!",
+            "sorry": "Don't let this make you weep!"
+          },
+          {
+            "word": "potato",
+            "languages": {
+              "english": "potato",
+              "spanish": "patata",
+              "french": "pomme de terre",
+              "german": "kartoffel",
+              "italian": "patata",
+              "portuguese": "batata",
+              "dutch": "aardappel",
+              "japanese": "jagaimo",
+              "korean": "gamja",
+              "finnish": "peruna",
+              "tereo": "rīwai"
+            },
+            "tags": ["food", "vegetable", "starchy", "versatile", "brown", "comfort food"],
+            "symbol": "🥔",
+            "funFact": "There are over 4,000 varieties of potatoes.",
+            "congrats": "You're the cream of the crop!",
+            "sorry": "Don't let this be a half-baked effort!"
+          },
+          {
+            "word": "pretzel",
+            "languages": {
+              "english": "pretzel",
+              "spanish": "pretzel",
+              "french": "bretzel",
+              "german": "brezel",
+              "italian": "pretzel",
+              "portuguese": "pretzel",
+              "dutch": "pretzel",
+              "japanese": "puretseru",
+              "korean": "pretchel",
+              "finnish": "pretzeli",
+              "tereo": "peretehere"
+            },
+            "tags": ["food", "snack", "baked", "salty", "twisted", "bread"],
+            "symbol": "🥨",
+            "funFact": "Pretzels twisted shape represents arms folded in prayer.",
+            "congrats": "You've got yourself in a winning twist!",
+            "sorry": "Don't get yourself in a knot!"
+          },
+          {
+            "word": "pancakes",
+            "languages": {
+              "english": "pancakes",
+              "spanish": "tortitas",
+              "french": "crêpes",
+              "german": "pfannkuchen",
+              "italian": "pancake",
+              "portuguese": "panquecas",
+              "dutch": "pannenkoeken",
+              "japanese": "hottokēki",
+              "korean": "hoteukeiku",
+              "finnish": "pannukakut",
+              "tereo": "panikeke"
+            },
+            "tags": ["food", "breakfast", "sweet", "flat", "fluffy", "morning"],
+            "symbol": "🥞",
+            "funFact": "The world's largest pancake measured 15 meters in diameter.",
+            "congrats": "You're stacking up the achievements!",
+            "sorry": "Don't let this situation fall flat!"
+          },
+          {
+            "word": "bacon",
+            "languages": {
+              "english": "bacon",
+              "spanish": "tocino",
+              "french": "bacon",
+              "german": "speck",
+              "italian": "pancetta",
+              "portuguese": "bacon",
+              "dutch": "spek",
+              "japanese": "bēkon",
+              "korean": "beikon",
+              "finnish": "pekoni",
+              "tereo": "pēkana"
+            },
+            "tags": ["food", "breakfast", "meat", "salty", "crispy", "pork"],
+            "symbol": "🥓",
+            "funFact": "The phrase 'bringing home the bacon' originated from a 12th-century tradition in England.",
+            "congrats": "You're sizzling with success!",
+            "sorry": "Don't let this streak get burned!"
+          },
+          {
+            "word": "sandwich",
+            "languages": {
+              "english": "sandwich",
+              "spanish": "sándwich",
+              "french": "sandwich",
+              "german": "sandwich",
+              "italian": "panino",
+              "portuguese": "sanduíche",
+              "dutch": "boterham",
+              "japanese": "sandoicchi",
+              "korean": "sandeuwitchi",
+              "finnish": "voileipä",
+              "tereo": "hanawiti"
+            },
+            "tags": ["food", "lunch", "bread", "filling", "portable", "versatile"],
+            "symbol": "🥪",
+            "funFact": "Sandwiches are named after John Montagu, the 4th Earl of Sandwich.",
+            "congrats": "You're really stacking up the layers of achievement!",
+            "sorry": "Don't let this be a soggy situation!"
+          },
+          {
+            "word": "salad",
+            "languages": {
+              "english": "salad",
+              "spanish": "ensalada",
+              "french": "salade",
+              "german": "salat",
+              "italian": "insalata",
+              "portuguese": "salada",
+              "dutch": "salade",
+              "japanese": "sarada",
+              "korean": "saellodeu",
+              "finnish": "salaatti",
+              "tereo": "hārara"
+            },
+            "tags": ["food", "healthy", "vegetables", "fresh", "green", "diet"],
+            "symbol": "🥗",
+            "funFact": "The world's largest salad was made in Romania in 2012, weighing 19,050 kg.",
+            "congrats": "You're tossing up great results!",
+            "sorry": "Don't let this wilt your spirits!"
+          },
+          {
+            "word": "cake",
+            "languages": {
+              "english": "cake",
+              "spanish": "pastel",
+              "french": "gâteau",
+              "german": "kuchen",
+              "italian": "torta",
+              "portuguese": "bolo",
+              "dutch": "taart",
+              "japanese": "kēki",
+              "korean": "keikeu",
+              "finnish": "kakku",
+              "tereo": "keke"
+            },
+            "tags": ["food", "dessert", "sweet", "celebration", "birthday", "baked"],
+            "symbol": "🎂",
+            "funFact": "The tradition of birthday cakes dates back to ancient Rome, but the modern birthday cake with candles originated in Germany in the 1700s. The 'Happy Birthday' song was first published in 1893.",
+            "congrats": "You take the cake on this one!",
+            "sorry": "Don't let this be your half-baked moment!"
+          },
+          {
+            "word": "cookie",
+            "languages": {
+              "english": "cookie",
+              "spanish": "galleta",
+              "french": "biscuit",
+              "german": "keks",
+              "italian": "biscotto",
+              "portuguese": "biscoito",
+              "dutch": "koekje",
+              "japanese": "kukkī",
+              "korean": "kuki",
+              "finnish": "keksi",
+              "tereo": "pihikete"
+            },
+            "tags": ["food", "dessert", "sweet", "snack", "baked", "chocolate"],
+            "symbol": "🍪",
+            "funFact": "The chocolate chip cookie was invented by accident",
+            "congrats": "That's the way the cookie crumbles—in your favor!",
+            "sorry": "Don't let this be a tough cookie to swallow!"
+          },
+          {
+            "word": "candy",
+            "languages": {
+              "english": "candy",
+              "spanish": "caramelo",
+              "french": "bonbon",
+              "german": "süßigkeit",
+              "italian": "caramella",
+              "portuguese": "doce",
+              "dutch": "snoep",
+              "japanese": "kyandi",
+              "korean": "satak",
+              "finnish": "makeinen",
+              "tereo": "rare"
+            },
+            "tags": ["food", "sweet", "treat", "sugar", "colorful", "dessert"],
+            "symbol": "🍬",
+            "funFact": "The world's oldest candy is Turkish Delight.",
+            "congrats": "Sweet success is yours for the taking!",
+            "sorry": "Don't let this leave a sour taste!"
+          }
     ]
 }
 
