@@ -5,13 +5,16 @@ import { ContentMode, Language } from '../common/enums';
 import Grid from '@mui/material/Grid2';
 import { mapContentModeToData, mapLanguageToFlag } from '../common/mappers';
 import characterModeJson from '../../configs/characterMode.json';
-import { ContentItem } from '../common/types';
+import { CharacterItem, ContentItem } from '../common/types';
+
+const MAX_ITEMS_DISPLAYED_BY_DEFAULT = 48;
 
 interface HintMenuProps {
     handleClose: () => void,
     chosenLanguage: Language,
     open: boolean,
     contentMode?: ContentMode
+    allItems?: ContentItem[] | CharacterItem[];
 }
 
 const CharacterModeHintGrid = ({contentMode}:{contentMode:ContentMode}) => {
@@ -36,12 +39,33 @@ const CharacterModeHintGrid = ({contentMode}:{contentMode:ContentMode}) => {
 
 
 
-function HintMenu({handleClose, chosenLanguage, open, contentMode=ContentMode.Food}:HintMenuProps) {
+function HintMenu({
+    handleClose, 
+    chosenLanguage, 
+    open, 
+    contentMode=ContentMode.Food,
+    allItems
+}:HintMenuProps) {
 
     const isCharacterMode = [ContentMode.Hiragana, ContentMode.Katakana].includes(contentMode)
 
-    const words:ContentItem[] = mapContentModeToData(contentMode).data;
+    let words:ContentItem[] = mapContentModeToData(contentMode).data;
     words.sort(() => Math.random() - 0.5);
+
+    if(MAX_ITEMS_DISPLAYED_BY_DEFAULT < words.length) {
+        // if the current content has more options than can be feasibly displayed, prioritise the items selected.
+
+        let itemsToGrab = MAX_ITEMS_DISPLAYED_BY_DEFAULT - (allItems?.length ?? 0)
+        
+        if(itemsToGrab <= 0 && allItems?.length) {
+            words = allItems as ContentItem[]
+        } else if(allItems?.length) {
+            words = [...words.slice(0, itemsToGrab), ...(allItems as ContentItem[])]
+        }
+
+        words.sort(() => Math.random() - 0.5);
+    }
+    
 
     return (
         <Dialog open={open} onClose={handleClose}>

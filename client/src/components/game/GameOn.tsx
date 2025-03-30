@@ -260,6 +260,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
                 handleClose={() => {setHintMenuOpen(false)}} 
                 chosenLanguage={chosenLanguage} 
                 contentMode={roomData?.gameState?.contentMode}
+                allItems={itemData?.allItems}
             />
         </Box>
     );
