@@ -6,11 +6,10 @@ import { Language } from '../common/enums';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
 import LanguageSelectMenu from '../common/LanguageSelectMenu';
-
-const avatarOptions = ['/avatars/avatarOne.svg', '/avatars/avatarTwo.svg', '/avatars/avatarThree.svg', '/avatars/avatarFour.svg', '/avatars/chef.svg'];
+import { AVATAR_OPTIONS } from '../common/mappers';
 
 const getRandomAvatar = () => {
-  return avatarOptions[Math.floor(Math.random()*avatarOptions.length)];
+  return AVATAR_OPTIONS[Math.floor(Math.random()*AVATAR_OPTIONS.length)];
 }
 
 function LandingScreen({socket}: {socket:Socket}) {
@@ -37,7 +36,7 @@ function LandingScreen({socket}: {socket:Socket}) {
 
         <Box className="flexCenter contentBox" flexDirection={'column'} gap={3} width={'fit-content'}>
           <Box className="flexCenter"   gap={1} >
-            <UserAvatar name={name} selectedAvatar={selectedAvatar} selectedLanguage={selectedLanguage} />
+            <UserAvatar name={name} selectedAvatar={selectedAvatar} selectedLanguage={selectedLanguage} setSelectedAvatar={setSelectedAvatar}/>
             <TextField id="outlined-basic" label="Name" variant="outlined" value={name} color={"secondary"} onChange={(v) => {setName(v.target?.value)}} />
           </Box>
 

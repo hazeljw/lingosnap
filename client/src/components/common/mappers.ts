@@ -54,3 +54,12 @@ export const mapContentModeToGameItemSize = (contentMode?: ContentMode) => {
             return 2;
     }
 }
+
+
+export const AVATAR_OPTIONS = [
+    '/avatars/avatarOne.svg', 
+    '/avatars/avatarTwo.svg', 
+    '/avatars/avatarThree.svg', 
+    '/avatars/avatarFour.svg', 
+    '/avatars/chef.svg'
+];
