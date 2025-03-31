@@ -53,7 +53,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
             } else {
                 const gameState = roomData?.gameState as GameState
 
-                textToDisplay = `Answer was ${gameState?.commonItem?.languages[chosenLanguage]}! ` + gameState?.commonItem?.sorry
+                textToDisplay = `Answer was ${gameState?.commonItem?.languages ? gameState?.commonItem?.languages[chosenLanguage] : ''}! ` + gameState?.commonItem?.sorry
             }
 
             setMissedAnswerText(textToDisplay);
@@ -94,7 +94,7 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
             return commonItem?.sound;
         } else {
             const commonItem = itemData?.commonItem as ContentItem
-            return commonItem?.languages[chosenLanguage];
+            return commonItem?.languages ? commonItem?.languages[chosenLanguage] : '';
         }
     }
 
