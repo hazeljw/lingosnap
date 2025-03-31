@@ -71,7 +71,7 @@ function Lobby({roomData, handleLeaveLobby, handleStartGame, isHost, userData, h
                             <MenuItem value={ContentMode.Animals}>Animals</MenuItem>
                             <MenuItem value={ContentMode.Hiragana}>Hiragana</MenuItem>
                             <MenuItem value={ContentMode.Katakana}>Katakana</MenuItem>
-                            <MenuItem value={ContentMode.Emojis}>Emojis</MenuItem>
+                            <MenuItem value={ContentMode.Emojis}>Random Emojis</MenuItem>
                         </Select>
                         <Button variant="contained" color="primary" onClick={() => handleStartGame(rounds, timePerRound, selectedContent)}>Start Game</Button>
                     </Box>

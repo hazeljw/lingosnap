@@ -17,7 +17,7 @@
                 "tereo": "mango"
             },
             "tags": ["animal", "fish", "predator", "marine", "ocean"],
-            "image": "/images/animals/shark.png",
+            "symbol": "🦈",
             "funFact": "Sharks can detect one drop of blood in 100 liters of water!",
             "congrats": "You're swimming with success!",
             "sorry": "Don't let this bite get you down!"
@@ -38,7 +38,7 @@
                 "tereo": "aihe"
             },
             "tags": ["animal", "mammal", "marine", "intelligent", "ocean"],
-            "image": "/images/animals/dolphin.png",
+            "symbol": "🐬",
             "funFact": "Dolphins sleep with one half of their brain at a time!",
             "congrats": "You're making waves of progress!",
             "sorry": "Keep swimming, you'll get there!"
@@ -59,7 +59,7 @@
                 "tereo": "tia"
             },
             "tags": ["animal", "mammal", "forest", "herbivore", "antlers"],
-            "image": "/images/animals/deer.png",
+            "symbol": "🦌",
             "funFact": "Male deer shed and regrow their antlers every year!",
             "congrats": "You've leaped to success!",
             "sorry": "Don't be a deer in headlights, try again!"
@@ -80,7 +80,7 @@
                 "tereo": "heihei"
             },
             "tags": ["animal", "bird", "farm", "food", "domestic"],
-            "image": "/images/animals/chicken.png",
+            "symbol": "🐓",
             "funFact": "Chickens can remember over 100 different faces of people or animals!",
             "congrats": "You're ruling the roost!",
             "sorry": "Don't chicken out, try again!"
@@ -101,31 +101,10 @@
                 "tereo": "ruru"
             },
             "tags": ["animal", "bird", "predator", "nocturnal", "wise"],
-            "image": "/images/animals/owl.png",
+            "symbol": "🦉",
             "funFact": "An owl's eyes are not true eyeballs - they're elongated tubes held in place by bones in the skull!",
             "congrats": "You're as wise as can be!",
             "sorry": "Who who who made a mistake? Try again!"
-        },
-        {
-            "word": "squirrel",
-            "languages": {
-                "english": "squirrel",
-                "spanish": "ardilla",
-                "french": "écureuil",
-                "german": "eichhörnchen",
-                "italian": "scoiattolo",
-                "portuguese": "esquilo",
-                "dutch": "eekhoorn",
-                "japanese": "risu",
-                "korean": "daram-i",
-                "finnish": "orava",
-                "tereo": "kata"
-            },
-            "tags": ["animal", "mammal", "rodent", "forest", "nuts"],
-            "image": "/images/animals/squirrel.png",
-            "funFact": "Squirrels can find food buried beneath a foot of snow just by smell!",
-            "congrats": "You're nuts about learning!",
-            "sorry": "Don't scatter your thoughts, gather them and try again!"
         },
         {
             "word": "bunny",
@@ -143,7 +122,7 @@
                 "tereo": "rapeti"
             },
             "tags": ["animal", "mammal", "pet", "cute", "herbivore"],
-            "image": "/images/animals/bunny.png",
+            "symbol": "🐇",
             "funFact": "A rabbit's teeth never stop growing - they wear them down by chewing!",
             "congrats": "You're hopping ahead!",
             "sorry": "Don't get scared like a rabbit in headlights, hop to it again!"
@@ -164,7 +143,7 @@
                 "tereo": "ika"
             },
             "tags": ["animal", "aquatic", "marine", "scales", "gills"],
-            "image": "/images/animals/fish.png",
+            "symbol": "🐠",
             "funFact": "Some species of fish can fly for up to 45 seconds!",
             "congrats": "You're swimming in success!",
             "sorry": "There are plenty more fish in the sea - try again!"
@@ -185,31 +164,10 @@
                 "tereo": "mokonui"
             },
             "tags": ["animal", "extinct", "prehistoric", "reptile", "fossil"],
-            "image": "/images/animals/dinosaur.png",
+            "symbol": "🦕",
             "funFact": "The smallest dinosaur was the size of a chicken, while the largest was longer than three school buses!",
             "congrats": "You're roaring with success!",
             "sorry": "Don't let this answer go extinct - try again!"
-        },
-        {
-            "word": "seagull",
-            "languages": {
-                "english": "seagull",
-                "spanish": "gaviota",
-                "french": "mouette",
-                "german": "möwe",
-                "italian": "gabbiano",
-                "portuguese": "gaivota",
-                "dutch": "meeuw",
-                "japanese": "kamome",
-                "korean": "galmaegi",
-                "finnish": "lokki",
-                "tereo": "karoro"
-            },
-            "tags": ["animal", "bird", "coastal", "flying", "scavenger"],
-            "image": "/images/animals/seagull.png",
-            "funFact": "Seagulls can drink both fresh and salt water thanks to special glands that filter out the salt!",
-            "congrats": "You're soaring high!",
-            "sorry": "Don't let this answer ruffle your feathers!"
         },
         {
             "word": "dog",
@@ -227,7 +185,7 @@
                 "tereo": "kurī"
             },
             "tags": ["animal", "mammal", "pet", "domestic", "loyal"],
-            "image": "/images/animals/dog.png",
+            "symbol": "🐶",
             "funFact": "A dog's sense of smell is up to 100,000 times stronger than humans - they can even smell emotions!",
             "congrats": "You're pawsitively brilliant!",
             "sorry": "Every dog has its day - try again!"
@@ -248,7 +206,7 @@
                 "tereo": "ngeru"
             },
             "tags": ["animal", "mammal", "pet", "domestic", "feline"],
-            "image": "/images/animals/cat.png",
+            "symbol": "🐱",
             "funFact": "Cats can make over 100 different vocal sounds, while dogs can only make around 10!",
             "congrats": "You're the cat's whiskers!",
             "sorry": "Don't let curiosity get the better of you - try again!"
@@ -269,7 +227,7 @@
                 "tereo": "tuatete"
             },
             "tags": ["animal", "mammal", "spikes", "nocturnal", "small"],
-            "image": "/images/animals/hedgehog.png",
+            "symbol": "🦔",
             "funFact": "A hedgehog has between 5,000 and 7,000 spines, each of which can last about a year before falling out and being replaced!",
             "congrats": "You're sharp as a hedgehog's spines!",
             "sorry": "Don't curl up in defeat - try again!"
@@ -290,7 +248,7 @@
                 "tereo": "ngata"
             },
             "tags": ["animal", "mollusk", "slow", "shell", "garden"],
-            "image": "/images/animals/snail.png",
+            "symbol": "🐌",
             "funFact": "Snails can sleep for up to three years at a time when the weather is unfavorable!",
             "congrats": "Slow and steady wins the race!",
             "sorry": "Don't retreat into your shell - try again!"
@@ -311,7 +269,7 @@
                 "tereo": "noke"
             },
             "tags": ["animal", "invertebrate", "soil", "garden", "decomposer"],
-            "image": "/images/animals/worm.png",
+            "symbol": "🪱",
             "funFact": "If a worm is cut in half, the head end can survive and regenerate its tail (but the tail end can't grow a new head)!",
             "congrats": "You're really digging deep!",
             "sorry": "Don't squirm away - wiggle back and try again!"
@@ -332,52 +290,10 @@
                 "tereo": "pokakē"
             },
             "tags": ["animal", "mammal", "predator", "cunning", "wild"],
-            "image": "/images/animals/fox.png",
+            "symbol": "🦊",
             "funFact": "Foxes use the Earth's magnetic field to help them hunt - they are more successful when facing north!",
             "congrats": "You're as clever as a fox!",
             "sorry": "Don't let this outfox you - try again!"
-        },
-        {
-            "word": "crow",
-            "languages": {
-                "english": "crow",
-                "spanish": "cuervo",
-                "french": "corbeau",
-                "german": "krähe",
-                "italian": "corvo",
-                "portuguese": "corvo",
-                "dutch": "kraai",
-                "japanese": "karasu",
-                "korean": "kkamakgwi",
-                "finnish": "varis",
-                "tereo": "kākāriki"
-            },
-            "tags": ["animal", "bird", "intelligent", "black", "urban"],
-            "image": "/images/animals/crow.png",
-            "funFact": "Crows can recognize human faces and remember if you've been kind or mean to them for years!",
-            "congrats": "You're showing real bird-brain smarts!",
-            "sorry": "Don't get in a flap - spread your wings and try again!"
-        },
-        {
-            "word": "pigeon",
-            "languages": {
-                "english": "pigeon",
-                "spanish": "paloma",
-                "french": "pigeon",
-                "german": "taube",
-                "italian": "piccione",
-                "portuguese": "pombo",
-                "dutch": "duif",
-                "japanese": "hato",
-                "korean": "bidulgi",
-                "finnish": "kyyhky",
-                "tereo": "kukupa"
-            },
-            "tags": ["animal", "bird", "urban", "flying", "messenger"],
-            "image": "/images/animals/pigeon.png",
-            "funFact": "Pigeons can recognize all 26 letters of the English alphabet and can be taught to perform complex sequences of actions!",
-            "congrats": "You're carrying the message of success!",
-            "sorry": "Don't let your hopes fly away - try again!"
         },
         {
             "word": "mouse",
@@ -395,10 +311,1081 @@
                 "tereo": "kiore"
             },
             "tags": ["animal", "mammal", "rodent", "small", "whiskers"],
-            "image": "/images/animals/mouse.png",
+            "symbol": "🐁",
             "funFact": "Mice sing complex ultrasonic songs to attract mates - we just can't hear them without special equipment!",
             "congrats": "You're mighty like a mouse!",
             "sorry": "Don't scurry away - squeak back for another try!"
+        },
+        {
+            "word": "bear",
+            "languages": {
+                "english": "bear",
+                "spanish": "oso",
+                "french": "ours",
+                "german": "bär",
+                "italian": "orso",
+                "portuguese": "urso",
+                "dutch": "beer",
+                "japanese": "kuma",
+                "korean": "gom",
+                "finnish": "karhu",
+                "tereo": "pēa"
+            },
+            "tags": ["animal", "mammal", "predator", "forest", "omnivore"],
+            "symbol": "🐻",
+            "funFact": "Bears can smell food from over a mile away!",
+            "congrats": "You're bearing up brilliantly!",
+            "sorry": "Don't let this challenge become unbearable!"
+        },
+        {
+            "word": "tiger",
+            "languages": {
+                "english": "tiger",
+                "spanish": "tigre",
+                "french": "tigre",
+                "german": "tiger",
+                "italian": "tigre",
+                "portuguese": "tigre",
+                "dutch": "tijger",
+                "japanese": "tora",
+                "korean": "horangi",
+                "finnish": "tiikeri",
+                "tereo": "taika"
+            },
+            "tags": ["animal", "mammal", "predator", "jungle", "stripes"],
+            "symbol": "🐯",
+            "funFact": "No two tigers have exactly the same stripe pattern!",
+            "congrats": "You've earned your stripes!",
+            "sorry": "Don't let this setback make you lose your stripes!"
+        },
+        {
+            "word": "lion",
+            "languages": {
+                "english": "lion",
+                "spanish": "león",
+                "french": "lion",
+                "german": "löwe",
+                "italian": "leone",
+                "portuguese": "leão",
+                "dutch": "leeuw",
+                "japanese": "raion",
+                "korean": "saja",
+                "finnish": "leijona",
+                "tereo": "raiona"
+            },
+            "tags": ["animal", "mammal", "predator", "savanna", "pride"],
+            "symbol": "🦁",
+            "funFact": "A lion's roar can be heard from up to 5 miles away!",
+            "congrats": "You're roaring with success!",
+            "sorry": "Even the king of the jungle has off days!"
+        },
+        {
+            "word": "cow",
+            "languages": {
+                "english": "cow",
+                "spanish": "vaca",
+                "french": "vache",
+                "german": "kuh",
+                "italian": "mucca",
+                "portuguese": "vaca",
+                "dutch": "koe",
+                "japanese": "ushi",
+                "korean": "so",
+                "finnish": "lehmä",
+                "tereo": "kau"
+            },
+            "tags": ["animal", "mammal", "herbivore", "farm", "domestic"],
+            "symbol": "🐄",
+            "funFact": "Cows have best friends and get stressed when separated from them!",
+            "congrats": "That was udderly fantastic!",
+            "sorry": "Don't have a cow, you'll do better next time!"
+        },
+        {
+            "word": "pig",
+            "languages": {
+                "english": "pig",
+                "spanish": "cerdo",
+                "french": "cochon",
+                "german": "schwein",
+                "italian": "maiale",
+                "portuguese": "porco",
+                "dutch": "varken",
+                "japanese": "buta",
+                "korean": "dwaeji",
+                "finnish": "sika",
+                "tereo": "poaka"
+            },
+            "tags": ["animal", "mammal", "omnivore", "farm", "domestic"],
+            "symbol": "🐷",
+            "funFact": "Pigs are one of the most intelligent animals, smarter than dogs and even some primates!",
+            "congrats": "You're bringing home the bacon!",
+            "sorry": "This little piggy will try again!"
+        },
+        {
+            "word": "frog",
+            "languages": {
+                "english": "frog",
+                "spanish": "rana",
+                "french": "grenouille",
+                "german": "frosch",
+                "italian": "rana",
+                "portuguese": "sapo",
+                "dutch": "kikker",
+                "japanese": "kaeru",
+                "korean": "gaeguri",
+                "finnish": "sammakko",
+                "tereo": "poroka"
+            },
+            "tags": ["animal", "amphibian", "pond", "jumper", "insectivore"],
+            "symbol": "🐸",
+            "funFact": "Some frogs can jump up to 20 times their body length in a single leap!",
+            "congrats": "You're leaping ahead with success!",
+            "sorry": "Don't worry, even frogs miss the lily pad sometimes!"
+        },
+        {
+            "word": "monkey",
+            "languages": {
+                "english": "monkey",
+                "spanish": "mono",
+                "french": "singe",
+                "german": "affe",
+                "italian": "scimmia",
+                "portuguese": "macaco",
+                "dutch": "aap",
+                "japanese": "saru",
+                "korean": "wonsung-i",
+                "finnish": "apina",
+                "tereo": "makimaki"
+            },
+            "tags": ["animal", "mammal", "primate", "jungle", "tree-dweller"],
+            "symbol": "🐒",
+            "funFact": "There are over 260 known species of monkeys in the world!",
+            "congrats": "You're swinging from success to success!",
+            "sorry": "Even the cleverest monkeys slip sometimes!"
+        },
+        {
+            "word": "penguin",
+            "languages": {
+                "english": "penguin",
+                "spanish": "pingüino",
+                "french": "pingouin",
+                "german": "pinguin",
+                "italian": "pinguino",
+                "portuguese": "pinguim",
+                "dutch": "pinguïn",
+                "japanese": "pengin",
+                "korean": "pengwin",
+                "finnish": "pingviini",
+                "tereo": "pengwini"
+            },
+            "tags": ["animal", "bird", "flightless", "arctic", "swimmer"],
+            "symbol": "🐧",
+            "funFact": "Emperor penguins can dive up to 1,850 feet deep in the ocean!",
+            "congrats": "You're sliding gracefully toward success!",
+            "sorry": "It's just a small slip on the ice, keep waddling forward!"
+        },
+        {
+            "word": "penguin",
+            "languages": {
+                "english": "penguin",
+                "spanish": "pingüino",
+                "french": "pingouin",
+                "german": "pinguin",
+                "italian": "pinguino",
+                "portuguese": "pinguim",
+                "dutch": "pinguïn",
+                "japanese": "pengin",
+                "korean": "pengwin",
+                "finnish": "pingviini",
+                "tereo": "pengwini"
+            },
+            "tags": ["animal", "bird", "flightless", "arctic", "swimmer"],
+            "symbol": "🐧",
+            "funFact": "Emperor penguins can dive up to 1,850 feet deep!",
+            "congrats": "You're sliding gracefully toward success!",
+            "sorry": "It's just a small slip on the ice, keep waddling forward!"
+        },
+        {
+            "word": "duck",
+            "languages": {
+                "english": "duck",
+                "spanish": "pato",
+                "french": "canard",
+                "german": "ente",
+                "italian": "anatra",
+                "portuguese": "pato",
+                "dutch": "eend",
+                "japanese": "ahiru",
+                "korean": "ori",
+                "finnish": "ankka",
+                "tereo": "rakiraki"
+            },
+            "tags": ["animal", "bird", "waterfowl", "swimmer", "pond"],
+            "symbol": "🦆",
+            "funFact": "Even when they dive underwater, Ducks' downy underlayer stays completely dry!",
+            "congrats": "Your efforts are swimming along nicely!",
+            "sorry": "Let it roll off your back like water off a duck!"
+        },
+        {
+            "word": "eagle",
+            "languages": {
+                "english": "eagle",
+                "spanish": "águila",
+                "french": "aigle",
+                "german": "adler",
+                "italian": "aquila",
+                "portuguese": "águia",
+                "dutch": "arend",
+                "japanese": "washi",
+                "korean": "doksu",
+                "finnish": "kotka",
+                "tereo": "hokioi"
+            },
+            "tags": ["animal", "bird", "raptor", "predator", "high-flyer"],
+            "symbol": "🦅",
+            "funFact": "Eagles can spot a rabbit from over 2 miles away!",
+            "congrats": "You've reached eagle-eye precision!",
+            "sorry": "Even eagles face headwinds sometimes!"
+        },
+        {
+            "word": "bat",
+            "languages": {
+                "english": "bat",
+                "spanish": "murciélago",
+                "french": "chauve-souris",
+                "german": "fledermaus",
+                "italian": "pipistrello",
+                "portuguese": "morcego",
+                "dutch": "vleermuis",
+                "japanese": "koumori",
+                "korean": "bakjwi",
+                "finnish": "lepakko",
+                "tereo": "pekapeka"
+            },
+            "tags": ["animal", "mammal", "nocturnal", "flying", "echolocation"],
+            "symbol": "🦇",
+            "funFact": "Bats are the only mammals capable of true flight!",
+            "congrats": "You're soaring through the night with success!",
+            "sorry": "Don't hang upside down about it, try again!"
+        },
+        {
+            "word": "wolf",
+            "languages": {
+                "english": "wolf",
+                "spanish": "lobo",
+                "french": "loup",
+                "german": "wolf",
+                "italian": "lupo",
+                "portuguese": "lobo",
+                "dutch": "wolf",
+                "japanese": "ookami",
+                "korean": "neugdae",
+                "finnish": "susi",
+                "tereo": "wuruhi"
+            },
+            "tags": ["animal", "mammal", "predator", "pack", "wilderness"],
+            "symbol": "🐺",
+            "funFact": "Wolves can hear sounds up to 10 miles away!",
+            "congrats": "You're leading the pack with your success!",
+            "sorry": "Even the alpha stumbles sometimes, keep howling!"
+        },
+        {
+            "word": "horse",
+            "languages": {
+                "english": "horse",
+                "spanish": "caballo",
+                "french": "cheval",
+                "german": "pferd",
+                "italian": "cavallo",
+                "portuguese": "cavalo",
+                "dutch": "paard",
+                "japanese": "uma",
+                "korean": "mal",
+                "finnish": "hevonen",
+                "tereo": "hoiho"
+            },
+            "tags": ["animal", "mammal", "herbivore", "domestic", "fast"],
+            "symbol": "🐎",
+            "funFact": "Horses can sleep both standing up and lying down!",
+            "congrats": "You're galloping to victory!",
+            "sorry": "Don't be saddled with disappointment, try again!"
+        },
+        {
+            "word": "unicorn",
+            "languages": {
+                "english": "unicorn",
+                "spanish": "unicornio",
+                "french": "licorne",
+                "german": "einhorn",
+                "italian": "unicorno",
+                "portuguese": "unicórnio",
+                "dutch": "eenhoorn",
+                "japanese": "yunikoon",
+                "korean": "yunikorn",
+                "finnish": "yksisarvinen",
+                "tereo": "unikaona"
+            },
+            "tags": ["mythical", "magical", "horse", "horn", "fantasy"],
+            "symbol": "🦄",
+            "funFact": "In medieval times, narwhal tusks were sold as unicorn horns!",
+            "congrats": "Your magical success is as rare as a unicorn!",
+            "sorry": "Even magical creatures stumble - sparkle on and try again!"
+        },
+        {
+            "word": "bee",
+            "languages": {
+                "english": "bee",
+                "spanish": "abeja",
+                "french": "abeille",
+                "german": "biene",
+                "italian": "ape",
+                "portuguese": "abelha",
+                "dutch": "bij",
+                "japanese": "hachi",
+                "korean": "beol",
+                "finnish": "mehiläinen",
+                "tereo": "pī"
+            },
+            "tags": ["animal", "insect", "pollinator", "honey", "hive"],
+            "symbol": "🐝",
+            "funFact": "Bees must visit about 2 million flowers to make one pound of honey!",
+            "congrats": "You're creating quite a buzz with your success!",
+            "sorry": "The sweetest honey comes after many flights!"
+        },
+        {
+            "word": "caterpillar",
+            "languages": {
+                "english": "caterpillar",
+                "spanish": "oruga",
+                "french": "chenille",
+                "german": "raupe",
+                "italian": "bruco",
+                "portuguese": "lagarta",
+                "dutch": "rups",
+                "japanese": "imomushi",
+                "korean": "beol레",
+                "finnish": "toukka",
+                "tereo": "anuhe"
+            },
+            "tags": ["animal", "insect", "larva", "transformation", "leaf-eater"],
+            "symbol": "🐛",
+            "funFact": "Some caterpillars have over 4,000 muscles in their body!",
+            "congrats": "Inch by inch, you're making remarkable progress!",
+            "sorry": "Remember, every butterfly was once a caterpillar that kept trying!"
+        },
+        {
+            "word": "butterfly",
+            "languages": {
+                "english": "butterfly",
+                "spanish": "mariposa",
+                "french": "papillon",
+                "german": "schmetterling",
+                "italian": "farfalla",
+                "portuguese": "borboleta",
+                "dutch": "vlinder",
+                "japanese": "chou",
+                "korean": "nabi",
+                "finnish": "perhonen",
+                "tereo": "pepepe"
+            },
+            "tags": ["animal", "insect", "flying", "colorful", "transformation"],
+            "symbol": "🦋",
+            "funFact": "Butterfly wings are actually transparent!",
+            "congrats": "You've transformed your efforts into beautiful success!",
+            "sorry": "Every great flight begins with a few wobbly wing flaps!"
+        },
+        {
+            "word": "ant",
+            "languages": {
+                "english": "ant",
+                "spanish": "hormiga",
+                "french": "fourmi",
+                "german": "ameise",
+                "italian": "formica",
+                "portuguese": "formiga",
+                "dutch": "mier",
+                "japanese": "ari",
+                "korean": "gaemi",
+                "finnish": "muurahainen",
+                "tereo": "popokorua"
+            },
+            "tags": ["animal", "insect", "colony", "strong", "tiny"],
+            "symbol": "🐜",
+            "funFact": "Ants can lift up to 50 times their own body weight!",
+            "congrats": "Your small steps are building something mighty!",
+            "sorry": "Like an ant, persistence will help you overcome this obstacle!"
+        },
+        {
+            "word": "mosquito",
+            "languages": {
+                "english": "mosquito",
+                "spanish": "mosquito",
+                "french": "moustique",
+                "german": "mücke",
+                "italian": "zanzara",
+                "portuguese": "mosquito",
+                "dutch": "mug",
+                "japanese": "ka",
+                "korean": "mogi",
+                "finnish": "hyttynen",
+                "tereo": "waeroa"
+            },
+            "tags": ["animal", "insect", "flying", "blood-sucker", "disease-vector"],
+            "symbol": "🦟",
+            "funFact": "Only female mosquitoes bite humans; the males feed exclusively on flower nectar!",
+            "congrats": "You've zeroed in on success with precision!",
+            "sorry": "Don't let this little sting discourage your bigger journey!"
+        },
+        {
+            "word": "cricket",
+            "languages": {
+                "english": "cricket",
+                "spanish": "grillo",
+                "french": "grillon",
+                "german": "grille",
+                "italian": "grillo",
+                "portuguese": "grilo",
+                "dutch": "krekel",
+                "japanese": "koorogi",
+                "korean": "beollebeolle",
+                "finnish": "sirkka",
+                "tereo": "tarakihi"
+            },
+            "tags": ["animal", "insect", "musical", "jumping", "nocturnal"],
+            "symbol": "🦗",
+            "funFact": "Crickets' chirping speed changes with temperature!",
+            "congrats": "Your success is music to everyone's ears!",
+            "sorry": "Keep chirping and jumping, your rhythm will come back!"
+        },
+        {
+            "word": "spider",
+            "languages": {
+                "english": "spider",
+                "spanish": "araña",
+                "french": "araignée",
+                "german": "spinne",
+                "italian": "ragno",
+                "portuguese": "aranha",
+                "dutch": "spin",
+                "japanese": "kumo",
+                "korean": "keomireul",
+                "finnish": "hämähäkki",
+                "tereo": "pungawerewere"
+            },
+            "tags": ["animal", "arachnid", "web-spinner", "eight-legged", "predator"],
+            "symbol": "🕷",
+            "funFact": "Some spiders can hold their breath underwater for up to 24 hours!",
+            "congrats": "You've woven a web of impressive accomplishment!",
+            "sorry": "Even the best web-spinners have to rebuild sometimes!"
+        },
+        {
+            "word": "scorpion",
+            "languages": {
+                "english": "scorpion",
+                "spanish": "escorpión",
+                "french": "scorpion",
+                "german": "skorpion",
+                "italian": "scorpione",
+                "portuguese": "escorpião",
+                "dutch": "schorpioen",
+                "japanese": "sasori",
+                "korean": "jeommaegi",
+                "finnish": "skorpioni",
+                "tereo": "kopiona"
+            },
+            "tags": ["animal", "arachnid", "desert", "venomous", "predator"],
+            "symbol": "🦂",
+            "funFact": "Scorpions glow a bright blue-green under ultraviolet light!",
+            "congrats": "You've struck with precision and achieved success!",
+            "sorry": "Even scorpions need to regroup before their next strike!"
+        },
+        {
+            "word": "turtle",
+            "languages": {
+                "english": "turtle",
+                "spanish": "tortuga",
+                "french": "tortue",
+                "german": "schildkröte",
+                "italian": "tartaruga",
+                "portuguese": "tartaruga",
+                "dutch": "schildpad",
+                "japanese": "kame",
+                "korean": "geobuk",
+                "finnish": "kilpikonna",
+                "tereo": "honu"
+            },
+            "tags": ["animal", "reptile", "shell", "slow", "long-lived"],
+            "symbol": "🐢",
+            "funFact": "Some turtle species can live for over 100 years!",
+            "congrats": "Slow and steady wins the race – excellent work!",
+            "sorry": "Slow and steady wins the race - try again!"
+        },
+        {
+            "word": "snake",
+            "languages": {
+                "english": "snake",
+                "spanish": "serpiente",
+                "french": "serpent",
+                "german": "schlange",
+                "italian": "serpente",
+                "portuguese": "cobra",
+                "dutch": "slang",
+                "japanese": "hebi",
+                "korean": "baem",
+                "finnish": "käärme",
+                "tereo": "neke"
+            },
+            "tags": ["animal", "reptile", "slithering", "scales", "predator"],
+            "symbol": "🐍",
+            "funFact": "Snakes can't blink because they don't have eyelids!",
+            "congrats": "You've skillfully navigated your way to success!",
+            "sorry": "Even the most flexible snake encounters obstacles!"
+        },
+        {
+            "word": "lizard",
+            "languages": {
+                "english": "lizard",
+                "spanish": "lagarto",
+                "french": "lézard",
+                "german": "eidechse",
+                "italian": "lucertola",
+                "portuguese": "lagarto",
+                "dutch": "hagedis",
+                "japanese": "tokage",
+                "korean": "domabaem",
+                "finnish": "lisko",
+                "tereo": "mokomoko"
+            },
+            "tags": ["animal", "reptile", "scales", "sunbather", "tail"],
+            "symbol": "🦎",
+            "funFact": "Many lizards can detach their tails when threatened and grow new ones!",
+            "congrats": "You've adapted brilliantly to achieve success!",
+            "sorry": "Sometimes you need to drop what's holding you back and grow anew!"
+        },
+        {
+            "word": "octopus",
+            "languages": {
+                "english": "octopus",
+                "spanish": "pulpo",
+                "french": "poulpe",
+                "german": "oktopus",
+                "italian": "polpo",
+                "portuguese": "polvo",
+                "dutch": "octopus",
+                "japanese": "tako",
+                "korean": "muneo",
+                "finnish": "mustekala",
+                "tereo": "wheke"
+            },
+            "tags": ["animal", "mollusk", "tentacles", "intelligent", "ocean"],
+            "symbol": "🐙",
+            "funFact": "Octopuses have three hearts and their blood is blue!",
+            "congrats": "You've stretched your abilities in eight directions of success!",
+            "sorry": "Even with eight arms, we all drop things sometimes!"
+        },
+        {
+            "word": "squid",
+            "languages": {
+                "english": "squid",
+                "spanish": "calamar",
+                "french": "calmar",
+                "german": "tintenfisch",
+                "italian": "calamaro",
+                "portuguese": "lula",
+                "dutch": "inktvis",
+                "japanese": "ika",
+                "korean": "ojingeo",
+                "finnish": "kalmari",
+                "tereo": "wheke riha"
+            },
+            "tags": ["animal", "mollusk", "tentacles", "deep-sea", "ocean"],
+            "symbol": "🦑",
+            "funFact": "The giant squid has the largest eyes of any animal!",
+            "congrats": "You've propelled yourself to impressive depths of success!",
+            "sorry": "Even the fastest swimmers need to reorient sometimes!"
+        },
+        {
+            "word": "shrimp",
+            "languages": {
+                "english": "shrimp",
+                "spanish": "camarón",
+                "french": "crevette",
+                "german": "garnele",
+                "italian": "gambero",
+                "portuguese": "camarão",
+                "dutch": "garnaal",
+                "japanese": "ebi",
+                "korean": "saeu",
+                "finnish": "katkarapu",
+                "tereo": "kouraura"
+            },
+            "tags": ["animal", "crustacean", "small", "ocean", "swimmer"],
+            "symbol": "🦐",
+            "funFact": "Some shrimp can make a snapping sound louder than a jet engine!",
+            "congrats": "Small but mighty – you've achieved impressive results!",
+            "sorry": "Size isn't everything – keep making waves!"
+        },
+        {
+            "word": "lobster",
+            "languages": {
+                "english": "lobster",
+                "spanish": "langosta",
+                "french": "homard",
+                "german": "hummer",
+                "italian": "aragosta",
+                "portuguese": "lagosta",
+                "dutch": "kreeft",
+                "japanese": "iseebi",
+                "korean": "lobster",
+                "finnish": "hummeri",
+                "tereo": "kōura"
+            },
+            "tags": ["animal", "crustacean", "claws", "ocean", "shellfish"],
+            "symbol": "🦞",
+            "funFact": "Lobsters can regenerate their claws, legs, and antennae!",
+            "congrats": "You've clawed your way to the top of success!",
+            "sorry": "Even the hardest shells have soft moments!"
+        },
+        {
+            "word": "crab",
+            "languages": {
+                "english": "crab",
+                "spanish": "cangrejo",
+                "french": "crabe",
+                "german": "krabbe",
+                "italian": "granchio",
+                "portuguese": "caranguejo",
+                "dutch": "krab",
+                "japanese": "kani",
+                "korean": "ge",
+                "finnish": "rapu",
+                "tereo": "papaka"
+            },
+            "tags": ["animal", "crustacean", "sideways", "pincer", "beach"],
+            "symbol": "🦀",
+            "funFact": "Crabs can walk in any direction, but generally prefer to move sideways!",
+            "congrats": "You're moving forward, even if sometimes sideways!",
+            "sorry": "Sometimes a sideways approach is just what you need!"
+        },
+        {
+            "word": "whale",
+            "languages": {
+                "english": "whale",
+                "spanish": "ballena",
+                "french": "baleine",
+                "german": "wal",
+                "italian": "balena",
+                "portuguese": "baleia",
+                "dutch": "walvis",
+                "japanese": "kujira",
+                "korean": "gori",
+                "finnish": "valas",
+                "tereo": "tohorā"
+            },
+            "tags": ["animal", "mammal", "marine", "giant", "ocean"],
+            "symbol": "🐳",
+            "funFact": "A blue whale's heart is so big that a small child could swim through its arteries!",
+            "congrats": "You've made an enormous splash with your success!",
+            "sorry": "Even the mightiest creatures in the ocean face currents!"
+        },
+        {
+            "word": "crocodile",
+            "languages": {
+                "english": "crocodile",
+                "spanish": "cocodrilo",
+                "french": "crocodile",
+                "german": "krokodil",
+                "italian": "coccodrillo",
+                "portuguese": "crocodilo",
+                "dutch": "krokodil",
+                "japanese": "wani",
+                "korean": "ageo",
+                "finnish": "krokotiili",
+                "tereo": "korokotaera"
+            },
+            "tags": ["animal", "reptile", "predator", "aquatic", "ancient"],
+            "symbol": "🐊",
+            "funFact": "Crocodiles have survived for more than 200 million years!",
+            "congrats": "Your patience and power have led to impressive success!",
+            "sorry": "Even the most ancient survivors have tough days!"
+        },
+        {
+            "word": "zebra",
+            "languages": {
+                "english": "zebra",
+                "spanish": "cebra",
+                "french": "zèbre",
+                "german": "zebra",
+                "italian": "zebra",
+                "portuguese": "zebra",
+                "dutch": "zebra",
+                "japanese": "shimauma",
+                "korean": "eolrukmal",
+                "finnish": "seepra",
+                "tereo": "hepara"
+            },
+            "tags": ["animal", "mammal", "stripes", "savanna", "herd"],
+            "symbol": "🦓",
+            "funFact": "Each zebra's stripe pattern is unique – like a fingerprint!",
+            "congrats": "You've earned your distinctive stripes of success!",
+            "sorry": "Remember, no two journeys share the same pattern!"
+        },
+        {
+            "word": "elephant",
+            "languages": {
+                "english": "elephant",
+                "spanish": "elefante",
+                "french": "éléphant",
+                "german": "elefant",
+                "italian": "elefante",
+                "portuguese": "elefante",
+                "dutch": "olifant",
+                "japanese": "zō",
+                "korean": "kokkiri",
+                "finnish": "norsu",
+                "tereo": "arawhana"
+            },
+            "tags": ["animal", "mammal", "trunk", "large", "intelligent"],
+            "symbol": "🐘",
+            "funFact": "Elephants can recognize themselves in mirrors!",
+            "congrats": "Your memory for success is truly elephant-sized!",
+            "sorry": "Remember, elephants never forget to try again!"
+        },
+        {
+            "word": "hippo",
+            "languages": {
+                "english": "hippo",
+                "spanish": "hipopótamo",
+                "french": "hippopotame",
+                "german": "nilpferd",
+                "italian": "ippopotamo",
+                "portuguese": "hipopótamo",
+                "dutch": "nijlpaard",
+                "japanese": "kaba",
+                "korean": "heopo",
+                "finnish": "virtahepo",
+                "tereo": "hipopotama"
+            },
+            "tags": ["animal", "mammal", "aquatic", "large", "herbivore"],
+            "symbol": "🦛",
+            "funFact": "Hippos can run faster than humans – up to 30 mph!",
+            "congrats": "Your deceptively powerful performance made a big splash!",
+            "sorry": "Even the mightiest river dwellers face strong currents!"
+        },
+        {
+            "word": "rhino",
+            "languages": {
+                "english": "rhino",
+                "spanish": "rinoceronte",
+                "french": "rhinocéros",
+                "german": "nashorn",
+                "italian": "rinoceronte",
+                "portuguese": "rinoceronte",
+                "dutch": "neushoorn",
+                "japanese": "sai",
+                "korean": "mului",
+                "finnish": "sarvikuono",
+                "tereo": "reina"
+            },
+            "tags": ["animal", "mammal", "horn", "thick-skinned", "endangered"],
+            "symbol": "🦏",
+            "funFact": "A group of rhinos is called a 'crash'!",
+            "congrats": "You've charged through obstacles with unstoppable force!",
+            "sorry": "Even the thickest skin feels setbacks – keep charging forward!"
+        },
+        {
+            "word": "camel",
+            "languages": {
+                "english": "camel",
+                "spanish": "camello",
+                "french": "chameau",
+                "german": "kamel",
+                "italian": "cammello",
+                "portuguese": "camelo",
+                "dutch": "kameel",
+                "japanese": "rakuda",
+                "korean": "nakta",
+                "finnish": "kameli",
+                "tereo": "kāmera"
+            },
+            "tags": ["animal", "mammal", "desert", "hump", "endurance"],
+            "symbol": "🐫",
+            "funFact": "A camel's hump does not store water – it stores fat for energy!",
+            "congrats": "Your resources were perfectly managed for this journey!",
+            "sorry": "Even desert experts have challenging days – stay hydrated!"
+        },
+        {
+            "word": "giraffe",
+            "languages": {
+                "english": "giraffe",
+                "spanish": "jirafa",
+                "french": "girafe",
+                "german": "giraffe",
+                "italian": "giraffa",
+                "portuguese": "girafa",
+                "dutch": "giraffe",
+                "japanese": "kirin",
+                "korean": "girin",
+                "finnish": "kirahvi",
+                "tereo": "hairafa"
+            },
+            "tags": ["animal", "mammal", "tall", "spotted", "savanna"],
+            "symbol": "🦒",
+            "funFact": "Giraffes only need 5-30 minutes of sleep in a 24-hour period!",
+            "congrats": "You've reached new heights with your accomplishment!",
+            "sorry": "Even the tallest perspective sometimes misses what's on the ground!"
+        },
+        {
+            "word": "sheep",
+            "languages": {
+                "english": "sheep",
+                "spanish": "oveja",
+                "french": "mouton",
+                "german": "schaf",
+                "italian": "pecora",
+                "portuguese": "ovelha",
+                "dutch": "schaap",
+                "japanese": "hitsuji",
+                "korean": "yang",
+                "finnish": "lammas",
+                "tereo": "hipi"
+            },
+            "tags": ["animal", "mammal", "wool", "herd", "farm"],
+            "symbol": "🐑",
+            "funFact": "Sheep have nearly 360-degree vision!",
+            "congrats": "Your woolly thinking has produced golden results!",
+            "sorry": "Sometimes the flock takes unexpected turns – stay together!"
+        },
+        {
+            "word": "goat",
+            "languages": {
+                "english": "goat",
+                "spanish": "cabra",
+                "french": "chèvre",
+                "german": "ziege",
+                "italian": "capra",
+                "portuguese": "cabra",
+                "dutch": "geit",
+                "japanese": "yagi",
+                "korean": "yeom",
+                "finnish": "vuohi",
+                "tereo": "koati"
+            },
+            "tags": ["animal", "mammal", "horns", "climber", "farm"],
+            "symbol": "🐐",
+            "funFact": "Goats have rectangular pupils that give them panoramic vision of 320-340 degrees!",
+            "congrats": "Your ability to scale challenges makes you the GOAT!",
+            "sorry": "Even the best climbers sometimes slip – find your footing again!"
+        },
+        {
+            "word": "turkey",
+            "languages": {
+                "english": "turkey",
+                "spanish": "pavo",
+                "french": "dinde",
+                "german": "truthahn",
+                "italian": "tacchino",
+                "portuguese": "peru",
+                "dutch": "kalkoen",
+                "japanese": "shichimenchō",
+                "korean": "chilmyeonjo",
+                "finnish": "kalkkuna",
+                "tereo": "tāke"
+            },
+            "tags": ["animal", "bird", "farm", "gobble", "feathered"],
+            "symbol": "🦃",
+            "funFact": "Turkeys can change the color of their heads from red to blue to white, depending on their mood!",
+            "congrats": "You've fanned out your talents impressively!",
+            "sorry": "Even the proudest display can be ruffled sometimes!"
+        },
+        {
+            "word": "parrot",
+            "languages": {
+                "english": "parrot",
+                "spanish": "loro",
+                "french": "perroquet",
+                "german": "papagei",
+                "italian": "pappagallo",
+                "portuguese": "papagaio",
+                "dutch": "papegaai",
+                "japanese": "ōmu",
+                "korean": "앵무새",
+                "finnish": "papukaija",
+                "tereo": "kākāriki"
+            },
+            "tags": ["animal", "bird", "colorful", "mimicry", "tropical"],
+            "symbol": "🦜",
+            "funFact": "Some parrot species can live for over 80 years!",
+            "congrats": "Your colorful performance has everyone talking!",
+            "sorry": "Even the most talkative need time to find the right words!"
+        },
+        {
+            "word": "swan",
+            "languages": {
+                "english": "swan",
+                "spanish": "cisne",
+                "french": "cygne",
+                "german": "schwan",
+                "italian": "cigno",
+                "portuguese": "cisne",
+                "dutch": "zwaan",
+                "japanese": "hakuchō",
+                "korean": "baekjo",
+                "finnish": "joutsen",
+                "tereo": "wāna"
+            },
+            "tags": ["animal", "bird", "elegant", "water", "white"],
+            "symbol": "🦢",
+            "funFact": "Swans can remember humans who have been kind or unkind to them!",
+            "congrats": "Your graceful performance conceals powerful effort beneath!",
+            "sorry": "Even the most elegant sometimes ruffle their feathers!"
+        },
+        {
+            "word": "flamingo",
+            "languages": {
+                "english": "flamingo",
+                "spanish": "flamenco",
+                "french": "flamant",
+                "german": "flamingo",
+                "italian": "fenicottero",
+                "portuguese": "flamingo",
+                "dutch": "flamingo",
+                "japanese": "furamingo",
+                "korean": "flamingo",
+                "finnish": "flamingo",
+                "tereo": "wherangi"
+            },
+            "tags": ["animal", "bird", "pink", "standing", "wading"],
+            "symbol": "🦩",
+            "funFact": "Flamingos get their pink color from the beta-carotene in their diet!",
+            "congrats": "Your unique stance has led to brilliant results!",
+            "sorry": "Even on one leg, balance is all about adjustments!"
+        },
+        {
+            "word": "raccoon",
+            "languages": {
+                "english": "raccoon",
+                "spanish": "mapache",
+                "french": "raton laveur",
+                "german": "waschbär",
+                "italian": "procione",
+                "portuguese": "guaxinim",
+                "dutch": "wasbeer",
+                "japanese": "araiguma",
+                "korean": "neoguri",
+                "finnish": "pesukarhu",
+                "tereo": "kuhukuhu"
+            },
+            "tags": ["animal", "mammal", "nocturnal", "omnivore", "forest"],
+            "symbol": "🦝",
+            "funFact": "Raccoons can remember solutions to tasks for up to three years!",
+            "congrats": "You've cleverly masked your way to success!",
+            "sorry": "Don't let this wash away your spirits!"
+        },
+        {
+            "word": "skunk",
+            "languages": {
+                "english": "skunk",
+                "spanish": "mofeta",
+                "french": "mouffette",
+                "german": "stinktier",
+                "italian": "puzzola",
+                "portuguese": "doninha",
+                "dutch": "stinkdier",
+                "japanese": "sukunku",
+                "korean": "seukeongteu",
+                "finnish": "haisunäätä",
+                "tereo": "puhihi"
+            },
+            "tags": ["animal", "mammal", "nocturnal", "omnivore", "spray"],
+            "symbol": "🦨",
+            "funFact": "Skunks can spray their infamous scent up to 10 feet!",
+            "congrats": "You've made quite the impression!",
+            "sorry": "This setback doesn't stink - keep going!"
+        },
+        {
+            "word": "otter",
+            "languages": {
+                "english": "otter",
+                "spanish": "nutria",
+                "french": "loutre",
+                "german": "otter",
+                "italian": "lontra",
+                "portuguese": "lontra",
+                "dutch": "otter",
+                "japanese": "kawauso",
+                "korean": "suroaji",
+                "finnish": "saukko",
+                "tereo": "kekeno"
+            },
+            "tags": ["animal", "mammal", "aquatic", "playful", "river"],
+            "symbol": "🦦",
+            "funFact": "Otters hold hands while sleeping so they don't drift apart!",
+            "congrats": "You're swimming in success!",
+            "sorry": "Don't worry, you'll slide back to victory soon!"
+        },
+        {
+            "word": "sloth",
+            "languages": {
+                "english": "sloth",
+                "spanish": "perezoso",
+                "french": "paresseux",
+                "german": "faultier",
+                "italian": "bradipo",
+                "portuguese": "preguiça",
+                "dutch": "luiaard",
+                "japanese": "namakemono",
+                "korean": "naengyi",
+                "finnish": "laiskiainen",
+                "tereo": "hakuturi"
+            },
+            "tags": ["animal", "mammal", "slow", "arboreal", "rainforest"],
+            "symbol": "🦥",
+            "funFact": "Sloths move so slowly that algae grows on their fur!",
+            "congrats": "Slow and steady wins the race!",
+            "sorry": "Take your time, you'll get there eventually!"
+        },
+        {
+            "word": "rat",
+            "languages": {
+                "english": "rat",
+                "spanish": "rata",
+                "french": "rat",
+                "german": "ratte",
+                "italian": "ratto",
+                "portuguese": "rato",
+                "dutch": "rat",
+                "japanese": "nezumi",
+                "korean": "jwi",
+                "finnish": "rotta",
+                "tereo": "kiore"
+            },
+            "tags": ["animal", "mammal", "rodent", "intelligent", "urban"],
+            "symbol": "🐀",
+            "funFact": "Rats can be taught to detect land mines and tuberculosis!",
+            "congrats": "You've scurried your way to victory!",
+            "sorry": "No need to scamper away - try again!"
+        },
+        {
+            "word": "dragon",
+            "languages": {
+                "english": "dragon",
+                "spanish": "dragón",
+                "french": "dragon",
+                "german": "drache",
+                "italian": "drago",
+                "portuguese": "dragão",
+                "dutch": "draak",
+                "japanese": "ryuu",
+                "korean": "yong",
+                "finnish": "lohikäärme",
+                "tereo": "taniwha"
+            },
+            "tags": ["mythical", "creature", "fire", "flying", "legendary"],
+            "symbol": "🐉",
+            "funFact": "Dragons appear in the mythology of cultures across the world!",
+            "congrats": "You've unleashed your fiery potential!",
+            "sorry": "Every dragon has setbacks - gather your treasure and try again!"
         }
     ]
 }

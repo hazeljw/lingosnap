@@ -47,7 +47,7 @@ export const mapContentModeToData = (contentMode: ContentMode) => {
 export const mapContentModeToGameItemSize = (contentMode?: ContentMode) => {
     switch(contentMode) {
         case ContentMode.Animals:
-            return 0.8;
+            return 2; // used to be 0.8 with image size
         case ContentMode.Food:
             return 2;
         default:
