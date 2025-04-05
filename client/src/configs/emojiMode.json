@@ -14,7 +14,7 @@
                 "japanese": "ringo",
                 "korean": "sagwa",
                 "finnish": "omena",
-                "tereo": "aporo"
+                "tereo": "āporo"
             },
             "tags": ["food", "fruit", "healthy", "snack", "red"],
             "symbol": "🍎",
@@ -35,7 +35,7 @@
             "japanese": "abokado",
             "korean": "abokado",
             "finnish": "avokado",
-            "tereo": "āwakato"
+            "tereo": "rahopūru"
             },
             "tags": ["food", "fruit", "healthy", "green"],
             "symbol": "🥑",
@@ -119,7 +119,7 @@
             "japanese": "bāgā",
             "korean": "beogeo",
             "finnish": "hampurilainen",
-            "tereo": "pēke"
+            "tereo": "pākā"
             },
             "tags": ["food", "fast food", "meat", "sandwich"],
             "symbol": "🍔",
@@ -182,7 +182,7 @@
             "japanese": "sakuranbo",
             "korean": "cherri",
             "finnish": "kirsikka",
-            "tereo": "tērī"
+            "tereo": "tiere"
             },
             "tags": ["food", "fruit", "red", "sweet"],
             "symbol": "🍒",
@@ -266,7 +266,7 @@
             "japanese": "tamago",
             "korean": "gyeran",
             "finnish": "muna",
-            "tereo": "heeki"
+            "tereo": "hēki"
             },
             "tags": ["food", "protein", "breakfast", "versatile"],
             "symbol": "🥚",
@@ -413,7 +413,7 @@
             "japanese": "mafin",
             "korean": "meopin",
             "finnish": "muffini",
-            "tereo": "mapine"
+            "tereo": "mawhene"
             },
             "tags": ["food", "pastry", "breakfast", "snack"],
             "symbol": "🧁",
@@ -476,7 +476,7 @@
             "japanese": "piza",
             "korean": "pija",
             "finnish": "pizza",
-            "tereo": "pīhi"
+            "tereo": "parehe"
             },
             "tags": ["food", "Italian", "fast food", "cheese"],
             "symbol": "🍕",
@@ -581,7 +581,7 @@
               "japanese": "ichigo",
               "korean": "ttalgi",
               "finnish": "mansikka",
-              "tereo": "tōrōpere"
+              "tereo": "rōpere"
             },
             "tags": ["food", "fruit", "sweet", "red", "berry", "summer"],
             "symbol": "🍓",
@@ -665,7 +665,7 @@
               "japanese": "nasu",
               "korean": "gaji",
               "finnish": "munakoiso",
-              "tereo": "ekapārata"
+              "tereo": "otahua"
             },
             "tags": ["food", "vegetable", "purple", "nightshade", "cooking"],
             "symbol": "🍆",
@@ -686,7 +686,7 @@
               "japanese": "burokkorī",
               "korean": "beurokkoli",
               "finnish": "parsakaali",
-              "tereo": "porokori"
+              "tereo": "porokari"
             },
             "tags": ["food", "vegetable", "green", "healthy", "cruciferous"],
             "symbol": "🥦",
@@ -728,7 +728,7 @@
               "japanese": "tōmorokoshi",
               "korean": "oksusu",
               "finnish": "maissi",
-              "tereo": "kōnati"
+              "tereo": "kānga"
             },
             "tags": ["food", "vegetable", "grain", "yellow", "summer", "farming"],
             "symbol": "🌽",
@@ -812,7 +812,7 @@
               "japanese": "puretseru",
               "korean": "pretchel",
               "finnish": "pretzeli",
-              "tereo": "peretehere"
+              "tereo": "pretzel"
             },
             "tags": ["food", "snack", "baked", "salty", "twisted", "bread"],
             "symbol": "🥨",
@@ -896,7 +896,7 @@
               "japanese": "sarada",
               "korean": "saellodeu",
               "finnish": "salaatti",
-              "tereo": "hārara"
+              "tereo": "huamata"
             },
             "tags": ["food", "healthy", "vegetables", "fresh", "green", "diet"],
             "symbol": "🥗",
@@ -980,7 +980,7 @@
               "japanese": "jūsu",
               "korean": "juseu",
               "finnish": "mehu",
-              "tereo": "hūhuka"
+              "tereo": "wai"
             },
             "tags": ["drink", "beverage", "fruit", "refreshing", "sweet", "healthy"],
             "symbol": "🧃",
@@ -1211,7 +1211,7 @@
               "japanese": "awateta",
               "korean": "dangwhang",
               "finnish": "hämmentynyt",
-              "tereo": "porangi"
+              "tereo": "pōrangirangi"
             },
             "tags": ["emotion", "embarrassed", "shocked", "blushing", "surprised", "overwhelmed"],
             "symbol": "😳",
@@ -1232,7 +1232,7 @@
               "japanese": "baka",
               "korean": "eoliseokhan",
               "finnish": "hassu",
-              "tereo": "wairangi"
+              "tereo": "tīhohehohe"
             },
             "tags": ["emotion", "playful", "goofy", "wild", "crazy", "funny"],
             "symbol": "🤪",
@@ -1253,7 +1253,7 @@
               "japanese": "kaubōi",
               "korean": "kawooboi",
               "finnish": "cowboy",
-              "tereo": "kaupōi"
+              "tereo": "kaupoai"
             },
             "tags": ["person", "western", "hat", "rancher", "rodeo", "adventurous"],
             "symbol": "🤠",
@@ -1274,7 +1274,7 @@
               "japanese": "piero",
               "korean": "keulraun",
               "finnish": "pelle",
-              "tereo": "kauna"
+              "tereo": "hako"
             },
             "tags": ["person", "performer", "funny", "circus", "colorful", "makeup"],
             "symbol": "🤡",
@@ -1295,7 +1295,7 @@
               "japanese": "unchi",
               "korean": "ddong",
               "finnish": "kakka",
-              "tereo": "paru"
+              "tereo": "hamuti"
             },
             "tags": ["waste", "bathroom", "brown", "stinky", "toilet", "organic"],
             "symbol": "💩",
@@ -1316,7 +1316,7 @@
               "japanese": "memai",
               "korean": "hyeongi",
               "finnish": "huimaava",
-              "tereo": "āponapona"
+              "tereo": "ānini"
             },
             "tags": ["feeling", "disoriented", "spinning", "confused", "unsteady", "wobbly"],
             "symbol": "😵",
