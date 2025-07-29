@@ -1,4 +1,4 @@
-import { CharacterItem, ContentItem } from "../common/types";
+import { CharacterItem, ContentItem } from "@lingosnap/shared";
 
 export interface GameContentData {
     cardOne: ContentItem[];

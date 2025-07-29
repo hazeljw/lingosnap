@@ -1,4 +1,4 @@
-import { Language } from "./enums"
+import { Language } from "@lingosnap/shared"
 import MaoriFlagIcon from "./MaoriFlagIcon"
 import { mapLanguageToFlag } from "./mappers"
 

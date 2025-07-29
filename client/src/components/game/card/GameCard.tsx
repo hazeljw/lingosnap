@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box } from "@mui/material"
 import Item, { GameCardItem } from "./Item"
 import './styles.css';
-import { CharacterItem, ContentItem } from '../../common/types';
+import { CharacterItem, ContentItem } from '@lingosnap/shared';
 
 
 interface GameCardProps {

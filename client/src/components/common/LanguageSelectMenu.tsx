@@ -1,6 +1,6 @@
 import { Box, IconButton } from "@mui/material";
 import React from "react";
-import { Language } from "./enums";
+import { Language } from "@lingosnap/shared";
 import LanguageFlag from "./LanguageFlag";
 
 function LanguageSelectMenu({selectedLanguage, setSelectedLanguage}:{selectedLanguage?:Language, setSelectedLanguage:(v:Language)=>void}) {

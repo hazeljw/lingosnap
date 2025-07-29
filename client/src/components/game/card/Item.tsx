@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import { ReactNode } from "react"
-import { CharacterItem, ContentItem } from '../../common/types';
+import { CharacterItem, ContentItem } from '@lingosnap/shared';
 import './styles.css';
 
 interface ItemMotion {

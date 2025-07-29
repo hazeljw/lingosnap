@@ -3,8 +3,7 @@ import './styles.css';
 import { Box, Button, MenuItem, Select, TextField } from '@mui/material';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
-import { ContentMode, Language } from '../common/enums';
-import { RoomData, User } from '../common/types';
+import { ContentMode, Language, RoomData, User } from '@lingosnap/shared';
 import LanguageSelectMenu from '../common/LanguageSelectMenu';
 import { CrownSimple } from '@phosphor-icons/react';
 

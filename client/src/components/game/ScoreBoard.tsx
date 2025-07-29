@@ -1,5 +1,5 @@
 import { Box } from "@mui/material"
-import { User } from "../common/types"
+import { User } from "@lingosnap/shared"
 import UserScore from "./UserScore"
 
 const ScoreBoard = ({users}:{users?:User[], isMobileView?:boolean}) => {

@@ -1,0 +1,689 @@
+{
+    "_comment": "Character mode configuration",
+    "data": [
+        {
+            "hiragana": {
+                "character": "あ",
+                "sound": "a",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ア",
+                "sound": "a",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "い",
+                "sound": "i",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "イ",
+                "sound": "i",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "う",
+                "sound": "u",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ウ",
+                "sound": "u",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "え",
+                "sound": "e",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "エ",
+                "sound": "e",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "お",
+                "sound": "o",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "オ",
+                "sound": "o",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "か",
+                "sound": "ka",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "カ",
+                "sound": "ka",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "き",
+                "sound": "ki",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "キ",
+                "sound": "ki",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "く",
+                "sound": "ku",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ク",
+                "sound": "ku",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "け",
+                "sound": "ke",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ケ",
+                "sound": "ke",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "こ",
+                "sound": "ko",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "コ",
+                "sound": "ko",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "さ",
+                "sound": "sa",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "サ",
+                "sound": "sa",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "し",
+                "sound": "shi",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "シ",
+                "sound": "shi",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "す",
+                "sound": "su",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ス",
+                "sound": "su",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "せ",
+                "sound": "se",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "セ",
+                "sound": "se",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "そ",
+                "sound": "so",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ソ",
+                "sound": "so",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "た",
+                "sound": "ta",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "タ",
+                "sound": "ta",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ち",
+                "sound": "chi",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "チ",
+                "sound": "chi",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "つ",
+                "sound": "tsu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ツ",
+                "sound": "tsu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "て",
+                "sound": "te",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "テ",
+                "sound": "te",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "と",
+                "sound": "to",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ト",
+                "sound": "to",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "な",
+                "sound": "na",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ナ",
+                "sound": "na",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "に",
+                "sound": "ni",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ニ",
+                "sound": "ni",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ぬ",
+                "sound": "nu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ヌ",
+                "sound": "nu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ね",
+                "sound": "ne",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ネ",
+                "sound": "ne",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "の",
+                "sound": "no",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ノ",
+                "sound": "no",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "は",
+                "sound": "ha",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ハ",
+                "sound": "ha",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ひ",
+                "sound": "hi",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ヒ",
+                "sound": "hi",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ふ",
+                "sound": "fu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "フ",
+                "sound": "fu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "へ",
+                "sound": "he",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ヘ",
+                "sound": "he",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ほ",
+                "sound": "ho",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ホ",
+                "sound": "ho",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ま",
+                "sound": "ma",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "マ",
+                "sound": "ma",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "み",
+                "sound": "mi",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ミ",
+                "sound": "mi",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "む",
+                "sound": "mu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ム",
+                "sound": "mu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "め",
+                "sound": "me",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "メ",
+                "sound": "me",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "も",
+                "sound": "mo",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "モ",
+                "sound": "mo",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "や",
+                "sound": "ya",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ヤ",
+                "sound": "ya",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ゆ",
+                "sound": "yu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ユ",
+                "sound": "yu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "よ",
+                "sound": "yo",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ヨ",
+                "sound": "yo",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ら",
+                "sound": "ra",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ラ",
+                "sound": "ra",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "り",
+                "sound": "ri",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "リ",
+                "sound": "ri",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "る",
+                "sound": "ru",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ル",
+                "sound": "ru",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "れ",
+                "sound": "re",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "レ",
+                "sound": "re",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ろ",
+                "sound": "ro",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ロ",
+                "sound": "ro",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "わ",
+                "sound": "wa",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ワ",
+                "sound": "wa",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "を",
+                "sound": "wo",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ヲ",
+                "sound": "wo",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ん",
+                "sound": "n",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ン",
+                "sound": "n",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "が",
+                "sound": "ga",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ガ",
+                "sound": "ga",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ぎ",
+                "sound": "gi",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ギ",
+                "sound": "gi",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ぐ",
+                "sound": "gu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "グ",
+                "sound": "gu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "げ",
+                "sound": "ge",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ゲ",
+                "sound": "ge",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ご",
+                "sound": "go",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ゴ",
+                "sound": "go",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ざ",
+                "sound": "za",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ザ",
+                "sound": "za",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "じ",
+                "sound": "ji",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ジ",
+                "sound": "ji",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ず",
+                "sound": "zu",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ズ",
+                "sound": "zu",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ぜ",
+                "sound": "ze",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ゼ",
+                "sound": "ze",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "ぞ",
+                "sound": "zo",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ゾ",
+                "sound": "zo",
+                "language": "japanese"
+            }
+        },
+        {
+            "hiragana": {
+                "character": "だ",
+                "sound": "da",
+                "language": "japanese"
+            },
+            "katakana": {
+                "character": "ダ",
+                "sound": "da",
+                "language": "japanese"
+            }
+        } 
+    ]
+}

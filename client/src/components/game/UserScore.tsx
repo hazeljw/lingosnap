@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import './styles.css';
 import UserAvatar from "../common/userAvatar";
-import { User } from "../common/types";
+import { User } from "@lingosnap/shared";
 import { CrownSimple } from "@phosphor-icons/react";
 
 

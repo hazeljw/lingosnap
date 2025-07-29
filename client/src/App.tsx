@@ -5,13 +5,11 @@ import Lobby from './components/lobby/Lobby';
 import io from 'socket.io-client';
 import GameOn from './components/game/GameOn';
 import ResultsScreen from './components/postGame/ResultsScreen';
-import { RoomData } from './components/common/types';
+import { RoomData, ContentMode, Language, contentData, User } from '@lingosnap/shared';
 import { Box } from '@mui/material';
 import GameCard from './components/game/card/GameCard';
-import data from './configs/contentData.json';
-import { ContentMode, Language } from './components/common/enums';
 
-const randomListOfData = [...data.data, ...data.data]
+const randomListOfData = [...contentData.data, ...contentData.data]
 
 enum GameStatus {
   NotJoined='NotJoined',
@@ -93,7 +91,7 @@ function App() {
   }
 
   const isHost = roomData?.hostId === socket.id;
-  const userData = roomData?.users?.find((user) => user.id === socket.id)
+  const userData = roomData?.users?.find((user:User) => user.id === socket.id)
 
   const handleReturnToLobby = () => {
     socket.emit('return_to_lobby', {roomData});
@@ -138,7 +136,7 @@ function App() {
           height: '100%',
           overflow: 'hidden'
         }}>
-          <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={data.data} size={2}/>
+          <GameCard cardHeight={window.innerHeight} cardWidth={window?.innerWidth ?? 2000} difficulty={50} items={contentData.data} size={2}/>
         </Box>
       )}
 

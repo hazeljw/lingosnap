@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Box } from '@mui/material';
-import { CharacterItem, ContentItem } from '../common/types';
+import { CharacterItem, ContentItem } from '@lingosnap/shared';
 import Canvas from '../common/Canvas/Canvas';
 
 interface GameCardProps {

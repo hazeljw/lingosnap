@@ -1,7 +1,4 @@
-import { ContentMode, Language } from "./enums";
-import data from '../../configs/contentData.json';
-import animals from '../../configs/animals.json';
-import emojis from '../../configs/emojiMode.json';
+import { ContentMode, Language, contentData, animalsData, emojisData } from "@lingosnap/shared";
 
 export const mapLanguageToFlag = (language: Language) => {
     switch(language){
@@ -33,13 +30,13 @@ export const mapLanguageToFlag = (language: Language) => {
 export const mapContentModeToData = (contentMode: ContentMode) => {
     switch(contentMode) {
         case ContentMode.Animals:
-            return animals;
+            return animalsData;
         case ContentMode.Food:
-            return data;
+            return contentData;
         case ContentMode.Emojis:
-            return emojis;
+            return emojisData;
         default:
-            return data;
+            return contentData;
     }
 }
 

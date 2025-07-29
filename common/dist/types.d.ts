@@ -1,8 +1,4 @@
-// TYPES SHARED WITH BE - KEEP IN SYNC
-// TODO: export this as a package that both FE and BE can install
-
-import { ContentMode, Language } from "./enums";
-
+import { ContentMode, Language } from './enums';
 export interface User {
     id: string;
     name: string;
@@ -11,14 +7,12 @@ export interface User {
     score?: number;
     avatar?: string;
 }
-
 export interface RoomData {
     roomCode: string;
     hostId?: string;
     users: User[];
     gameState?: GameState | CharacterGameState;
 }
-
 export interface GameState {
     totalRounds: number;
     currentRound: number;
@@ -28,10 +22,9 @@ export interface GameState {
     cardTwo: ContentItem[];
     commonItem: ContentItem;
     allItems: ContentItem[];
-    userIdsWithCorrectAnswerForRound: string[]
-    roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
+    userIdsWithCorrectAnswerForRound: string[];
+    roundExpiryTimeUTC: Date;
 }
-
 export interface CharacterGameState {
     totalRounds: number;
     currentRound: number;
@@ -41,11 +34,9 @@ export interface CharacterGameState {
     cardTwo: CharacterItem[];
     commonItem: CharacterItem;
     allItems: CharacterItem[];
-    userIdsWithCorrectAnswerForRound: string[]
-    roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
+    userIdsWithCorrectAnswerForRound: string[];
+    roundExpiryTimeUTC: Date;
 }
-
-
 export interface ContentItem {
     word: string;
     languages: {
@@ -69,7 +60,6 @@ export interface ContentItem {
     congrats: string;
     sorry: string;
 }
-
 export interface CharacterItem {
     character: string;
     sound: string;

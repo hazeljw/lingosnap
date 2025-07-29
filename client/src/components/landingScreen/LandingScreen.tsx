@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import { Box, Button, TextField } from '@mui/material';
 import { Socket } from 'socket.io-client';
-import { Language } from '../common/enums';
+import { Language } from '@lingosnap/shared';
 import UserAvatar from '../common/userAvatar';
 import MainTitle from '../common/MainTitle';
 import LanguageSelectMenu from '../common/LanguageSelectMenu';

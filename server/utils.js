@@ -1,7 +1,10 @@
-const data = require('./data/contentData.json');
-const animals = require('./data/animals.json');
-const characters = require('./data/characterMode.json');
-const emojis = require('./data/emojiMode.json');
+const { contentData, animalsData, charactersData, emojisData } = require('@lingosnap/shared');
+
+// Use the imported data
+const data = contentData;
+const animals = animalsData;
+const characters = charactersData;
+const emojis = emojisData;
 
 const generateRoomCode = () => {
     return Math.random().toString(36).substr(2, 6).toUpperCase();

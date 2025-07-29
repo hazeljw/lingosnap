@@ -1,3 +1,5 @@
+import { ContentMode, Language } from './enums';
+
 export interface User {
     id: string;
     name: string;
@@ -11,13 +13,14 @@ export interface RoomData {
     roomCode: string;
     hostId?: string;
     users: User[];
-    gameState?: GameState;
+    gameState?: GameState | CharacterGameState;
 }
 
 export interface GameState {
     totalRounds: number;
     currentRound: number;
     timePerRound: number;
+    contentMode: ContentMode;
     cardOne: ContentItem[];
     cardTwo: ContentItem[];
     commonItem: ContentItem;
@@ -26,18 +29,17 @@ export interface GameState {
     roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
 }
 
-export enum Language {
-    English = 'english',
-    Spanish = 'spanish',
-    French = 'french',
-    German = 'german',
-    Italian = 'italian',
-    Dutch = 'dutch',
-    Portuguese = 'portuguese',
-    Japanese = 'japanese',
-    Korean = 'korean',
-    Finnish = 'finnish',
-    TeReo = 'tereo',
+export interface CharacterGameState {
+    totalRounds: number;
+    currentRound: number;
+    timePerRound: number;
+    contentMode: ContentMode;
+    cardOne: CharacterItem[];
+    cardTwo: CharacterItem[];
+    commonItem: CharacterItem;
+    allItems: CharacterItem[];
+    userIdsWithCorrectAnswerForRound: string[]
+    roundExpiryTimeUTC: Date; // time when the round ends if not everyone has guessed the common item
 }
 
 export interface ContentItem {
@@ -63,3 +65,9 @@ export interface ContentItem {
     congrats: string;
     sorry: string;
 }
+
+export interface CharacterItem {
+    character: string;
+    sound: string;
+    language: string;
+} 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Language } from "./enums";
+import { Language } from "@lingosnap/shared";
 import { Avatar, Badge, Box, Popover } from "@mui/material";
 import LanguageFlag from "./LanguageFlag";
 import AvatarSelectMenu from "./AvatarSelectMenu";

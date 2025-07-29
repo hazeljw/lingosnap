@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 import { Button, Box } from '@mui/material';
-import { Language } from '../common/enums';
+import { Language } from '@lingosnap/shared';
 
 
 const getSymbolsForLanguage = (language: Language):string[] => {

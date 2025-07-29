@@ -18,4 +18,4 @@ export enum ContentMode {
     Hiragana = 'Hiragana',
     Katakana = 'Katakana',
     Emojis = 'Emojis'
-}
+} 
