@@ -43,20 +43,22 @@ export enum Language {
 export interface ContentItem {
     word: string;
     languages: {
-        [Language.English]: string;
-        [Language.Spanish]: string;
-        [Language.French]: string;
-        [Language.German]: string;
-        [Language.Italian]: string;
-        [Language.Dutch]: string;
-        [Language.Portuguese]: string;
-        [Language.Japanese]: string;
-        [Language.Korean]: string;
-        [Language.Finnish]: string;
-        [Language.TeReo]: string;
+        [Language.English]: string | string[];
+        [Language.Spanish]: string | string[];
+        [Language.French]: string | string[];
+        [Language.German]: string | string[];
+        [Language.Italian]: string | string[];
+        [Language.Dutch]: string | string[];
+        [Language.Portuguese]: string | string[];
+        [Language.Japanese]: string | string[];
+        [Language.Korean]: string | string[];
+        [Language.Finnish]: string | string[];
+        [Language.TeReo]: string | string[];
     };
     tags: string[];
-    image: string;
+    image?: string;
+    symbol?: string;
+    isPixel?: boolean;
     funFact: string;
     congrats: string;
     sorry: string;

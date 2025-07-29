@@ -52,8 +52,16 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
 
             } else {
                 const gameState = roomData?.gameState as GameState
+                const languageData = gameState?.commonItem?.languages ? gameState?.commonItem?.languages[chosenLanguage] : '';
+                
+                let answerText = '';
+                if (Array.isArray(languageData)) {
+                    answerText = languageData[0] || ''; // Show only the first option
+                } else {
+                    answerText = languageData || '';
+                }
 
-                textToDisplay = `Answer was ${gameState?.commonItem?.languages ? gameState?.commonItem?.languages[chosenLanguage] : ''}! ` + gameState?.commonItem?.sorry
+                textToDisplay = `Answer was ${answerText}! ` + gameState?.commonItem?.sorry
             }
 
             setMissedAnswerText(textToDisplay);
@@ -94,24 +102,41 @@ function GameOn({roomData, handleLeaveLobby, handleCorrectAnswer, handleTimeOut,
             return commonItem?.sound;
         } else {
             const commonItem = itemData?.commonItem as ContentItem
-            return commonItem?.languages ? commonItem?.languages[chosenLanguage] : '';
+            const languageData = commonItem?.languages ? commonItem?.languages[chosenLanguage] : '';
+            
+            // Return array of possible answers, or single answer wrapped in array
+            if (Array.isArray(languageData)) {
+                return languageData;
+            } else {
+                return languageData ? [languageData] : [];
+            }
         }
     }
 
     const handleSubmitAnswer = () => {
-        const correctAnswer = determineCorrectAnswer();
+        const correctAnswers = determineCorrectAnswer();
 
-        if(enteredAnswer?.toLowerCase() === correctAnswer?.toLowerCase()) {
-
-            handleCorrectAnswer();
-            determineCelebration();
-
+        // For character mode, still handle single answer
+        if(isCharacterMode) {
+            if(enteredAnswer?.toLowerCase() === (correctAnswers as string)?.toLowerCase()) {
+                handleCorrectAnswer();
+                determineCelebration();
+            }
         } else {
-            // TODO: give some ui feedback for incorrect answer
+            // Check if entered answer matches any of the correct answers
+            const isCorrect = (correctAnswers as string[]).some(answer => 
+                enteredAnswer?.toLowerCase() === answer?.toLowerCase()
+            );
+            
+            if(isCorrect) {
+                handleCorrectAnswer();
+                determineCelebration();
+            } else {
+                // TODO: give some ui feedback for incorrect answer
+            }
         }
 
         setEnteredAnswer("");
-
     }
 
 
