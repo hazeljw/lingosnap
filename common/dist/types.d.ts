@@ -7,11 +7,26 @@ export interface User {
     score?: number;
     avatar?: string;
 }
+export type RoundResult = {
+    round: number;
+    answer: ContentItem | CharacterItem;
+    userToResult: {
+        userId: string;
+        timeTaken: number;
+    }[];
+};
+export type CharacterRoundResult = RoundResult & {
+    answer: CharacterItem;
+};
+export type ContentRoundResult = RoundResult & {
+    answer: ContentItem;
+};
 export interface RoomData {
     roomCode: string;
     hostId?: string;
     users: User[];
     gameState?: GameState | CharacterGameState;
+    roundResults: RoundResult[];
 }
 export interface GameState {
     totalRounds: number;

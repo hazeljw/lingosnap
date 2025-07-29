@@ -39,6 +39,7 @@ io.on("connect", (socket) => {
             roomCode: roomCode,
             hostId: socket.id,
             users: [{id: socket.id, name: data.name, isHost: true, score: 0, selectedLanguage: data.selectedLanguage, avatar: data.selectedAvatar}],
+            roundResults: []
         }
 
         socket.join(roomCode);
@@ -132,6 +133,12 @@ io.on("connect", (socket) => {
 
         roomData.gameState = gameState;
 
+        roomData.roundResults = [{
+            round: 1,
+            answer: gameState.commonItem,
+            userToResult: []
+        }];
+
         // send the game state to all users in the room
         socket.to(roomCode).emit('game_start', {roomData});
         socket.emit('game_start', {roomData}); // TODO: pass back info about the room
@@ -154,6 +161,10 @@ io.on("connect", (socket) => {
 
         const user = roomData.users.find(user => user.id === userId);
 
+        // update the round results
+        const timeTaken = roomData.gameState.timePerRound - (roomData.gameState.roundExpiryTimeUTC - Date.now());
+        roomData.roundResults[roomData.gameState.currentRound - 1].userToResult.push({userId, timeTaken});
+
         if(!user) return;
         user.score += score;
         roomData.gameState?.userIdsWithCorrectAnswerForRound.push(userId);
@@ -163,8 +174,6 @@ io.on("connect", (socket) => {
             // move to the next round
             moveToNextRound(roomData)  
         }
-
-
 
         socket.to(roomCode).emit('game_update', {roomData});
         socket.emit('game_update', {roomData}); 

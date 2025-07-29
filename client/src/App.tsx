@@ -110,7 +110,7 @@ function App() {
 
       { gameStatus === GameStatus.InGame && <GameOn socket={socket} roomData={roomData} handleLeaveLobby={handleLeaveLobby} handleCorrectAnswer={handleCorrectAnswer} handleTimeOut={handleTimeOut} />}
       
-      { gameStatus === GameStatus.GameOver && <ResultsScreen roomData={roomData} isHost={isHost} handleReturnToLobby={handleReturnToLobby}/>}
+      { gameStatus === GameStatus.GameOver && <ResultsScreen userId={socket.id} roomData={roomData} isHost={isHost} handleReturnToLobby={handleReturnToLobby}/>}
       
       { gameStatus !== GameStatus.InGame && (
         <Box style={{

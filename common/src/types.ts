@@ -9,11 +9,26 @@ export interface User {
     avatar?: string;
 }
 
+export type RoundResult = {
+    round: number;
+    answer: ContentItem | CharacterItem;
+    userToResult: {userId:string, timeTaken:number}[]; // user id to seconds taken to answer. if not there, then the user got it wrong. 
+}
+
+export type CharacterRoundResult = RoundResult & {
+    answer: CharacterItem;
+}
+
+export type ContentRoundResult = RoundResult & {
+    answer: ContentItem;
+}
+
 export interface RoomData {
     roomCode: string;
     hostId?: string;
     users: User[];
     gameState?: GameState | CharacterGameState;
+    roundResults: RoundResult[];
 }
 
 export interface GameState {

@@ -106,6 +106,11 @@ const moveToNextRound = (roomData) => {
         }
 
         roomData.gameState = gameState;
+        roomData.roundResults.push({
+            round: gameState.currentRound,
+            answer: gameState.commonItem,
+            userToResult: []
+        });
     }  
 
 
